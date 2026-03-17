@@ -58,7 +58,7 @@
 @import url("make-something-blink.css");
 
 /* File for adding a smooth animated gradient background */
-@import url("animated-gradient.css");
+/* @import url("animated-gradient.css"); */
 
 /* File for adding a glitch animation to your 404 error page */
 @import url("error.css");
@@ -106,9 +106,9 @@
   --rotating-font-size: 1rem;
   --rotating-duration: 20s;
   /* Core Colours */
-  --color-text-primary: #000000;
-  --color-text-secondary: #333;
-  --color-accent-primary: #ffffff;
+  --color-text-primary: #1f2a24;
+  --color-text-secondary: #4e5f56;
+  --color-accent-primary: #1f2a24;
   --color-accent-secondary: #ff057c;
   --color-overlay-primary: rgba(82, 0, 255, 0.5);
   --color-highlight: lemonchiffon;
@@ -133,12 +133,11 @@
   --color-text-project-title: #5200ff;
   --color-text-work-grid-title: #ffffff;
   /* Link States */
-  --color-link: #5200ff;
-  --color-link-hover: #111;
-  --color-link-visited: #5200ff;
-  /* Navigation */
-  --color-nav-link: #5200ff;
-  --color-nav-link-hover: #321575;
+  --color-link: #1f2a24;
+  --color-link-hover: #4d6b5d;
+  --color-link-visited: #1f2a24;
+  --color-nav-link: #1f2a24;
+  --color-nav-link-hover: #4d6b5d;
   --color-nav-arrow: #5200ff;
   --color-nav-arrow-hover: #000;
   --color-nav-arrow-stroke: #5200ff;
@@ -148,7 +147,7 @@
   --color-bg-project-description: #f5f5f5;
   --color-bg-sidebar-project: transparent;
   --color-bg-sidebar-work: lemonchiffon;
-  --color-gradient-hero: linear-gradient(90deg, #ff00ff, #00ffff);
+  --color-gradient-hero: linear-gradient(180deg, #edf8f2 0%, #e6f4ec 100%);
   --color-gradient-project-details: linear-gradient(
     -225deg,
     #ff057c 0%,
@@ -684,9 +683,10 @@ a.nav-link-primary:hover {
 
 .hero {
   width: 100%;
-  min-height: 80vh; /* Takes up most of the screen height */
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
+  background: var(--color-gradient-hero);
 }
 .hero-header {
   min-height: 6rem; /* Space reserved for logo + nav */
