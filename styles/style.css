@@ -627,9 +627,13 @@ a:active {
 
 a.nav-link-primary {
   color: var(--color-nav-link);
+  transition:
+    color 0.2 ease,
+    opacity 0.2s ease;
 }
 a.nav-link-primary:hover {
   color: var(--color-nav-link-hover);
+  opacity: 0.8;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -711,6 +715,12 @@ a.nav-link-primary:hover {
 .nav-branding-logo {
   width: 3rem;
   /* TODO: Adjust the width of the logo on mobile devices here */
+}
+
+.nav-branding .nav-link-primary {
+  font-family: var(--font-family-body);
+  font-size: 1.1rem;
+  font-weight: 500;
 }
 
 .hero-headline-wrapper {
