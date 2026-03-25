@@ -1575,7 +1575,13 @@ to keep your styles reusable and consistent.
     width: 5rem;
     /* TODO: Adjust the width of the logo on large devices here. */
   }
-
+  .ian-logo {
+    fill: black;
+    transition: fill 0.2s ease-in-out; /* smooth color change */
+  }
+  .ian-logo:hover {
+    fill: green;
+  }
   .hero {
     min-height: 100vh;
   }
