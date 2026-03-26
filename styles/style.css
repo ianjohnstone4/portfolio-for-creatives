@@ -1593,7 +1593,7 @@ to keep your styles reusable and consistent.
     fill: var(--color-nav-link-hover);
   }
   .hero {
-    min-height: 50vh;
+    min-height: 80vh;
   }
 
   .hero-headline-wrapper {
