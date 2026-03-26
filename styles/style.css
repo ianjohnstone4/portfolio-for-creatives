@@ -633,7 +633,7 @@ a.nav-link-primary {
 }
 a.nav-link-primary:hover {
   color: var(--color-nav-link-hover);
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -709,7 +709,7 @@ a.nav-link-primary:hover {
   flex-direction: row;
 }
 .nav-branding-item {
-  padding: var(--padding-tiny);
+  padding: 0.75rem;
 }
 
 .nav-branding-logo {
@@ -1589,11 +1589,11 @@ to keep your styles reusable and consistent.
     fill: black;
     transition: fill 0.2s ease-in-out; /* smooth color change */
   }
-  .ian-logo:hover {
-    fill: green;
+  .nav-branding-logo a:hover .ian-logo {
+    fill: var(--color-nav-link-hover);
   }
   .hero {
-    min-height: 100vh;
+    min-height: 50vh;
   }
 
   .hero-headline-wrapper {
