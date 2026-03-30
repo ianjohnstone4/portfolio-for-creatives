@@ -899,20 +899,33 @@ a.nav-link-primary:hover {
 /* Defining the work page grid */
 .grid {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(300px, 1fr)
-  ); /* Creates a responsive grid */
-  grid-gap: 1rem; /* Space between grid items */
-  /* The auto-fit and minmax() function help ensure responsiveness across screen sizes */
+  grid-template-columns: 1.4fr 1fr;
+  gap: 1rem;
 }
 
-/* Individual Work Grid Item */
 .work-page-grid-item,
 .overlay-container {
   width: 100%;
-  height: auto;
-  position: relative; /* Needed to position the overlay */
+  position: relative;
+  overflow: hidden;
+  min-height: 22rem;
+}
+
+.work-page-grid-item:first-child {
+  grid-row: span 2;
+  min-height: 45rem;
+}
+
+.work-page-grid-item figure {
+  height: 100%;
+  margin: 0;
+}
+
+.work-page-grid-item img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
 }
 /* Masonry Overlay Text */
 .overlay-container:hover .overlay {
@@ -1472,10 +1485,9 @@ to keep your styles reusable and consistent.
   }
 
   /* Work Page Grid for Large Devices */
-
   .grid {
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    grid-gap: 1rem;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 1rem;
   }
 
   /* Grayscale filter with full-colour on hover and tap */
@@ -1600,7 +1612,7 @@ to keep your styles reusable and consistent.
   /* TODO: Add styles here for X-large devices. */
 
   .grid {
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-template-columns: 1.4fr 1fr;
   }
 }
 
@@ -1610,7 +1622,7 @@ to keep your styles reusable and consistent.
   /* TODO: Add styles here for XX-large devices. */
 
   .grid {
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-columns: 1.4fr 1fr;
   }
 }
 
@@ -1629,6 +1641,20 @@ That’s a wrap, class! 🧑‍🎓✨
 /* 🎉 You made it to the end! */
 /* This is a great place to celebrate your progress, add Easter eggs, or leave notes for your future self. */
 /* Happy coding, and don’t forget to take breaks, stay hydrated, and share your work proudly. 💻✨🎨 */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .work-page-grid-item:first-child {
+    grid-row: span 1;
+    min-height: 22rem;
+  }
+
+  .work-page-grid-item {
+    min-height: 20rem;
+  }
+}
 .site-footer {
   padding: 6rem 2rem 2.5rem;
   border-top: 1px solid rgba(0, 0, 0, 0.08);
