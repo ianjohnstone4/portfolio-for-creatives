@@ -425,14 +425,6 @@ svg {
 /* This section is in progress — you'll build a mobile-friendly nav bar here */
 /* ---------------------------------------- */
 
-.responsive-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background: lightblue;
-  padding: var(--padding-small);
-}
-
 /* ------------------------------------------------------------------ */
 /* 🔤 Global & Mobile Typography                                      */
 /* Heading styles that scale nicely for mobile-first, responsive sites */
@@ -743,11 +735,6 @@ a.nav-link-primary:hover {
   margin-bottom: 1rem;
   color: var(--color-accent-primary);
 }
-
-.hero-icon {
-  font-size: 4rem;
-}
-
 .hero-footer {
   display: flex;
   justify-content: center;
@@ -931,13 +918,6 @@ a.nav-link-primary:hover {
 .overlay-container:hover .overlay {
   opacity: 1;
 }
-
-/* Project container for background and padding */
-.project-container {
-  background: var(--color-accent-primary); /* Set project background color */
-  padding: var(--padding-medium);
-}
-
 /* Overlay (appears on hover) */
 .overlay {
   position: absolute;
@@ -969,10 +949,6 @@ a.nav-link-primary:hover {
 }
 
 /* Optional container for future overlay customization */
-.project-details-overlay {
-  /* Placeholder: no custom styles yet */
-}
-
 /*
 
 ███████ ██ ██████  ███████ ██████   █████  ██████  
@@ -1046,125 +1022,7 @@ a.nav-link-primary:hover {
 ██      ██    ██ ██    ██    ██    ██      ██   ██ 
 ██       ██████   ██████     ██    ███████ ██   ██ 
                                                    
-*/
 
-/* -------------------------------------------------------------------------- */
-/* 📱 MOBILE FOOTER LAYOUT                                                    */
-/* Designed with mobile-first approach using CSS Grid                          */
-/* -------------------------------------------------------------------------- */
-
-.footer-global {
-  display: grid;
-  grid-template-columns: 1fr; /* Single column layout */
-  grid-gap: 3rem; /* Consistent spacing between sections */
-  min-height: auto; /* Allows footer to expand based on content, no fixed height */
-  background: var(--color-bg-footer); /* Using CSS variable for theming */
-  padding: var(--padding-small); /* Internal spacing */
-
-  /* Note: Using 'fr' units ensures proper scaling across devices */
-}
-
-/* -------------------------------------------------------------------------- */
-/* 🧩 FOOTER SECTION PLACEMENT                                                */
-/* Each component stacks vertically in mobile view                             */
-/* -------------------------------------------------------------------------- */
-
-.footer-tagline {
-  grid-column: 1 / 2; /* Full width (single column) */
-  grid-row: 1 / 2;
-}
-.footer-highlights {
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
-}
-.footer-contact-social {
-  grid-column: 1 / 2;
-  grid-row: 3 / 4;
-}
-/* -------------------------------------------------------------------------- */
-/* 🌊 FULL-WIDTH BOTTOM SECTION                                               */
-/* Typically used for copyright/legal information                             */
-/* -------------------------------------------------------------------------- */
-.footer-full-width {
-  grid-column: 1 / 2;
-  grid-row: 4 / 5;
-  text-align: center; /* Center copyright text */
-  align-self: end; /* Push to bottom */
-}
-
-/* ------------------------------- */
-/* 📜 Reusable footer list styles */
-/* ------------------------------- */
-.footer-list {
-  margin-bottom: 2rem;
-}
-.footer-awards-list {
-  margin-bottom: 2rem;
-}
-.footer-works-list {
-  margin-bottom: 2rem;
-}
-.footer-socials-list {
-  margin-bottom: 2rem;
-}
-
-/* -------------------------------------------------------------------------- */
-/* 📏 Footer Item Spacing                                                     */
-/* -------------------------------------------------------------------------- */
-
-/* Apply this class to ALL list items (awards, works, social, bullets) */
-.footer-item {
-  line-height: 1.2; /* Consistent line height for footer items to improve spacing */
-  margin-bottom: 0.25rem;
-}
-
-/* ------------------------------- */
-/* ▪️ Bullet List Style */
-/* Square bullets with compact spacing */
-/* ------------------------------- */
-
-.footer-bullet-list {
-  list-style-type: square;
-  list-style-position: inside;
-  margin-bottom: 1rem;
-}
-
-.footer-bullet-list .footer-item {
-  margin-bottom: 0.25rem;
-  padding-left: 0.5rem;
-  text-indent: -0.5rem; /* Pulls text back toward bullet */
-}
-
-/* -------------------------------------------------------------------------- */
-/* ✨ Footer Special Elements                                                 */
-/* -------------------------------------------------------------------------- */
-
-/* Heart icon for copyright/love notes */
-.heart {
-  color: var(--color-icon-heart); /* Color for heart icon */
-}
-
-.footer-fineprint {
-  font-size: 0.875rem; /* Slightly smaller for disclaimers or captions */
-  color: var(--color-text-secondary); /* Themed color */
-}
-
-/* New item badges */
-.badge-new {
-  background: var(--color-highlight);
-  padding: 0.1rem;
-  font-size: 0.8125rem;
-  text-transform: uppercase;
-}
-
-/* -------------------------------------------------------------------------- */
-/* 🌐 MINIMAL FOOTER (ALTERNATIVE VERSION)                                    */
-/* A simpler alternative to the CSS Grid footer - ideal for beginners          */
-/* -------------------------------------------------------------------------- */
-
-.footer-global-wrapper {
-  padding: var(--padding-small);
-}
 
 /* 
 
@@ -1715,41 +1573,9 @@ to keep your styles reusable and consistent.
   /* 🖥️ FOOTER GRID - DESKTOP LAYOUT */
   /* ------------------------------- */
 
-  .footer-global {
-    padding-top: var(--padding-jumbo);
-    padding-right: var(--padding-jumbo);
-    padding-bottom: 0;
-    padding-left: var(--padding-jumbo);
-    grid-template-columns: 1fr 1fr 1fr; /* Three equal columns */
-  }
-
-  /* Column 1: Tagline/Message */
-  .footer-tagline {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-  }
-
-  /* Column 2: Awards & Works */
-  .footer-highlights {
-    grid-row: 1 / 2;
-    grid-column: 2 / 3;
-  }
-
-  /* Column 3: Contact & Social */
-  .footer-contact-social {
-    grid-row: 1 / 2;
-    grid-column: 3 / 4;
-  }
-
   /* ------------------------------- */
   /* 📏 FULL-WIDTH BOTTOM SECTION */
   /* ------------------------------- */
-  .footer-full-width {
-    grid-row: 2 / 3;
-    grid-column: 1 / 4; /* Spans all three columns */
-    text-align: center;
-    align-self: end; /* Aligns content to bottom */
-  }
 
   /* Work Sidebar on Large Devices */
 
@@ -1803,3 +1629,73 @@ That’s a wrap, class! 🧑‍🎓✨
 /* 🎉 You made it to the end! */
 /* This is a great place to celebrate your progress, add Easter eggs, or leave notes for your future self. */
 /* Happy coding, and don’t forget to take breaks, stay hydrated, and share your work proudly. 💻✨🎨 */
+.site-footer {
+  padding: 6rem 2rem 2.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.site-footer-inner {
+  width: min(100%, 1200px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.site-footer-top {
+  max-width: 700px;
+}
+
+.site-footer-eyebrow {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
+  opacity: 0.7;
+}
+
+.site-footer-heading {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.05;
+  margin-bottom: 1rem;
+  color: var(--color-accent-primary);
+}
+
+.site-footer-copy {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 56ch;
+  opacity: 0.8;
+}
+
+.site-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.site-footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.site-footer-small {
+  font-size: 0.9rem;
+  opacity: 0.65;
+}
+@media (max-width: 768px) {
+  .site-footer {
+    padding: 4rem 1.25rem 2rem;
+  }
+
+  .site-footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
