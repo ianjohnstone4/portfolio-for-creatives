@@ -62,7 +62,7 @@
 /* @import url("animated-gradient.css"); */
 
 /* File for adding a glitch animation to your 404 error page */
-@import url("error.css");
+/* @import url("error.css"); */
 
 /* File for adding text stroke (outline) effect */
 @import url("text-stroke.css");
@@ -1258,23 +1258,126 @@ a.nav-link-primary:hover {
 /* TODO: Customize your 404 Error Page */
 
 /* A great 404 page is a chance to leave a memorable impression when visitors land on a page that doesn't exist. Consider customizing this page to be more engaging, humorous, or on-brand with your site. Check out error.css for the gradient and glitch effect. */
+.error-page {
+  min-height: 100vh;
+}
+
+.error-hero {
+  min-height: 72vh;
+}
 
 .error-headline-wrapper {
-  width: 85%;
+  width: min(100%, 760px);
   display: flex;
   flex-direction: column;
   flex: 1;
   align-items: center;
   justify-content: center;
-  padding: var(--padding-small);
+  padding: 3rem 1.5rem 4rem;
   text-align: center;
   margin: 0 auto;
 }
 
-.error-page-animation {
-  width: 25rem;
+.error-page-kicker {
+  margin-bottom: 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
 }
 
+.error-page-title.error-404 {
+  margin-bottom: 1rem;
+  font-size: clamp(3rem, 8vw, 5.75rem);
+  line-height: 0.94;
+  letter-spacing: -0.05em;
+  color: var(--color-accent-primary);
+  text-wrap: balance;
+}
+
+.error-page-copy {
+  max-width: 34rem;
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--color-text-primary);
+  opacity: 0.85;
+}
+
+.error-page-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.error-page-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 10.5rem;
+  padding: 0.95rem 1.35rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-family: var(--font-family-body);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    transform var(--duration-fast),
+    background-color var(--duration-fast),
+    color var(--duration-fast),
+    border-color var(--duration-fast),
+    opacity var(--duration-fast);
+}
+
+.error-page-button:hover {
+  transform: translateY(-2px);
+}
+
+.error-page-button-primary,
+.error-page-button-primary:link,
+.error-page-button-primary:visited {
+  background: var(--color-accent-primary);
+  color: #ffffff;
+  border-color: var(--color-accent-primary);
+}
+
+.error-page-button-primary:hover,
+.error-page-button-primary:active {
+  background: var(--color-link-hover);
+  border-color: var(--color-link-hover);
+  color: #ffffff;
+}
+
+.error-page-button-secondary {
+  background: transparent;
+  color: var(--color-text-primary);
+  border-color: rgba(31, 42, 36, 0.14);
+}
+
+.error-page-button-secondary:hover {
+  border-color: rgba(31, 42, 36, 0.28);
+  color: var(--color-text-primary);
+}
+
+@media (max-width: 640px) {
+  .error-headline-wrapper {
+    padding: 2.5rem 1.25rem 3rem;
+  }
+
+  .error-page-actions {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .error-page-button {
+    width: 100%;
+  }
+}
 /*
 
 
