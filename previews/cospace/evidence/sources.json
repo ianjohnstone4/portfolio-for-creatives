@@ -1,0 +1,79 @@
+{
+  "verified_on": "2026-10-29",
+  "figma_file_key": "nlQ9Fp6Yjdfs2Hr9TyUSY2",
+  "session_id": "27da5a1c-0658-4cd2-8f53-ca2bf499c9ef",
+  "source_exports": [
+    {
+      "file": "assets/screens/home.png",
+      "node_id": "230:2948",
+      "method": "Figma download_assets native PNG export; unchanged artwork"
+    },
+    {
+      "file": "assets/screens/nearby.png",
+      "node_id": "403:2738",
+      "method": "Figma download_assets native PNG export; unchanged artwork"
+    },
+    {
+      "file": "assets/screens/location.png",
+      "node_id": "415:6381",
+      "method": "Figma download_assets native PNG export; unchanged artwork"
+    },
+    {
+      "file": "assets/screens/schedule.png",
+      "node_id": "400:5690",
+      "method": "Figma download_assets native PNG export; unchanged artwork"
+    },
+    {
+      "file": "assets/screens/review.png",
+      "node_id": "400:3855",
+      "method": "Figma download_assets native PNG export; unchanged artwork"
+    },
+    {
+      "file": "assets/screens/virtual.png",
+      "node_id": "230:4610",
+      "method": "Figma download_assets native PNG export; unchanged artwork"
+    },
+    {
+      "file": "assets/screens/schedule-filled.png",
+      "node_id": "414:5934",
+      "method": "Figma download_assets native PNG export; unchanged artwork"
+    },
+    {
+      "file": "assets/screens/focus.png",
+      "node_id": "400:5057",
+      "method": "Figma download_assets native PNG export; unchanged artwork"
+    },
+    {
+      "file": "assets/screens/wireflow.png",
+      "node_id": "135:3081",
+      "method": "Figma download_assets native PNG export; unchanged artwork"
+    },
+    {
+      "file": "assets/screens/design-guide.png",
+      "node_id": "916:3295",
+      "method": "Figma download_assets native PNG export; unchanged artwork"
+    }
+  ],
+  "device": {
+    "file": "assets/mockups/graphite-device.png",
+    "method": "Built-in image generation using previous CoSpace phone as a hardware reference",
+    "prompt_file": "evidence/image-generation-prompt.txt",
+    "ui_generation": false
+  },
+  "case_references": [
+    "https://ianjohnstone.ca/project-1.html",
+    "https://ianjohnstone.ca/project-2.html",
+    "https://ianjohnstone.ca/project-3.html"
+  ],
+  "assignment_text": {
+    "file": "evidence/assignment-presentation.txt",
+    "original": "Group5_CoSpaceFinal.pdf",
+    "source_record": "Previously saved extraction, 20 pages, cover dated December 11, 2025",
+    "limits": "The original PDF was not visually inspected in this task. Used for team, course, concept, and audience only."
+  },
+  "claim_limits": [
+    "Individual contribution split not established.",
+    "No user research findings or measured outcomes established.",
+    "Coworking service features remain Figma concept screens."
+  ]
+}
