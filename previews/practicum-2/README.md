@@ -6,6 +6,10 @@ This directory is for review. The production homepage, styles, case studies, dom
 
 ## Open the preview
 
+[Open the interactive branch preview](https://htmlpreview.github.io/?https://github.com/ianjohnstone4/portfolio-for-creatives/blob/codex/practicum-homepage-preview/previews/practicum-2/index.html). This uses GitHub HTML Preview to render the files from this branch and does not deploy to ianjohnstone.ca. Allow a moment for the stylesheet and script to load.
+
+To run it locally instead:
+
 From the repository root:
 
 ```sh
@@ -55,6 +59,7 @@ Interaction references from the supplied inspiration document: [Onda Studio](htt
 - Browser review at 1280 × 720 and embedded widths of 834 and 390 pixels.
 - Checked the full, intermediate and collapsed project states; hero pointer movement; footer ripple activation; project keyboard focus; motion pause, persistence after reload, and resume.
 - No console warnings or errors during the desktop review.
+- Verified the remote GitHub HTML Preview loads all project images and scripts and reaches the collapsed project-list state.
 - Confirmed that production files match the original `main` commit.
 
 System reduced-motion and no-JavaScript fallbacks were reviewed in the source. The manual motion-off path was exercised in the browser. Native phone hardware and a full cross-browser/accessibility audit are outside this preview's validation.
