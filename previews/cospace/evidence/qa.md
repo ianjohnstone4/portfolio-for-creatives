@@ -2,6 +2,13 @@
 
 Checked October 29, 2026.
 
+## October 30 spacing revision
+
+- Matched the visible right handset edge to the 48px left copy inset at desktop width. The right-hand positioning includes the extra width created by its rotation and the transparent margins of the generated hardware image.
+- Reduced the three hero phones slightly and moved the outer phones upward, leaving clear space above the lower caption. The right caption now shares the same inset as the left copy.
+- Verified the revised composition at 1280px, 1024px, and 390px widths, with no horizontal overflow. Shared responsive insets are 48px, 30px, and 24px.
+- Re-exported the hero mockup and saved desktop/mobile screenshots for the revision.
+
 ## Source and visual checks
 
 - Current portfolio homepage and three project pages were opened. SharedStandard was also inspected visually in the browser.
