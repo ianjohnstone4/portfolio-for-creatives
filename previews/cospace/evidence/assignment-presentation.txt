@@ -1,0 +1,311 @@
+<PARSED TEXT FOR PAGE: 1 / 20>
+
+Ian Johnstone
+
+Sebastian Abarca Rodriguez
+
+Nhi Pham (Tong Pham)
+IXD 103_Dec 11, 2025 Group 5
+
+<PARSED TEXT FOR PAGE: 2 / 20>
+
+DOMAIN
+Isolated Remote Workers and Students
+
+
+Professionals or students whose daily work
+or learning primarily happens online, often
+from home or flexible locations.
+
+<PARSED TEXT FOR PAGE: 3 / 20>
+
+USER PERSONAS
+The Freelance Designer: Sofia Patel
+Background:
+
+Sofia left her full-time job to freelance for flexibility and creative control. She
+enjoys autonomy but often feels disconnected from peers and misses
+creative brainstorming sessions that come from working with others.
+
+Goals:
+
+Stay motivated without a structured team environment
+
+Find local creatives to share ideas and work with
+
+Maintain a routine and avoid working too late
+
+Pain points:
+
+Feels unproductive working alone for long stretches
+
+Hard to find balance, work often bleeds into personal time
+
+Networking online feels transactional
+
+How We Help:
+
+Matches her with other freelancers nearby for coworking sessions
+
+Provides a mix of social and focused coworking options
+
+Offers quick chat sessions for creative breaks
+Age: 28
+
+Occupation: Freelance
+Graphic Designer
+
+Location: Vancouver, BC
+
+Tech Use: MacBook Pro,
+iPhone, iPad Pro
+
+Work Environment: Small
+apartment; alternates
+between home and cafés
+
+<PARSED TEXT FOR PAGE: 4 / 20>
+
+USER PERSONAS
+The Remote Student: “Maya Chen”
+Background:
+
+Maya attends an online university program after moving to a new city. She finds it hard
+to meet classmates or build study habits without in-person classes.
+
+Goals:
+
+Stay focused and productive during study sessions
+
+Meet peers in similar programs or with similar goals
+
+Build professional connections for future career
+
+Feel less isolated while studying from home
+
+Pain points:
+
+Easily distracted when studying alone
+
+Misses classroom discussions and group projects
+
+Lacks external accountability to stay on track
+
+How We Help:
+
+Finds nearby or virtual study partners
+
+Provides structured “focus sessions” with built-in timers
+
+Optional coffee break chats simulate campus interactions
+
+Age: 22
+
+Occupation: UX Design
+Student (Online Program)
+
+Location: Toronto, ON
+
+Tech Use: MacBook,
+iPhone, tablet
+
+Study Environment:
+Shared apartment,
+bedroom workspace
+
+<PARSED TEXT FOR PAGE: 5 / 20>
+
+Stakeholder Persona - Community Partner Organization
+Pain points:
+
+High Vacancy during certain hours. - Lost revenue
+
+Difficulty marketing to online students and freelancers - Low
+Discovery
+
+Opportunities for our app:
+
+Integrate co-working space listings with real-time availability.
+
+Why it helps our partner:
+
+1. Drives new foot traffic & Bookings
+
+2.  Advertises their business to new potential customers.
+
+Link with our users’ verified profiles into the booking process.
+
+Why it helps our partner:
+
+Improves community safety and professionalism.
+Name: Sarah Mitchell
+
+Age: 35
+
+Role: Manages Coworking Spaces
+
+Stakeholder Type: Partner - B2B Supporter
+
+Tech Comfort: High, uses digital tools for
+analytics and bookings.
+
+<PARSED TEXT FOR PAGE: 6 / 20>
+
+COMMON G O A L
+Maintain Focus, Motivation, and Productivity
+
+
+Build Social and Professional Connection
+
+
+Establish Clear Work-Life Boundaries
+
+
+Develop Professionally and Build Networks
+
+<PARSED TEXT FOR PAGE: 7 / 20>
+
+COMMON A C T I V I T I E S
+Attending video calls or online lectures.
+
+Messaging teammates or classmates via
+Slack, Teams, or Discord.
+Multitasking while working: Nearly a third of remote
+and hybrid workers said they used the bathroom
+during calls while 21% said they browsed social media,
+14% went on online shopping sprees, 12% did laundry
+and 9% cleaned the kitchen. 4% admit they fall asleep
+and 3% take a shower.
+
+
+
+Individual tasks,  Digital collaboration, and
+self-management routines.
+Completing solo work tasks or assignments.
+
+<PARSED TEXT FOR PAGE: 8 / 20>
+
+Challenges and Opportunities
+
+<PARSED TEXT FOR PAGE: 9 / 20>
+
+DIGITAL
+PRODUCT We chose to go with a Mobile Application
+Higher user engagement
+
+Comes with native device
+features (camera, GPS,...)
+
+Can be used anywhere, anytime
+
+<PARSED TEXT FOR PAGE: 10 / 20>
+
+MISSION STATEMENT
+Our group aims to create a platform where remote work
+and study feel connected, collaborative, and community￾based. Helping people stay productive, motivated, and
+supported in both digital and physical spaces.
+
+<PARSED TEXT FOR PAGE: 11 / 20>
+
+MAIN FEATURES
+IN-PERSON MEETUPS
+
+VIRTUAL MEETUPS
+
+CONSTRUCT CONNECTIONS
+
+ORGANIZED AND STRUCTURED
+WORK FLOW
+
+PERSONAL WORK ORGANIZER
+
+<PARSED TEXT FOR PAGE: 12 / 20>
+
+PERSONAL TIMER
+
+<PARSED TEXT FOR PAGE: 13 / 20>
+
+JOINING IN-PERSON SESSIONS
+
+<PARSED TEXT FOR PAGE: 14 / 20>
+
+HOSTING IN-PERSON SESSIONS
+
+<PARSED TEXT FOR PAGE: 15 / 20>
+
+VIRTUAL SESSIONS
+
+<PARSED TEXT FOR PAGE: 16 / 20>
+
+VIRTUAL FEATURES
+
+<PARSED TEXT FOR PAGE: 17 / 20>
+
+ISSUE 1: ISOLATION & LACK OF COMMUNITY
+Remote workers and students often feel disconnected from others. Virtual work
+environments can feel especially lonely and silent.
+Users get low-pressure, meaningful social interaction while still being productive.
+
+Cospace Solution:
+In-Person:
+
+• Browse and join nearby coworking meetups
+
+• Structured sessions with light, low-pressure social
+breaks.
+
+
+Virtual:
+
+• Join virtual coworking rooms with and shared focus
+cycles
+
+• Light voice-optional or camera-optional presence
+
+<PARSED TEXT FOR PAGE: 18 / 20>
+
+ISSUE 2: DIFFICULTY MAINTAINING FOCUS &
+ROUTINE
+
+Users struggle to start tasks, stay focused, and maintain a productive rhythm on their own.
+Cospace Solution:
+In-Person & Virtual Features:
+
+• Guided focus blocks
+
+• Scheduled breaks and lunch periods
+
+• Focus timer with visual progress bar
+
+• Start-of-session goal setting
+
+• End-of-session reflection and
+progress summary
+CoSpace adds external structure to an otherwise unstructured day, helping users enter and exit focus
+states more easily.
+
+<PARSED TEXT FOR PAGE: 19 / 20>
+
+ISSUE 3: PROFESSIONAL/ACADEMIC ENGAGEMENT
+
+Remote work reduces spontaneous interaction with peers, limiting networking, shared
+learning, and motivation.
+Cospace Solution:
+In-Person:
+
+• Industry-based coworking groups
+
+• Easy face-to-face engagement during breaks
+
+
+Virtual:
+
+• Field-specific virtual coworking rooms
+
+• Light chat for shared progress and questions
+Reintroduces peer connection and informal professional learning into
+remote work and study environments.
+
+<PARSED TEXT FOR PAGE: 20 / 20>
+
+THANK YOU
