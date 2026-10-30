@@ -52,6 +52,16 @@
       "file": "assets/screens/design-guide.png",
       "node_id": "916:3295",
       "method": "Figma download_assets native PNG export; unchanged artwork"
+    },
+    {
+      "file": "assets/screens/schedule-check-in.png",
+      "node_id": "490:2572",
+      "method": "Figma download_assets native PNG export, state=True check-in component; unchanged artwork"
+    },
+    {
+      "file": "assets/screens/schedule-next-block.png",
+      "node_id": "510:3220",
+      "method": "Figma download_assets native PNG export, state=True next-block component; unchanged artwork"
     }
   ],
   "device": {
@@ -75,5 +85,36 @@
     "Individual contribution split not established.",
     "No user research findings or measured outcomes established.",
     "Coworking service features remain Figma concept screens."
-  ]
+  ],
+  "schedule_builder_composition": {
+    "base_screen": "400:5690",
+    "screen_dimensions": [
+      402,
+      874
+    ],
+    "check_in": {
+      "node_id": "490:2572",
+      "position": [
+        24,
+        170
+      ],
+      "dimensions": [
+        354,
+        97
+      ]
+    },
+    "next_block": {
+      "node_id": "510:3220",
+      "position": [
+        28,
+        267
+      ],
+      "dimensions": [
+        360,
+        133
+      ]
+    },
+    "reference": "Original project mockup screen-reference-29-02.png, inspected locally",
+    "method": "Native component artwork layered at source coordinates in the browser; source Figma nodes were not modified."
+  }
 }

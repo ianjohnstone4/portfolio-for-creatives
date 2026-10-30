@@ -44,7 +44,13 @@ html:has(.cospace-page) { scroll-behavior:auto; }
 .cs-phone { position:relative; display:block; width:250px; aspect-ratio:1/2; flex-shrink:0; }
 .cs-hardware { position:absolute; inset:0; width:100%; height:100%!important; pointer-events:none; }
 .cs-screen { position:absolute; left:9.65%; top:6.27%; width:80.8%; height:88.53%!important; object-fit:fill; border-radius:14.2% / 6.6%; background:white; pointer-events:none; }
-.cs-screen--long { object-fit:contain; }
+.cs-screen-artwork { overflow:hidden; }
+.cs-screen-artwork>.cs-base-art { width:100%; height:100%!important; object-fit:fill; }
+.cs-schedule-layers { position:absolute; inset:0; pointer-events:none; }
+.cs-schedule-layers[hidden] { display:none; }
+.cs-schedule-check-in { position:absolute; left:5.97015%; top:19.4508%; width:88.0597%; height:13.1579%; background:#fff; }
+.cs-schedule-check-in img { width:100%; height:auto; }
+.cs-schedule-next-block { position:absolute; left:6.96517%; top:30.5492%; width:89.5522%; height:auto; }
 .cs-hero-phone { position:absolute; width:var(--cs-hero-phone-size); }
 .cs-hero-phone--left { left:-5px; top:64px; transform:rotate(-10deg); z-index:1; }
 .cs-hero-phone--right { right:calc(var(--cs-hero-inset) + var(--cs-hero-phone-size) * .0725); top:56px; transform:rotate(10deg); z-index:1; }
@@ -150,8 +156,9 @@ html:has(.cospace-page) { scroll-behavior:auto; }
 .cs-viewer-top button { font-size:13px; padding:9px 14px; background:#e9eee9; border:0; border-radius:50px; }
 .cs-viewer-top button span { font-size:20px; padding-left:12px; }
 .cs-viewer-content { display:grid; place-items:center; }
-.cs-viewer-content img { width:auto; max-width:100%; max-height:none; height:auto; border-radius:4px; }
-.cs-viewer.is-wide .cs-viewer-content img { width:1050px; max-height:none; }
+.cs-viewer-artwork { position:relative; max-width:100%; }
+.cs-viewer-content #viewer-image { width:auto; max-width:100%; max-height:none; height:auto; border-radius:4px; }
+.cs-viewer.is-wide .cs-viewer-content #viewer-image { width:1050px; max-height:none; }
 .cs-viewer>p { color:var(--cs-muted); font-size:12px; max-width:65ch; margin:18px auto 0; text-align:center; }
 .cospace-page.cs-modal-open { overflow:hidden; }
 @media (min-width:1450px) { .cs-intro { padding-top:68px; } }
@@ -296,7 +303,7 @@ html:has(.cospace-page) { scroll-behavior:auto; }
   .cs-viewer-top h2 { font-size:18px; }
   .cs-viewer-top button { white-space:nowrap; }
   .cs-viewer.is-wide .cs-viewer-content { display:block; overflow:auto; }
-  .cs-viewer.is-wide .cs-viewer-content img { max-width:none; width:1150px; }
+  .cs-viewer.is-wide .cs-viewer-content #viewer-image { max-width:none; width:1150px; }
 }
 @media (prefers-reduced-motion:reduce) {
   .cospace-page { scroll-behavior:auto; }

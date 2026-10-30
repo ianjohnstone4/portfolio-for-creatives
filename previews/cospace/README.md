@@ -26,7 +26,7 @@ The screen walkthrough presents original Figma artwork. The portfolio page does 
 
 The page follows the current project pages at `https://ianjohnstone.ca/project-1.html`, `project-2.html`, and `project-3.html`: Jost typography, dark green text, a light background, a project metadata panel, labelled sections, large rounded showcases, and the existing contact language. Page-specific styling lives in `cospace.css`.
 
-Figma file: `nlQ9Fp6Yjdfs2Hr9TyUSY2`. Native source exports are saved locally in `assets/screens/`. Their UI, text, colours, icons, and states are unchanged. The taller schedule uses `object-fit: contain` to preserve the full source; the artwork dialog displays it at its natural size with scrolling.
+Figma file: `nlQ9Fp6Yjdfs2Hr9TyUSY2`. Native source exports are saved locally in `assets/screens/`. The schedule builder uses the original 402 × 874 screen and the original check-in and next-block component states, positioned at their Figma coordinates. This matches the editable builder shown in the project mockup and fills the phone display. The enlarged artwork view shows the same composition. The completed full-day schedule export is retained as source evidence rather than used for the builder.
 
 The graphite device frame was generated with the built-in image generation tool. The original Figma UI is layered over the frame with CSS, rather than regenerated. The exact generation prompt and asset provenance are in `evidence/`. The exported mockup JPEGs are browser renders of these compositions. They can be reused as portfolio images.
 

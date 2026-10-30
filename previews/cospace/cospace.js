@@ -6,14 +6,14 @@
     nearby: { title: "Find a session nearby", file: "nearby.png", alt: "CoSpace map of North Vancouver with location filters, available sessions, and a Host Session action.", caption: "Original in-person discovery screen. The map is source artwork, rather than a live location service." },
     virtual: { title: "Work alongside others online", file: "virtual.png", alt: "Virtual Casual Room with a shared focus timer, Ethan Cole, participant cards, and call controls.", caption: "Original virtual room screen. Video, audio, chat, and sharing are represented in the Figma concept." },
     location: { title: "Choose a location", file: "location.png", alt: "Choose a location using a map pin, address field, and Select and Continue button.", caption: "Original hosting screen with a selected location and address confirmation." },
-    schedule: { title: "Build a schedule", file: "schedule-filled.png", alt: "Original session schedule from 8AM to 4PM with check-in, focus sessions, coffee and lunch breaks, reflection, and a Continue button.", caption: "Original full-day schedule. The complete source artwork is shown without cropping." },
+    schedule: { title: "Build a schedule", file: "schedule.png", alt: "Original schedule builder with a 9:00AM to 9:30AM Check-In, Icebreaker and Attendance description, and an editable 9:30AM to 1:00PM block with title and description fields, an add control, and Continue.", caption: "Original schedule builder with a completed check-in and the next editable time block." },
     review: { title: "Review the details", file: "review.png", alt: "Editable session summary showing location, date and time, session type, group size, safety choices, description, and Publish Session.", caption: "Original review-before-publish interface. Verification choices are proposed controls, rather than an implemented identity check." },
     focus: { title: "Work alongside others", file: "focus.png", alt: "In-person coworking session with a focus timer, upcoming break information, and a personal goal list.", caption: "Original in-person session screen. The timer and task content are prototype states." },
     wireflow: { title: "The original session wireflow", file: "wireflow.png", alt: "Five original screens connected by red arrows: directions, arrival, focused work, break, and session completion.", caption: "Original Figma process artifact. On a small screen, scroll the enlarged image horizontally to inspect the flow." }
   };
   const steps = [
     { screen: "location", detail: "A selected pin and address field make the proposed meeting place explicit before moving on." },
-    { screen: "schedule", detail: "The schedule gives check-in, focus periods, breaks, and reflection their own time blocks across the day." },
+    { screen: "schedule", detail: "The check-in is defined first. The next time block keeps its title and description editable, with an add control for building the rest of the session." },
     { screen: "review", detail: "The summary gathers the session details in one place, with edit actions beside each section before publishing." },
     { screen: "focus", detail: "The in-person session pairs the current focus period with upcoming breaks and a personal goal list." }
   ];
@@ -31,8 +31,8 @@
     const screen = screens[step.screen];
     walkthroughImage.src = `assets/screens/${screen.file}`;
     walkthroughImage.alt = screen.alt;
-    // The long schedule remains complete within the same handset. No source pixels are cropped.
-    walkthroughImage.classList.toggle("cs-screen--long", step.screen === "schedule");
+    // Show the original Figma component states at their native positions on the 402 x 874 screen.
+    document.getElementById("walkthrough-schedule-layers").hidden = step.screen !== "schedule";
     walkthroughView.dataset.view = step.screen;
     document.getElementById("stage-label").textContent = screen.title;
     document.getElementById("step-detail").textContent = step.detail;
@@ -65,6 +65,7 @@
       document.getElementById("viewer-caption").textContent = screen.caption;
       viewerImage.src = `assets/screens/${screen.file}`;
       viewerImage.alt = screen.alt;
+      document.getElementById("viewer-schedule-layers").hidden = key !== "schedule";
       viewerImage.removeAttribute("width");
       viewerImage.removeAttribute("height");
       dialog.classList.toggle("is-wide", key === "wireflow");

@@ -39,9 +39,17 @@
     "sha256": "8fab513114d27a48f2cb7c2a65fe276471af81dd12ca290f4169379a13f30747",
     "bytes": 46204
   },
+  "assets/screens/schedule-check-in.png": {
+    "sha256": "2b8c4af26e2cb375f224f16a9891d782e6632a8d4cebb05e33df54efc33ea0f6",
+    "bytes": 6276
+  },
   "assets/screens/schedule-filled.png": {
     "sha256": "f6f80d253709d05b522a7ba0ec1fa64bec7e646c4ac11620e7253e729d2f1ce4",
     "bytes": 59052
+  },
+  "assets/screens/schedule-next-block.png": {
+    "sha256": "4daedc837ee492b6c75ce76d28a07c32beb88a3c3cc3835075701468b1b15bfe",
+    "bytes": 8365
   },
   "assets/screens/schedule.png": {
     "sha256": "725a1ad80246aecb55e85c1a326a809213c2ec0a5d4daec6b4dec906f8ac7d38",
