@@ -73,7 +73,7 @@ html:has(.cospace-page) { scroll-behavior:auto; }
 .cs-note { font-size:12px!important; line-height:1.6!important; color:var(--cs-muted); }
 .cs-principles+.cs-note { margin-top:32px; }
 .cs-duo { display:grid; grid-template-columns:1fr 1fr; gap:22px; padding:0 0 2px; }
-.cs-feature { padding:42px 40px 24px; border-radius:28px; text-align:center; background:#e9f2f7; min-width:0; }
+.cs-feature { display:grid; grid-template-rows:1fr auto auto; padding:42px 40px 24px; border-radius:28px; text-align:center; background:#e9f2f7; min-width:0; }
 .cs-feature--virtual { background:#fcf4d6; }
 .cs-feature .cs-eyebrow { display:block; margin-bottom:14px; font-size:10px; }
 .cs-feature h3 { font-size:32px; line-height:1.12; letter-spacing:-.035em; }

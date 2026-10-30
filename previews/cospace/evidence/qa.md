@@ -2,6 +2,8 @@
 
 Checked October 29, 2026.
 
+Discovery card alignment, October 30: the two feature cards use equal flexible caption rows, keeping the phone and enlargement caption rows aligned when descriptions wrap differently. Verified equal phone top/bottom coordinates and caption tops on desktop, equal phone positions at 900px, and normal stacking without horizontal overflow at 390px. Refreshed the discovery mockup export.
+
 ## October 30 spacing revision
 
 - Matched the visible right handset edge to the 48px left copy inset at desktop width. The right-hand positioning includes the extra width created by its rotation and the transparent margins of the generated hardware image.
