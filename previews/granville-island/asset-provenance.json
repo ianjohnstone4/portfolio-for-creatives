@@ -1,0 +1,114 @@
+[
+  {
+    "file": "homepage-opening.png",
+    "source": "assets/home.png",
+    "crop": [
+      0,
+      0,
+      1440,
+      744
+    ],
+    "dimensions": [
+      1440,
+      744
+    ],
+    "source_sha256": "296da5836d1ff40da2768524798cedc597cdedf2ede86e6a0cdf5ac753060340",
+    "sha256": "9868cb64ad64e7b0357b573e2b22cfa5480f71b06ae7b1a77bac01d1bad49351"
+  },
+  {
+    "file": "homepage-earlier.png",
+    "source": "assets/early-home.png",
+    "crop": [
+      0,
+      744,
+      1440,
+      1514
+    ],
+    "dimensions": [
+      1440,
+      770
+    ],
+    "source_sha256": "bdebc421a1f188c654d349d5c4398f5107f9b891b987d65e10daf2731153c0e9",
+    "sha256": "128c292a754a3be624fa635d1b57d009ea94db41e8b68947bce31aa4c303a96b"
+  },
+  {
+    "file": "homepage-final.png",
+    "source": "assets/home.png",
+    "crop": [
+      0,
+      744,
+      1440,
+      1514
+    ],
+    "dimensions": [
+      1440,
+      770
+    ],
+    "source_sha256": "296da5836d1ff40da2768524798cedc597cdedf2ede86e6a0cdf5ac753060340",
+    "sha256": "977c4c184f3b35d8660a91d570747f71f10e19bcbca1a988ca76b7bd6e8fc94c"
+  },
+  {
+    "file": "information-hierarchy.png",
+    "source": "assets/ia-highres.png",
+    "crop": [
+      112,
+      900,
+      1525,
+      2388
+    ],
+    "dimensions": [
+      1413,
+      1488
+    ],
+    "source_sha256": "28f5a119ba9659ca0171a4a415645bfc813ba9ebfda88d7432ceaf5cad5f7c02",
+    "sha256": "a49f4d004d9ac361f021221ef36bcfb103cadecd296213a71a69fce914479095"
+  },
+  {
+    "file": "vendor-profile.png",
+    "source": "assets/vendor.png",
+    "crop": [
+      40,
+      145,
+      1450,
+      1303
+    ],
+    "dimensions": [
+      1410,
+      1158
+    ],
+    "source_sha256": "6f01d9fa7c6930956505e8114d665bae1c800a2eb818f1c5fb00cc8fd1183777",
+    "sha256": "8825bf106a57ba89bd0e600ecde334937953683aa2c7e9b4e89b5c9f0fe8a584"
+  },
+  {
+    "file": "vendor-menu-detail.png",
+    "source": "assets/vendor.png",
+    "crop": [
+      40,
+      650,
+      760,
+      940
+    ],
+    "dimensions": [
+      720,
+      290
+    ],
+    "source_sha256": "6f01d9fa7c6930956505e8114d665bae1c800a2eb818f1c5fb00cc8fd1183777",
+    "sha256": "0c7977190c37dd1d1129832cbd2b0c9d0530d69551127fcde9f083db4b9422b2"
+  },
+  {
+    "file": "recommendation-details.png",
+    "source": "assets/quick-bites.png",
+    "crop": [
+      112,
+      810,
+      745,
+      950
+    ],
+    "dimensions": [
+      633,
+      140
+    ],
+    "source_sha256": "6a0ae1f22a959cdd4ea73c393cbd82dfd0b57270424222e180a95523b1043aef",
+    "sha256": "65e2c873057eb46354cc4dcfc568646ec757aa8f60cdfd9a0576f0b41ef64405"
+  }
+]

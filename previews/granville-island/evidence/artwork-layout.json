@@ -1,0 +1,64 @@
+{
+  "density": 1,
+  "rects": [
+    {
+      "height": 617.9296875,
+      "natural": [
+        1440,
+        744
+      ],
+      "src": "assets/homepage-opening.png",
+      "width": 1196,
+      "x": 114.5,
+      "y": 652.734375
+    },
+    {
+      "height": 661.984375,
+      "natural": [
+        1440,
+        770
+      ],
+      "src": "assets/homepage-earlier.png",
+      "width": 1238,
+      "x": 93.5,
+      "y": 1938.09375
+    },
+    {
+      "height": 661.984375,
+      "natural": [
+        1440,
+        770
+      ],
+      "src": "assets/homepage-final.png",
+      "width": 1238,
+      "x": 93.5,
+      "y": 1938.09375
+    },
+    {
+      "height": 574.1953125,
+      "natural": [
+        1413,
+        1488
+      ],
+      "src": "assets/information-hierarchy.png",
+      "width": 545.2578125,
+      "x": 122.5,
+      "y": 3303.453125
+    },
+    {
+      "height": 549.75,
+      "natural": [
+        1410,
+        1158
+      ],
+      "src": "assets/vendor-profile.png",
+      "width": 669.390625,
+      "x": 647.1015625,
+      "y": 4149.8359375
+    }
+  ],
+  "viewport": [
+    1440,
+    1000
+  ]
+}
