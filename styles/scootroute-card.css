@@ -1,0 +1,20 @@
+/* Match the existing homepage grid, image treatment, and hover overlay. */
+.scootroute-work-card { grid-column: auto; height: 22rem; min-height: 22rem; }
+.scootroute-project-card { position: relative; display: block; width: 100%; height: 100%; overflow: hidden; background: #edf1e8; }
+.scootroute-work-card figure { height: 100%; }
+.scootroute-work-card img { width: 100%; height: 100%; object-fit: cover; }
+.scootroute-card-caption h2 { margin: 0; color: var(--color-text-work-grid-title, #fff); line-height: 1.15; }
+.scootroute-card-caption p { margin: 12px 0 0; color: var(--color-text-project-category, #fff); line-height: 1.4; }
+.scootroute-project-card:focus-visible { outline: 3px solid #fff; outline-offset: -6px; }
+.scootroute-project-card:focus-visible .overlay { opacity: 1; visibility: visible; }
+@media (max-width: 900px) {
+  .scootroute-work-card { height: 20rem; min-height: 20rem; }
+}
+@media (hover: none) {
+  .scootroute-card-caption { opacity: 1; visibility: visible; justify-content: flex-end; align-items: flex-start; text-align: left; padding: 24px; background: linear-gradient(0deg, rgba(15, 24, 36, .86), transparent 72%); }
+  .scootroute-card-caption h2 { font-size: 30px; }
+  .scootroute-card-caption p { font-size: 14px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .scootroute-project-card, .scootroute-project-card * { animation: none !important; transition: none !important; }
+}
