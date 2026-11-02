@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Crave: Research to Design | Ian Johnstone</title>
+    <meta name="description" content="How three interviews informed my Crave UX recommendations for Home, browsing, profiles and playback, with original wireframes and a later prototype refinement." />
+    <link rel="canonical" href="https://ianjohnstone.ca/crave.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Crave: Research to Design | Ian Johnstone" />
+    <meta property="og:description" content="Three interviews, six recommendation areas and the design decisions behind my Crave UX study." />
+    <meta property="og:url" content="https://ianjohnstone.ca/crave.html" />
+    <meta property="og:image" content="https://ianjohnstone.ca/assets/crave/project-card-1280.webp" />
+    <meta name="theme-color" content="#fdfdfd" />
+    <link rel="icon" type="image/svg+xml" href="assets/branding-images/ijblackfill.svg" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/crave.css?v=a3ff38bc81" />
+    <script src="js/crave.js?v=27cdb96f87" defer></script>
+  </head>
+  <body class="crave-page" id="top">
+    <a class="cr-skip" href="#main">Skip to content</a>
+    <header class="cr-header">
+      <a class="cr-brand" href="index.html" aria-label="Ian Johnstone, home"><img src="assets/branding-images/ijblackfill.svg" width="52" height="52" alt="" /></a>
+      <nav aria-label="Main navigation"><a href="index.html">Work</a><a href="about.html">About</a></nav>
+    </header>
+
+    <main id="main" tabindex="-1">
+      <div class="cr-shell">
+        <section class="cr-opening" aria-labelledby="project-title">
+          <div class="cr-opening-copy">
+            <p class="cr-project-context">IXD 102 / Individual UX project</p>
+            <h1 id="project-title">Crave</h1>
+            <p class="cr-lede">I interviewed three Crave viewers about finding content, recommendations and playback issues.</p>
+            <p>I developed six design principles covering Home, content discovery, profiles, recommendation controls and playback reliability. Two desktop wireframes explored Home and documentary browsing.</p>
+            <dl class="cr-opening-facts">
+              <div><dt>My role</dt><dd>Research, synthesis, strategy and interaction design. Individual coursework.</dd></div>
+              <div><dt>Timeline</dt><dd>2025 study · October 2026 prototype refinement</dd></div>
+            </dl>
+            <a class="cr-text-link" href="#research">Read the case study <span aria-hidden="true">↓</span></a>
+          </div>
+          <figure class="cr-opening-art">
+            <div class="cr-art-label"><span>Desktop concept</span><span>2026 refinement</span></div>
+            <a class="cr-artwork cr-opening-screen" href="assets/crave/screens/home-refinement.png" data-view="home-refinement" aria-label="Enlarge the later Crave Home concept"><img src="assets/crave/screens/home-refinement.png" width="1440" height="1024" fetchpriority="high" alt="Later Crave Home concept with a featured documentary, Continue Watching and a By Genre row" /></a>
+            <figcaption><span>Home screen from the October 2026 refinement.</span><a href="assets/crave/screens/home-refinement.png" data-view="home-refinement">Enlarge <span aria-hidden="true">↗</span></a></figcaption>
+          </figure>
+        </section>
+
+        <nav class="cr-chapters" aria-label="On this page"><a href="#research">Interviews</a><a href="#insights">Recommendations</a><a href="#wireframe">Wireframes</a><a href="#refinement">Prototype</a><a href="#outcome">Outcome</a></nav>
+
+        <section class="cr-research cr-section" id="research" aria-labelledby="research-title">
+          <div class="cr-section-heading">
+            <div><p class="cr-eyebrow">2025 study</p><h2 id="research-title">User interviews</h2></div>
+            <div class="cr-section-intro"><p>I began with ten assumptions and focused the interviews on discovery, personalization and technical friction. I used a 15-question guide, transcribed three interviews and grouped the accounts into needs, comments, suggestions and emotions.</p><p>The content itself still mattered: all three described their usage changing with the shows or series they were watching.</p></div>
+          </div>
+          <div class="cr-assumption"><span class="cr-eyebrow">An assumption I reconsidered</span><p>I expected people to arrive with a title in mind. One interviewee usually did. The other two usually browsed without one.</p></div>
+          <p class="cr-table-hint" id="table-hint">Scroll across to compare all three topics <span aria-hidden="true">↔</span></p>
+          <div class="cr-table-scroll" tabindex="0" role="region" aria-label="Interview comparison, scroll horizontally if needed" aria-describedby="table-hint">
+            <table class="cr-interview-table">
+              <caption>Three individual accounts, summarized from the transcripts.</caption>
+              <thead><tr><th scope="col">Participant</th><th scope="col">Choosing something</th><th scope="col">Recommendation context</th><th scope="col">Returning to watch</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Interview 1</th><td>Usually a specific title. Categories could feel repetitive or confusing.</td><td>Some recommendations fit. Shared-account use and profile uncertainty.</td><td>Reported losing the viewing position after pausing and returning.</td></tr>
+                <tr><th scope="row">Interview 2</th><td>Usually browsing. Wanted more genre choices, while finding the layout generally okay.</td><td>Less relevant recommendations. Believed the family used one profile.</td><td>Reported needing to refresh after time away.</td></tr>
+                <tr><th scope="row">Interview 3</th><td>Usually browsing. Requested Historical, Current Events and True Crime documentaries.</td><td>Some interest fit, but no clear explanation of the recommendation basis.</td><td>Occasional TV friction. No reported phone issues.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="cr-source-note">Anonymized paraphrases from Phase 1, pp. 14–19. These three accounts informed the concept; they do not establish how common each issue is among Crave viewers.</p>
+        </section>
+
+        <section class="cr-insights cr-section" id="insights" aria-labelledby="insights-title">
+          <div class="cr-section-heading cr-heading-compact"><div><p class="cr-eyebrow">Phase 2 strategy</p><h2 id="insights-title">Design recommendations</h2></div><p class="cr-section-intro">I developed six design principles from the study. Some became features in the wireframes, while others remained proposals for further design or technical investigation.</p></div>
+          <div class="cr-recommendation-list" aria-label="Six recommendation areas from Phase 2">
+            <article class="cr-recommendation">
+              <div class="cr-recommendation-heading"><h3>Simplify Home</h3><p>Phase 2 / p. 9</p></div>
+              <div class="cr-recommendation-copy"><p><strong>Research basis:</strong> Participants described different starting intentions and problems with repetitive or confusing categories.</p><p><strong>Recommendation:</strong> Use fewer, clearer sections, remove repeated content placements, improve the hierarchy and keep Continue Watching prominent.</p></div>
+              <div class="cr-recommendation-status"><p class="cr-status-label">Home wireframe</p><p>Continue Watching and By Genre are visible in the original Home layout. A reduction in overload was not measured.</p></div>
+            </article>
+            <article class="cr-recommendation">
+              <div class="cr-recommendation-heading"><h3>Use more specific categories</h3><p>Phase 2 / p. 10</p></div>
+              <div class="cr-recommendation-copy"><p><strong>Research basis:</strong> Participants wanted clearer genre choices; one requested specific documentary subjects.</p><p><strong>Recommendation:</strong> Add subgenres and useful filters, avoid duplicate listings, offer an editorial “Hot this month” category and let viewers pin preferred categories.</p></div>
+              <div class="cr-recommendation-status"><p class="cr-status-label">Wireframe and selected prototype states</p><p>Documentary subjects appear in the wireframe. The later prototype develops subject and length selection. Editorial and pinning features remain proposals.</p></div>
+            </article>
+            <article class="cr-recommendation">
+              <div class="cr-recommendation-heading"><h3>Make profile setup more visible</h3><p>Phase 2 / p. 11</p></div>
+              <div class="cr-recommendation-copy"><p><strong>Research basis:</strong> Two interviewees were unsure about, or did not recognize, individual profile options.</p><p><strong>Recommendation:</strong> Prompt profile creation during onboarding, make Add Profile easier to find, collect favourite genres or shows, and keep viewing histories separate.</p></div>
+              <div class="cr-recommendation-status"><p class="cr-status-label">Home wireframe cues</p><p>The layout includes a profile control, signed-in context and a setup reminder. Guided setup and preference checks were not developed into complete flows.</p></div>
+            </article>
+            <article class="cr-recommendation">
+              <div class="cr-recommendation-heading"><h3>Offer more ways to browse</h3><p>Phase 2 / p. 12</p></div>
+              <div class="cr-recommendation-copy"><p><strong>Research basis:</strong> Two interviewees usually browsed without a particular title in mind.</p><p><strong>Recommendation:</strong> Explore curated collections, editorial playlists, a shuffle or “Surprise Me” option, mood filters and custom saved lists.</p></div>
+              <div class="cr-recommendation-status"><p class="cr-status-label">Genre route shown; other ideas proposed</p><p>The Home wireframe provides a By Genre route. Collections, shuffle, mood filters and custom lists remained strategy proposals, not tested features.</p></div>
+            </article>
+            <article class="cr-recommendation">
+              <div class="cr-recommendation-heading"><h3>Improve playback reliability</h3><p>Phase 2 / p. 13</p></div>
+              <div class="cr-recommendation-copy"><p><strong>Research basis:</strong> Accounts included lost viewing positions, refreshing after time away and occasional TV friction.</p><p><strong>Recommendation:</strong> Preserve playback position, improve resuming after inactivity, review buffering and device consistency, and add a Still Watching check.</p></div>
+              <div class="cr-recommendation-status"><p class="cr-status-label">Technical investigation proposed</p><p>Playback was outside the wireframes and browsing prototype. The interviews did not establish device benchmarks or comparative performance.</p></div>
+            </article>
+            <article class="cr-recommendation">
+              <div class="cr-recommendation-heading"><h3>Explain recommendations and add controls</h3><p>Phase 2 / p. 14</p></div>
+              <div class="cr-recommendation-copy"><p><strong>Research basis:</strong> Recommendation relevance was mixed, and the viewing context or recommendation basis was not always clear.</p><p><strong>Recommendation:</strong> Explain why content is suggested, allow preference overrides or resets, offer Don’t Recommend This, adjust category visibility and clarify streaming-quality information.</p></div>
+              <div class="cr-recommendation-status"><p class="cr-status-label">Feedback cue shown; settings proposed</p><p>The Home wireframe includes Not For Me. Recommendation explanations, reset settings and quality indicators remained proposals.</p></div>
+            </article>
+          </div>
+          <p class="cr-source-note">Source: Phase 2, “Design Principles and Recommendations,” pp. 9–14. The recommendations include design proposals as well as responses directly supported by interview accounts. Their effectiveness was not tested.</p>
+          <div class="cr-evidence-intro"><h3>Interview evidence</h3><p>Select an area to see the accounts, interpretation and design response behind these recommendations.</p></div>
+          <div class="cr-insight-tabs" role="tablist" aria-label="Research insight areas" hidden>
+            <button type="button" id="tab-intent" role="tab" aria-controls="panel-intent" aria-selected="true" tabindex="0" data-insight="intent">Browsing intent</button>
+            <button type="button" id="tab-subjects" role="tab" aria-controls="panel-subjects" aria-selected="false" tabindex="-1" data-insight="subjects">Documentary subjects</button>
+            <button type="button" id="tab-profiles" role="tab" aria-controls="panel-profiles" aria-selected="false" tabindex="-1" data-insight="profiles">Profile awareness</button>
+            <button type="button" id="tab-continuity" role="tab" aria-controls="panel-continuity" aria-selected="false" tabindex="-1" data-insight="continuity">Viewing continuity</button>
+          </div>
+          <div class="cr-insight-panel" id="panel-intent" role="tabpanel" aria-labelledby="tab-intent" tabindex="0">
+            <div class="cr-evidence-column"><p class="cr-eyebrow">Interview evidence / Paraphrased</p><dl class="cr-evidence-list"><div><dt>Interview 1</dt><dd>Usually arrives for a specific show.</dd><dd class="cr-reference">Phase 1 p. 14 · 01:15</dd></div><div><dt>Interviews 2 and 3</dt><dd>Usually browse without a particular title in mind.</dd><dd class="cr-reference">Phase 1 p. 16 · 00:44; p. 18 · 01:37</dd></div></dl><p class="cr-retained">Knowing a title does not necessarily mean resuming something already watched.</p></div>
+            <div class="cr-reasoning-column"><p class="cr-eyebrow">Insight</p><h3>Different browsing intentions</h3><p>The Home concept needed to support both patterns described in the interviews: finding a specific title and browsing for something to watch.</p><dl class="cr-decision-list"><div><dt>Recommendation</dt><dd>Retain Search and Continue Watching, while making genre browsing visible.</dd></div><div><dt>Design response</dt><dd>The original Home wireframe includes direct access, a Continue Watching row and a By Genre entry.</dd></div></dl><a class="cr-text-link" href="assets/crave/screens/home-wireframe.png" data-view="home-wireframe">Inspect the original Home wireframe <span aria-hidden="true">↗</span></a></div>
+          </div>
+          <div class="cr-insight-panel" id="panel-subjects" role="tabpanel" aria-labelledby="tab-subjects" tabindex="0">
+            <div class="cr-evidence-column"><p class="cr-eyebrow">Interview evidence / Paraphrased</p><dl class="cr-evidence-list"><div><dt>Interview 1</dt><dd>Some categories feel confusing or repetitive.</dd><dd class="cr-reference">Phase 1 p. 14 · 03:06</dd></div><div><dt>Interview 2</dt><dd>Wants more comprehensive genre choices.</dd><dd class="cr-reference">Phase 1 p. 18 · 11:24</dd></div><div><dt>Interview 3</dt><dd>Names Historical, Current Events and True Crime as useful documentary subjects.</dd><dd class="cr-reference">Phase 1 p. 19 · 07:22</dd></div></dl><p class="cr-retained">A difference worth retaining: Interview 2 also described the overall layout as generally okay (p. 17, 02:38).</p></div>
+            <div class="cr-reasoning-column"><p class="cr-eyebrow">Theme / Category choices</p><h3>More specific documentary categories</h3><p>The requested subjects gave me a concrete way to organize documentaries for people browsing without a title in mind.</p><dl class="cr-decision-list"><div><dt>Recommendation</dt><dd>Add subject-level choices within Documentaries.</dd></div><div><dt>Design response</dt><dd>Historical, Current Events and True Crime appear in the original documentary wireframe. The later prototype includes selected subjects, length filtering and a clear action.</dd></div><div><dt>Boundary</dt><dd>Nature, Biographical and length are design proposals. Their usefulness has not been tested.</dd></div></dl></div>
+          </div>
+          <div class="cr-insight-panel" id="panel-profiles" role="tabpanel" aria-labelledby="tab-profiles" tabindex="0">
+            <div class="cr-evidence-column"><p class="cr-eyebrow">Interview evidence / Paraphrased</p><dl class="cr-evidence-list"><div><dt>Interviews 1 and 2</dt><dd>Are unsure about, or do not recognize, individual profile options.</dd><dd class="cr-reference">Phase 1 p. 16 · 08:40 and 01:59</dd></div><div><dt>Interview 3</dt><dd>Cannot see an explicit basis for recommendations.</dd><dd class="cr-reference">Phase 1 p. 18 · 03:22</dd></div></dl><p class="cr-retained">Recommendation relevance was mixed. These accounts do not establish that the recommendation algorithm was inaccurate.</p></div>
+            <div class="cr-reasoning-column"><p class="cr-eyebrow">Insight</p><h3>Profile awareness and recommendation context</h3><p>The interviews supported making profiles and recommendation explanations clearer. They did not establish a problem with the algorithm itself.</p><dl class="cr-decision-list"><div><dt>Recommendation</dt><dd>Surface profile choice and setup, explain recommendation context, and offer feedback controls.</dd></div><div><dt>Design response</dt><dd>The Home wireframe contains a profile control, setup reminder and Not For Me cue.</dd></div><div><dt>Boundary</dt><dd>These are wireframe cues. A complete profile or feedback flow, and any effect on recommendation quality, remain unverified.</dd></div></dl><a class="cr-text-link" href="assets/crave/screens/home-wireframe.png" data-view="home-wireframe">Inspect the profile cues <span aria-hidden="true">↗</span></a></div>
+          </div>
+          <div class="cr-insight-panel" id="panel-continuity" role="tabpanel" aria-labelledby="tab-continuity" tabindex="0">
+            <div class="cr-evidence-column"><p class="cr-eyebrow">Interview evidence / Paraphrased</p><dl class="cr-evidence-list"><div><dt>Interview 1</dt><dd>Loses the viewing position after pausing and returning.</dd><dd class="cr-reference">Phase 1 p. 14 · 03:56</dd></div><div><dt>Interview 2</dt><dd>Needs a refresh after being away.</dd><dd class="cr-reference">Phase 1 p. 17 · 03:44</dd></div><div><dt>Interview 3</dt><dd>Reports occasional TV problems, with no phone issues.</dd><dd class="cr-reference">Phase 1 p. 19 · 06:21–06:32</dd></div></dl><p class="cr-retained">Losing a position and refreshing a stream are different failure modes. The interviews were not controlled device tests.</p></div>
+            <div class="cr-reasoning-column"><p class="cr-eyebrow">Insight</p><h3>Playback recovery after interruptions</h3><p>The reported problems included lost viewing positions and refreshing after inactivity, as well as occasional TV issues.</p><dl class="cr-decision-list"><div><dt>Recommendation</dt><dd>Preserve viewing position, investigate resume behaviour and review autoplay checks.</dd></div><div><dt>Design response</dt><dd>This remained a strategy and engineering recommendation. Playback was outside the browsing prototype’s scope.</dd></div><div><dt>Next inquiry</dt><dd>Reproduce the reported pause, refresh and TV issues with engineering, then evaluate recovery by device and context.</dd></div></dl></div>
+          </div>
+          <p class="cr-source-note">This evidence reader reconstructs the research-to-decision links from the existing notes and transcripts. It does not represent an additional interview or synthesis session.</p>
+        </section>
+
+        <section class="cr-wireframe cr-section" id="wireframe" aria-labelledby="wireframe-title">
+          <div class="cr-section-heading"><div><p class="cr-eyebrow">2025 coursework</p><h2 id="wireframe-title">Home and documentary wireframes</h2></div><p class="cr-section-intro">The Home wireframe brings together the layout, profile-awareness and feedback recommendations. The documentary wireframe explores more specific categories and proposed filters.</p></div>
+          <div class="cr-wireframe-layout">
+            <figure class="cr-original-art"><div class="cr-art-label"><span>Home wireframe / 2025</span><span>Phase 3 / p. 26</span></div><a class="cr-artwork" href="assets/crave/screens/home-wireframe.png" data-view="home-wireframe" aria-label="Enlarge the original Home wireframe"><img src="assets/crave/screens/home-wireframe.png" width="1170" height="832" loading="lazy" alt="Original Home wireframe with Continue Watching, By Genre, a Profile control, signed-in context, a personal-profile reminder and a Not For Me action" /></a><figcaption><span>Original Home concept, including profile and feedback cues.</span><a href="assets/crave/screens/home-wireframe.png" data-view="home-wireframe">Enlarge <span aria-hidden="true">↗</span></a></figcaption></figure>
+            <div class="cr-wireframe-notes"><h3>Home</h3><dl class="cr-decision-list"><div><dt>Content hierarchy</dt><dd>Search, Continue Watching and By Genre support different starting intentions.</dd></div><div><dt>Profile awareness</dt><dd>The Profile control, signed-in context and personal-profile reminder make the account context more visible.</dd></div><div><dt>Feedback</dt><dd>Not For Me gives the recommendation-control proposal a visible place in the layout.</dd></div></dl><p class="cr-source-note">These are wireframe cues. The full profile setup, feedback and recommendation-reset flows were not developed or tested.</p></div>
+          </div>
+          <div class="cr-wireframe-layout">
+            <figure class="cr-original-art"><div class="cr-art-label"><span>Documentary wireframe / 2025</span><span>Phase 3 / p. 27</span></div><a class="cr-artwork" href="assets/crave/screens/documentaries-wireframe.png" data-view="documentaries-wireframe" aria-label="Enlarge the original documentary wireframe"><img src="assets/crave/screens/documentaries-wireframe.png" width="1170" height="832" loading="lazy" alt="Original documentary wireframe with All, True Crime, Historical, Current Events, Nature and Biographical, followed by proposed sort and filter controls" /></a><figcaption><span>Original artwork and typography, unchanged.</span><a href="assets/crave/screens/documentaries-wireframe.png" data-view="documentaries-wireframe">Enlarge <span aria-hidden="true">↗</span></a></figcaption></figure>
+            <div class="cr-wireframe-notes"><h3>Documentaries</h3><dl class="cr-decision-list"><div><dt>Subject categories</dt><dd>Historical, Current Events and True Crime connect directly to a participant’s requested subjects.</dd></div><div><dt>Unfiltered browsing</dt><dd>All preserves a way to browse across the whole documentary list.</dd></div><div><dt>Proposed filters</dt><dd>Length, year and language are proposed refinements. Interview 2’s concern about language availability is not resolved by adding a Language control.</dd></div></dl><p class="cr-source-note">The journey and task flow were synthesized models. No original usability study of these wireframes was supplied.</p></div>
+          </div>
+        </section>
+      </div>
+
+      <section class="cr-refinement" id="refinement" aria-labelledby="refinement-title">
+        <div class="cr-shell">
+          <div class="cr-section-heading"><div><p class="cr-eyebrow">October 2026</p><h2 id="refinement-title">Prototype refinement</h2></div><div class="cr-section-intro"><p>I developed the documentary wireframe into a separate desktop Figma prototype. It includes subject selection, length filtering and a clear action.</p><p>This develops one part of the original strategy. Profile setup, recommendation explanations, preference-reset controls and playback improvements remain proposals. Length remains a design hypothesis.</p></div></div>
+          <div class="cr-state-controls" hidden><div class="cr-length-options" role="group" aria-label="Compare the documented Historical documentary states"><button type="button" data-length="any" aria-pressed="true">Any length</button><button type="button" data-length="short" aria-pressed="false">Under 60 min</button></div><button class="cr-clear" type="button" id="clear-length" hidden>Clear length filter <span aria-hidden="true">×</span></button></div>
+          <figure class="cr-state-figure"><a class="cr-artwork cr-state-art" id="state-art" href="assets/crave/screens/historical.png" data-view="historical" aria-label="Enlarge the Historical documentary state"><img id="state-image" src="assets/crave/screens/historical.png" width="1440" height="1024" loading="lazy" alt="Historical selected in the later prototype, with any length and six illustrative documentary titles" /></a><figcaption><span id="state-description" aria-live="polite" aria-atomic="true">Historical selected · Any length · 6 illustrative titles</span><a id="state-enlarge" href="assets/crave/screens/historical.png" data-view="historical">Enlarge this state <span aria-hidden="true">↗</span></a></figcaption></figure>
+          <div class="cr-refinement-bottom"><p>Programme titles, runtimes and viewing progress are illustrative. The change from six titles to three demonstrates a filter state; it is not a measured discovery improvement or a current Crave catalogue.</p><a class="cr-text-link" href="https://www.figma.com/proto/DDUnU6ZA3UR2FciaBqPHnB/Crave-UX---Essential-Fixes---Working-Copy?node-id=4039-1006&amp;starting-point-node-id=4039%3A1006&amp;scaling=scale-down" target="_blank" rel="noopener noreferrer">Try the connected Figma prototype <span aria-hidden="true">↗</span></a></div>
+        </div>
+      </section>
+
+      <div class="cr-shell">
+        <section class="cr-outcome cr-section" id="outcome" aria-labelledby="outcome-title"><div class="cr-section-heading"><div><p class="cr-eyebrow">Project status</p><h2 id="outcome-title">Outcome and next steps</h2></div><p class="cr-section-intro">The coursework produced a research-based strategy and two wireframes. The later prototype develops documentary browsing further. Profile setup and playback recovery remain recommendations that need separate work.</p></div><dl class="cr-outcome-register"><div><dt>2025 coursework</dt><dd>I completed the three interviews, synthesis, strategy, six design principles, journey and task models, and two desktop wireframes independently.</dd></div><div><dt>2026 refinement</dt><dd>A separate Figma browsing prototype. Functional checks covered its links, subject and length persistence, clearing, menu dismissal and scrolling.</dd></div><div><dt>What I would test next</dt><dd>Give viewers a documentary subject, then check whether they can interpret the labels, find a relevant option and understand the active refinement. Profile awareness and playback recovery need separate evaluation.</dd></div></dl><p class="cr-limit">No post-design usability study, recommendation-system test or measured retention outcome is available. The prototype covers desktop browsing; playback, title details, complete search/profile flows and mobile behaviour remain outside its scope.</p></section>
+
+        <details class="cr-sources"><summary>Sources, dates and assistance</summary><div><p>The original work is an individual IXD 102 course study. Phase 3 is the final submission. Phase 1 was exported on 11 November 2025 and Phase 3 on 10 December 2025; these establish the submission period, not exact interview dates.</p><ul><li><a href="https://www.figma.com/design/dGiaCBVAlSLKhQsNlluYgh/IXD-102-UX-Assignment?node-id=0-1" target="_blank" rel="noopener noreferrer">Original research, strategy and wireframes in Figma</a></li><li><a href="https://www.figma.com/design/DDUnU6ZA3UR2FciaBqPHnB/Crave-UX---Essential-Fixes---Working-Copy?node-id=4039-1006" target="_blank" rel="noopener noreferrer">Separate 2026 refinement file</a></li></ul><p>Source documents: “Ian Johnstone - IXD 102 Crave phase 1(1).pdf,” “Ian Johnstone-Crave phase 2pdf.pdf” and “Ian Johnstone-IXD 102 Phase 3.pdf.” The complete review covered their 65 pages and all four original Figma pages. Public findings use anonymized paraphrases; raw transcripts remain private.</p><p>The high-fidelity refinement (30 October 2026), research-led deck (31 October 2026) and this portfolio page were developed with Codex assistance. The original submission remains unchanged. This is an independent course concept, with no claim of commission, approval or implementation by Crave.</p><p>Archival images in the illustrative programme artwork come from the <a href="https://www.loc.gov/resource/det.4a31822/" target="_blank" rel="noopener noreferrer">Library of Congress</a> and <a href="https://science.nasa.gov/image-detail/earth-apollo-11-as11-36-5355-16x9/" target="_blank" rel="noopener noreferrer">NASA</a>. Full image credits are on the deck’s final slide. Linked Figma files may require access.</p></div></details>
+        <nav class="cr-project-nav" aria-label="More projects"><a href="cospace.html"><span class="cr-eyebrow">A different design challenge</span><strong>CoSpace <span aria-hidden="true">↗</span></strong></a><a href="index.html"><span class="cr-eyebrow">Keep exploring</span><strong>All work <span aria-hidden="true">↗</span></strong></a></nav>
+      </div>
+    </main>
+
+    <footer class="cr-footer"><div class="cr-shell"><p class="cr-eyebrow">Get in touch</p><h2>Interested in working together?</h2><p>I’m a UI/UX designer focused on calm, clear digital experiences. Currently open to internships, freelance opportunities, and creative collaborations.</p><a class="cr-contact" href="mailto:ian.johnstone1998@gmail.com">Email me <span aria-hidden="true">↗</span></a><div class="cr-footer-bottom"><span>© 2026 Ian Johnstone</span><a href="#top">Back to top <span aria-hidden="true">↑</span></a></div></div></footer>
+
+    <dialog class="cr-viewer" aria-labelledby="viewer-title" aria-describedby="viewer-caption"><div class="cr-viewer-header"><h2 id="viewer-title">Original artwork</h2><div><button id="viewer-zoom" type="button" aria-pressed="false">Actual size</button><button id="viewer-close" type="button">Close <span aria-hidden="true">×</span></button></div></div><div class="cr-viewer-body" tabindex="0" role="region" aria-label="Enlarged artwork, scroll to inspect"><img id="viewer-image" src="assets/crave/screens/home-refinement.png" width="1440" height="1024" alt="Crave Home concept" /></div><p id="viewer-caption"></p></dialog>
+  </body>
+</html>
