@@ -228,10 +228,22 @@
 
 /* ScootRoute: two complete trip views against a single drawn route. */
 .card-scootroute { --paper: #e4e9db; --ink: #304b35; }
-.art-route { width: 85%; height: 67%; left: 8%; top: 14%; overflow: visible; color: #8aa77b; }
-.card-scootroute .phone-one { width: min(27%, 34cqh); left: 35%; top: 46%; --angle: -9deg; --hover-angle: 3deg; --lift: -10px; }
-.card-scootroute .phone-two { width: min(27%, 34cqh); left: 67%; top: 51%; --angle: 9deg; --hover-angle: -3deg; --lift: -16px; }
-.project-card:is(:hover, :focus-visible) .art-route { transform: scale(1.05) rotate(-3deg); }
+.scootroute-composition {
+  position: absolute;
+  left: 50%;
+  top: 48%;
+  width: min(100cqw, 126cqh);
+  aspect-ratio: 1000 / 680;
+  container-type: size;
+  transform: translate(-50%, -50%);
+  transition: transform 850ms cubic-bezier(.2,.75,.2,1);
+}
+.card-scootroute .art-route { inset: 0; width: 100%; height: 100%; overflow: visible; color: #8aa77b; transform: none; }
+.card-scootroute .phone-one { width: 27%; left: 30%; top: 46%; --angle: -9deg; }
+.card-scootroute .phone-two { width: 27%; left: 70%; top: 51%; --angle: 9deg; }
+.card-scootroute:is(:hover, :focus-visible) .scootroute-composition { transform: translate(-50%, calc(-50% - 8px)); }
+.card-scootroute:is(:hover, :focus-visible) .mockup-item { transform: translate(-50%, -50%) rotate(var(--angle)); }
+.card-scootroute:is(:hover, :focus-visible) .art-route { transform: none; }
 
 @media (min-width: 1800px) {
   .work-page .project-grid { grid-auto-rows: 25vw; }
@@ -270,4 +282,5 @@
   .project-card:is(:hover, :focus-visible) .art-orbit,
   .project-card:is(:hover, :focus-visible) .art-route { transform: none; }
   .card-velvet:is(:hover, :focus-visible) .art-orbit { transform: rotate(24deg); }
+  .card-scootroute:is(:hover, :focus-visible) .scootroute-composition { transform: translate(-50%, -50%); }
 }
