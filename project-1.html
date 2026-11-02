@@ -26,9 +26,9 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./styles/style.css?v=dbb266ed79" />
-    <link rel="stylesheet" href="./styles/sharedstandard-motion.css" />
+    <link rel="stylesheet" href="./styles/sharedstandard-motion.css?v=loops-20261102" />
     <link rel="stylesheet" href="./styles/sharedstandard-page.css?v=role-20261102" />
-    <script src="./scripts/sharedstandard-motion.js" defer></script>
+    <script src="./scripts/sharedstandard-motion.js?v=loops-20261102" defer></script>
     <script src="./scripts/sharedstandard-page.js" defer></script>
   </head>
 
@@ -702,16 +702,25 @@ z"
                 target="_blank"
                 rel="noopener noreferrer"
               >View the motion study in Figma <span aria-hidden="true">↗</span></a>
-              <p>Silent clips. Select play to watch.</p>
+              <div class="ss-playback-controls">
+                <p class="ss-playback-status" aria-live="polite">Silent previews</p>
+                <button class="ss-playback-button" type="button" aria-controls="motion-clips" hidden>
+                  <svg class="ss-pause-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M7 5v10M13 5v10" /></svg>
+                  <svg class="ss-play-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m7 4 9 6-9 6Z" /></svg>
+                  <span>Pause animations</span>
+                </button>
+              </div>
             </div>
 
-            <div class="ss-motion-grid">
+            <div class="ss-motion-grid" id="motion-clips">
               <figure class="ss-motion-card">
                 <div class="ss-motion-media">
                   <video
                     controls
+                    loop
                     playsinline
                     muted
+                    disablepictureinpicture
                     preload="none"
                     width="786"
                     height="1854"
@@ -723,6 +732,7 @@ z"
                     <a href="assets/project-1/motion/open-dishes.mp4">Watch the dishes animation</a>.
                   </video>
                 </div>
+                <p class="ss-motion-fallback" hidden>Preview unavailable. <a href="assets/project-1/motion/open-dishes.mp4">Open the dishes animation</a>.</p>
                 <figcaption id="motion-chore-caption">
                   <p class="ss-motion-number">01 / Keep the context</p>
                   <h3>Connect the choice to its details</h3>
@@ -738,8 +748,10 @@ z"
                 <div class="ss-motion-media">
                   <video
                     controls
+                    loop
                     playsinline
                     muted
+                    disablepictureinpicture
                     preload="none"
                     width="786"
                     height="1854"
@@ -751,6 +763,7 @@ z"
                     <a href="assets/project-1/motion/custom-timing.mp4">Watch the custom timing animation</a>.
                   </video>
                 </div>
+                <p class="ss-motion-fallback" hidden>Preview unavailable. <a href="assets/project-1/motion/custom-timing.mp4">Open the timing animation</a>.</p>
                 <figcaption id="motion-timing-caption">
                   <p class="ss-motion-number">02 / Reveal what is needed</p>
                   <h3>Make room for a custom deadline</h3>
@@ -766,8 +779,10 @@ z"
                 <div class="ss-motion-media">
                   <video
                     controls
+                    loop
                     playsinline
                     muted
+                    disablepictureinpicture
                     preload="none"
                     width="786"
                     height="1854"
@@ -779,6 +794,7 @@ z"
                     <a href="assets/project-1/motion/send-for-review.mp4">Watch the review animation</a>.
                   </video>
                 </div>
+                <p class="ss-motion-fallback" hidden>Preview unavailable. <a href="assets/project-1/motion/send-for-review.mp4">Open the review animation</a>.</p>
                 <figcaption id="motion-review-caption">
                   <p class="ss-motion-number">03 / Show the handoff</p>
                   <h3>Show who needs to respond</h3>

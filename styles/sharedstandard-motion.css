@@ -25,7 +25,8 @@
 .ss-motion-links {
   display: flex;
   flex-wrap: wrap;
-  align-items: baseline;
+  align-items: center;
+  justify-content: space-between;
   gap: 0.65rem 1.5rem;
   margin-top: 1.4rem;
 }
@@ -43,6 +44,7 @@
 }
 
 .ss-motion a:focus-visible,
+.ss-playback-button:focus-visible,
 .ss-motion video:focus-visible {
   outline: 3px solid var(--color-accent-primary);
   outline-offset: 5px;
@@ -54,6 +56,43 @@
   gap: 1.25rem;
   margin-top: 2rem;
 }
+
+.ss-playback-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem 1rem;
+}
+
+.ss-motion .ss-playback-status { color: var(--color-text-secondary); font-size: 0.8rem; }
+
+.ss-playback-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  padding: 0.6rem 0.9rem;
+  border: 1px solid #cbded1;
+  border-radius: 999px;
+  background: #edf6f0;
+  color: #16733e;
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+.ss-playback-button:hover { background: #dfeee4; border-color: #16733e; }
+.ss-playback-button svg { width: 16px; height: 16px; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.ss-playback-button .ss-play-icon,
+.ss-playback-button[data-paused="true"] .ss-pause-icon { display: none; }
+.ss-playback-button[data-paused="true"] .ss-play-icon { display: block; }
+.ss-playback-button[hidden],
+.ss-motion-fallback[hidden] { display: none; }
+.ss-motion-fallback { margin-top: 0.75rem; font-size: 0.85rem; }
+.ss-motion-fallback a { color: #16733e; text-decoration: underline; text-underline-offset: 0.2em; }
 
 .ss-motion-card {
   min-width: 0;

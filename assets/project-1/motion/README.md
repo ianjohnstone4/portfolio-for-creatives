@@ -24,5 +24,11 @@ were cropped. All clips are silent H.264 MP4, 786 × 1854 pixels. WebP posters
 come from each clip's initial frame. No generated research or measured
 usability outcome is implied by the accompanying purpose descriptions.
 
-Playback is visitor initiated, has native controls, does not loop, and loads
-video only on demand. Playing another clip or hiding the page pauses playback.
+Playback uses the original MP4 files as silent, continuously looping previews.
+JavaScript replaces native video controls with one accessible pause/play button
+above the group. Clips load and play when at least 15% visible, and pause when
+off screen or when the page is hidden. Reduced-motion preferences start the
+previews paused; visitors can explicitly choose to play. A blocked autoplay
+attempt presents the play button. Native controls remain available without
+JavaScript, and a failed clip exposes a direct file link. Original footage and
+animation timing are unchanged.
