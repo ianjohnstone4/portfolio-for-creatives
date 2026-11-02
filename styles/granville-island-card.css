@@ -1,0 +1,17 @@
+/* Scoped to the new project card. The existing work grid is preserved. */
+.granville-work-card { grid-column: 1 / -1; min-height: 0; }
+.granville-project-card { display: block; overflow: hidden; background: var(--color-bg-about, #f5f5f5); }
+.granville-work-card figure { height: auto; }
+.granville-work-card img { width: 100%; height: auto; object-fit: contain; }
+.granville-card-caption { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; padding: 24px 30px; }
+.granville-card-caption h2 { margin: 0; color: var(--color-text-primary, #1f2a24); font-family: var(--font-family-body, "Jost", sans-serif); font-size: clamp(24px, 3vw, 38px); font-weight: 500; line-height: 1.2; }
+.granville-card-caption p { margin: 0; color: var(--color-text-secondary, #4e5f56); font-size: 14px; line-height: 1.5; }
+.granville-project-card:focus-visible { outline: 3px solid #10069f; outline-offset: -5px; }
+.granville-project-card:hover .granville-card-caption h2 { text-decoration: underline; text-underline-offset: 6px; }
+@media (max-width: 600px) {
+  .granville-card-caption { display: block; padding: 20px; }
+  .granville-card-caption p { margin-top: 8px; font-size: 13px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .granville-project-card, .granville-project-card * { animation: none !important; transition: none !important; }
+}
