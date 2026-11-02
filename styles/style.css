@@ -2783,10 +2783,11 @@ Thatâ€™s a wrap, class! ðŸ§‘â€ðŸŽ“âœ¨
 
 .about-photo-frame img {
   width: 100%;
+  height: auto;
   display: block;
   border-radius: 1.5rem;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
+  aspect-ratio: 1280 / 963;
+  object-fit: contain;
 }
 
 .about-copy-block {
