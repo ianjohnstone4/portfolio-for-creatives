@@ -81,8 +81,7 @@ These are great first steps to customize your portfolio visually without writing
 
 4. **Update your social media links**  
    Open `index.html` and scroll to the footer. Look for links like:  
-   `<a href="#">Insta</a>`  
-   `<a href="#">LinkedIn</a>`  
+   `<a href="https://www.instagram.com/ian__johnstone/">Insta</a>`
    `<a href="#">Behance</a>`  
    Replace each `#` with your real profile link.
 
