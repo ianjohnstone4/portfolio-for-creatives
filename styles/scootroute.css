@@ -83,7 +83,7 @@ html:has(.scootroute-page) { scroll-behavior: auto; }
 .sr-lime-frame, .sr-response-frame { position: relative; }
 .sr-ui-outline { position: absolute; border: 2px solid var(--sr-rust); border-radius: 8px; pointer-events: none; }
 .sr-ui-outline>span { position: absolute; top: -14px; right: -14px; width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; background: var(--sr-rust); color: white; font-size: 14px; }
-.sr-ui-outline--error { left: 53.8%; top: 60.5%; width: 36.6%; height: 34.7%; }
+.sr-ui-outline--error { left: 53%; top: 60.35%; width: 36.35%; height: 34.35%; border-radius: 4% 4% 10% 10% / 4% 4% 12% 12%; }
 .sr-ui-outline--pin { left: 7%; top: 57.5%; width: 36.5%; height: 37.7%; }
 .sr-ui-outline--pin>span { right: auto; left: -14px; }
 .sr-design-response { padding-top: 0; }

@@ -12,6 +12,12 @@
 .lynn-valley-page .case-section-content a { text-underline-offset: .2em; }
 .lynn-valley-page .case-section-content a:hover { text-decoration: underline; }
 
+/* Spread the critique cards over the height of the original screenshot. */
+.lynn-diagnosis-grid > .case-card-grid { margin-top: 0; }
+@media (min-width: 768px) {
+  .lynn-diagnosis-grid > .case-card-grid { align-self: stretch; align-content: space-between; }
+}
+
 /* Homepage opening: realistic viewports keep the UI at a readable scale. */
 .lynn-valley-page .lynn-hero-image { padding: 0; overflow: visible; background: transparent; border-radius: 0; box-shadow: none; }
 .lynn-hero-image > figcaption { padding: .8rem .1rem 0; font-size: .78rem; }
