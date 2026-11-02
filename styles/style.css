@@ -3013,3 +3013,9 @@ Thatâ€™s a wrap, class! ðŸ§‘â€ðŸŽ“âœ¨
     justify-self: start;
   }
 }
+
+/* Keep the complete SharedStandard composition visible in the tall feature card. */
+.work-page-grid-item img.sharedstandard-card-image {
+  object-fit: contain;
+  background: #eaf8f0;
+}

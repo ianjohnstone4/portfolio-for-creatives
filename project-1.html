@@ -13,7 +13,7 @@
       type="image/svg+xml"
       href="assets/branding-images/ijblackfill.svg"
     />
-    <meta property="og:image" content="screenshot.jpg" />
+    <meta property="og:image" content="https://ianjohnstone.ca/assets/project-1/sharedstandard-cover-fit.png" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
@@ -27,7 +27,9 @@
     />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/sharedstandard-motion.css" />
+    <link rel="stylesheet" href="./styles/sharedstandard-page.css" />
     <script src="./scripts/sharedstandard-motion.js" defer></script>
+    <script src="./scripts/sharedstandard-page.js" defer></script>
   </head>
 
   <body class="project-1" id="top">
@@ -130,7 +132,7 @@ z"
       </ul>
     </header>
 
-    <main class="case-study-page">
+    <main class="case-study-page sharedstandard-page">
       <section class="case-hero">
         <div class="case-hero-copy">
           <p class="case-eyebrow">IXD 105 · UX Concept · Mobile Prototype</p>
@@ -181,10 +183,17 @@ z"
 
         <figure class="case-hero-image">
           <img
-            src="assets/temp/p-one-hero.jpg"
-            alt="SharedStandard hero mockup"
+            src="assets/project-1/sharedstandard-cover-fit.png"
+            width="1448" height="1086" fetchpriority="high"
+            alt="Four SharedStandard screens fitted inside phone mockups: Home, chore selection, definition of done, and confirmation."
           />
         </figure>
+        <nav class="ss-section-nav" aria-label="SharedStandard sections">
+          <a href="#process">Process <span aria-hidden="true">↗</span></a>
+          <a href="#design-guide">Design guide <span aria-hidden="true">↗</span></a>
+          <a href="#walkthrough">Screen walkthrough <span aria-hidden="true">↗</span></a>
+          <a href="#motion">Motion studies <span aria-hidden="true">↗</span></a>
+        </nav>
       </section>
 
       <section class="case-section">
@@ -295,15 +304,15 @@ z"
         </div>
       </section>
 
-      <section class="case-section">
+      <section class="case-section ss-process" id="process">
         <div class="case-section-grid">
           <div class="case-section-label">Process</div>
           <div class="case-section-content">
             <h2>
-              A research led process moved from problem framing to refinement
+              From research to refinement
             </h2>
 
-            <ol class="process-timeline">
+            <ol class="process-timeline ss-timeline">
               <li class="process-timeline-item">
                 <div class="process-timeline-marker">01</div>
                 <div class="process-timeline-content">
@@ -418,7 +427,7 @@ z"
               before moving into wireflows and the high-fidelity prototype.
             </p>
 
-            <div class="case-visual-grid three-up">
+            <div class="case-visual-grid three-up ss-process-gallery">
               <figure class="case-visual">
                 <img
                   src="assets/project-1/sswireframes.jpeg"
@@ -428,11 +437,11 @@ z"
               </figure>
 
               <figure class="case-visual">
-                <img
-                  src="assets/project-1/Design Guide.jpg"
-                  alt="Design guide"
-                />
-                <figcaption>Design guide</figcaption>
+                <a href="#design-guide" class="ss-artifact-link" aria-label="Explore the SharedStandard design guide">
+                  <img src="assets/project-1/design-guide-original.jpg" width="1406" height="1556" loading="lazy"
+                    alt="Original SharedStandard design guide with colour, typography, spacing, buttons, cards, lists, chips, and forms." />
+                </a>
+                <figcaption>Design guide <span aria-hidden="true">↗</span></figcaption>
               </figure>
 
               <figure class="case-visual">
@@ -441,6 +450,49 @@ z"
                   alt="High fidelity prototype"
                 />
                 <figcaption>High fidelity mobile prototype</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section ss-guide" id="design-guide" aria-labelledby="guide-title">
+        <div class="case-section-grid">
+          <div class="case-section-label">Design guide</div>
+          <div class="case-section-content">
+            <h2 id="guide-title">A consistent language for shared tasks</h2>
+            <p>The original guide brings colour, typography, spacing, and interaction states together. It gives the screens a common structure while keeping the tone calm and direct.</p>
+            <div class="ss-guide-layout">
+              <div class="ss-guide-notes">
+                <article>
+                  <span class="ss-detail-label">Colour</span>
+                  <h3>Give actions a clear emphasis</h3>
+                  <p>Green marks primary actions, while white and pale grey separate content. Warning, information, and error states have their own colours.</p>
+                  <div class="ss-swatches" aria-label="Primary green, subtle green, white, and dark text colours">
+                    <span style="--swatch: #16A34A" title="Primary: #16A34A"></span>
+                    <span style="--swatch: #ECFDF5" title="Primary subtle: #ECFDF5"></span>
+                    <span style="--swatch: #FFFFFF" title="Surface: #FFFFFF"></span>
+                    <span style="--swatch: #0F172A" title="Text: #0F172A"></span>
+                  </div>
+                </article>
+                <article>
+                  <span class="ss-detail-label">Components</span>
+                  <h3>Make status visible</h3>
+                  <p>Buttons, status chips, and form feedback distinguish an available action, a pending agreement, and an error that needs attention.</p>
+                </article>
+                <article>
+                  <span class="ss-detail-label">Layout</span>
+                  <h3>Keep the structure predictable</h3>
+                  <p>The guide specifies Inter, an 8-point spacing system, 12-pixel card corners, and a 48-pixel minimum tap target.</p>
+                </article>
+                <a class="ss-text-link" href="https://www.figma.com/design/doQoiSFxIVzqs4kR0q5Dl7/IXD-105?node-id=1-2" target="_blank" rel="noopener noreferrer">View the guide in Figma <span aria-hidden="true">↗</span></a>
+              </div>
+              <figure class="ss-guide-board">
+                <a class="ss-artifact-link" href="assets/project-1/design-guide-original.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open the full-size SharedStandard design guide">
+                  <img src="assets/project-1/design-guide-original.jpg" width="1406" height="1556" loading="lazy" alt="Full original design guide showing the colour palette, Inter type scale, spacing rules, and component states." />
+                  <span class="ss-image-action">View full size <span aria-hidden="true">↗</span></span>
+                </a>
+                <figcaption>Original project design guide</figcaption>
               </figure>
             </div>
           </div>
@@ -482,8 +534,8 @@ z"
               <article class="case-card">
                 <h3 class="case-mini-heading">Keep reminders gentle</h3>
                 <p>
-                  A shared agreement and one gentle reminder reduces the need
-                  for repeated, emotionally loaded follow up.
+                  A shared agreement and one gentle reminder are intended to
+                  reduce repeated, emotionally loaded follow-up.
                 </p>
               </article>
             </div>
@@ -518,45 +570,89 @@ z"
         </div>
       </section>
 
-      <section class="case-section">
+      <section class="case-section ss-walkthrough" id="walkthrough" aria-labelledby="walkthrough-title">
         <div class="case-section-grid">
           <div class="case-section-label">Key screens</div>
           <div class="case-section-content">
-            <h2>Key moments in the final flow</h2>
-
-            <div class="case-visual-grid two-up tall-screens">
-              <figure class="case-visual">
-                <img
-                  src="assets/project-1/HomepageMockup.png"
-                  alt="Home or spaces screen"
-                />
-                <figcaption>Home or spaces view</figcaption>
-              </figure>
-
-              <figure class="case-visual">
-                <img
-                  src="assets/project-1/definitionofdone.png"
-                  alt="Define standard screen"
-                />
-                <figcaption>Definition of done flow</figcaption>
-              </figure>
-
-              <figure class="case-visual">
-                <img
-                  src="assets/project-1/confirmationscreen.png"
-                  alt="Waiting for approval screen"
-                />
-                <figcaption>Waiting for approval state</figcaption>
-              </figure>
-
-              <figure class="case-visual">
-                <img
-                  src="assets/project-1/notificationscreen.png"
-                  alt="Reminder or update screen"
-                />
-                <figcaption>Reminder or update flow</figcaption>
-              </figure>
+            <h2 id="walkthrough-title">How a shared agreement takes shape</h2>
+            <p>Four moments in the SharedStandard flow connect the space, the task, the timing, and the people involved.</p>
+            <div class="ss-walkthrough-toolbar">
+              <a class="ss-text-link" href="https://www.figma.com/design/doQoiSFxIVzqs4kR0q5Dl7/IXD-105?node-id=666-820" target="_blank" rel="noopener noreferrer">Explore the screen set in Figma <span aria-hidden="true">↗</span></a>
+              <button class="ss-motion-toggle" type="button" aria-pressed="false" hidden>Show screens together</button>
             </div>
+            <div class="ss-walkthrough-layout">
+              <div class="ss-screen-stage" aria-hidden="true">
+                <div class="ss-screen-stage-inner">
+                  <div class="ss-screen-frame">
+                    <img class="ss-stage-screen is-active" data-screen="home" src="assets/project-1/screens/home.png" width="786" height="1704" alt="" loading="lazy" />
+                    <img class="ss-stage-screen" data-screen="definition" src="assets/project-1/screens/definition.png" width="786" height="1704" alt="" loading="lazy" />
+                    <img class="ss-stage-screen" data-screen="timing" src="assets/project-1/screens/timing.png" width="786" height="1854" alt="" loading="lazy" />
+                    <img class="ss-stage-screen" data-screen="confirm" src="assets/project-1/screens/confirm.png" width="786" height="1854" alt="" loading="lazy" />
+                  </div>
+                  <div class="ss-screen-stage-caption"><span class="ss-stage-count">01 / 04</span><span class="ss-stage-label">Start with the shared space</span></div>
+                  <div class="ss-stage-progress"><span></span></div>
+                </div>
+              </div>
+              <ol class="ss-story-steps">
+                <li class="ss-story-step" data-step="home" id="screen-home">
+                  <div class="ss-step-copy">
+                    <span class="ss-step-number">01</span>
+                    <h3>Start with the shared space</h3>
+                    <p>The home screen groups standards by room. Due and recent items sit below the spaces, so the starting point is the part of the home that needs attention.</p>
+                    <p class="ss-step-takeaway">Organize around a place roommates already share.</p>
+                    <a class="ss-text-link ss-screen-full-link" href="assets/project-1/screens/home.png" target="_blank" rel="noopener noreferrer">View screen full size <span aria-hidden="true">↗</span></a>
+                  </div>
+                  <figure class="ss-step-figure">
+                    <a href="assets/project-1/screens/home.png" target="_blank" rel="noopener noreferrer" aria-label="Open start with the shared space screen full size">
+                      <img src="assets/project-1/screens/home.png" width="786" height="1704" alt="Home screen with kitchen, bathroom, entryway, living room, laundry, due standards, and recent activity." loading="lazy" />
+                    </a>
+                  </figure>
+                </li>
+                <li class="ss-story-step" data-step="definition" id="screen-definition">
+                  <div class="ss-step-copy">
+                    <span class="ss-step-number">02</span>
+                    <h3>Agree on what done means</h3>
+                    <p>A short checklist turns “clean the kitchen” into specific actions. Suggested items give roommates a starting point they can adjust together.</p>
+                    <p class="ss-step-takeaway">Replace an open-ended expectation with visible criteria.</p>
+                    <a class="ss-text-link ss-screen-full-link" href="assets/project-1/screens/definition.png" target="_blank" rel="noopener noreferrer">View screen full size <span aria-hidden="true">↗</span></a>
+                  </div>
+                  <figure class="ss-step-figure">
+                    <a href="assets/project-1/screens/definition.png" target="_blank" rel="noopener noreferrer" aria-label="Open agree on what done means screen full size">
+                      <img src="assets/project-1/screens/definition.png" width="786" height="1704" alt="Dishes reset checklist defining what done means, with Continue and Cancel actions." loading="lazy" />
+                    </a>
+                  </figure>
+                </li>
+                <li class="ss-story-step" data-step="timing" id="screen-timing">
+                  <div class="ss-step-copy">
+                    <span class="ss-step-number">03</span>
+                    <h3>Make the timing explicit</h3>
+                    <p>A date and time sit alongside the standard. This makes the timing part of the agreement instead of another assumption to negotiate later.</p>
+                    <p class="ss-step-takeaway">Connect the definition of done to a clear time.</p>
+                    <a class="ss-text-link ss-screen-full-link" href="assets/project-1/screens/timing.png" target="_blank" rel="noopener noreferrer">View screen full size <span aria-hidden="true">↗</span></a>
+                  </div>
+                  <figure class="ss-step-figure">
+                    <a href="assets/project-1/screens/timing.png" target="_blank" rel="noopener noreferrer" aria-label="Open make the timing explicit screen full size">
+                      <img src="assets/project-1/screens/timing.png" width="786" height="1854" alt="Timing screen with a calendar and a summary of the selected standard." loading="lazy" />
+                    </a>
+                  </figure>
+                </li>
+                <li class="ss-story-step" data-step="confirm" id="screen-confirm">
+                  <div class="ss-step-copy">
+                    <span class="ss-step-number">04</span>
+                    <h3>Show who has agreed</h3>
+                    <p>The confirmation screen brings the task, timing, and agreement status together. “Agreed” and “Pending” distinguish the creator’s decision from the roommate’s response.</p>
+                    <p class="ss-step-takeaway">Sending a standard is different from everyone agreeing to it.</p>
+                    <a class="ss-text-link ss-screen-full-link" href="assets/project-1/screens/confirm.png" target="_blank" rel="noopener noreferrer">View screen full size <span aria-hidden="true">↗</span></a>
+                  </div>
+                  <figure class="ss-step-figure">
+                    <a href="assets/project-1/screens/confirm.png" target="_blank" rel="noopener noreferrer" aria-label="Open show who has agreed screen full size">
+                      <img src="assets/project-1/screens/confirm.png" width="786" height="1854" alt="Confirmation screen showing You as Agreed and Alex as Pending, with an action to send the standard for review." loading="lazy" />
+                    </a>
+                  </figure>
+                </li>
+              </ol>
+            </div>
+            <p class="ss-walkthrough-footnote">Portfolio refinement of the IXD 105 screens. The usability findings below refer to the original coursework prototype.</p>
           </div>
         </div>
       </section>
@@ -723,32 +819,28 @@ z"
               SharedStandard reframed chores as a communication design problem
             </h2>
             <p>
-              The final concept did not try to pressure people into compliance.
-              Instead, it created a shared reference point that made
-              expectations visible, reduced ambiguity, and supported calmer
-              coordination in daily life.
+              The outcome was a prototype built around clear expectations and
+              mutual agreement. These principles guided the design; their effect
+              on everyday household conflict has not been measured.
             </p>
 
-            <div class="stats-grid">
-              <div class="stat-card">
-                <p class="stat-number">1</p>
-                <p class="stat-label">Shared definition of done</p>
-              </div>
-
-              <div class="stat-card">
-                <p class="stat-number">1</p>
-                <p class="stat-label">
-                  Gentle reminder instead of repeated nagging
-                </p>
-              </div>
-
-              <div class="stat-card">
-                <p class="stat-number">0</p>
-                <p class="stat-label">
-                  Points, surveillance, or gamified pressure
-                </p>
-              </div>
-            </div>
+            <ul class="ss-principles" aria-label="Three principles behind the concept">
+              <li>
+                <span class="ss-principle-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="5" y="3" width="14" height="18" rx="3"/><path d="m8 10 2 2 5-5M8 16h8"/></svg></span>
+                <div><h3>One shared definition of done</h3><p>A short checklist gives everyone the same reference point.</p></div>
+                <span class="ss-principle-tag">Clarity</span>
+              </li>
+              <li>
+                <span class="ss-principle-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9a6 6 0 0 1 12 0c0 7 2 7 2 8H4c0-1 2-1 2-8ZM10 21h4M12 1v2"/></svg></span>
+                <div><h3>One gentle reminder</h3><p>A single prompt keeps follow-up brief and predictable.</p></div>
+                <span class="ss-principle-tag">Restraint</span>
+              </li>
+              <li>
+                <span class="ss-principle-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8"/><path d="m6.5 6.5 11 11"/></svg></span>
+                <div><h3>No points, rankings, or surveillance</h3><p>The concept centres on agreement between roommates.</p></div>
+                <span class="ss-principle-tag">Autonomy</span>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
