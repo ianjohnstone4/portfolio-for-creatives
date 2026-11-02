@@ -1,0 +1,97 @@
+/* Presentation refinements for the two homepage mockup screens only. */
+.card-sharedstandard .ss-screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  container-type: size;
+  border-radius: 10% / 4.5%;
+  background: #fff;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  text-align: left;
+}
+.ss-ui { position: absolute; inset: 0; font-size: 4cqw; line-height: 1; }
+.ss-screen *, .ss-screen *::before, .ss-screen *::after { box-sizing: border-box; }
+.ss-header {
+  position: relative;
+  height: 25.2cqw;
+  border-bottom: .2cqw solid #dedede;
+}
+.ss-header-title {
+  position: absolute;
+  top: 15.3cqw;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  font-size: 6.2cqw;
+  line-height: 1.1;
+}
+.ss-screen-home .ss-header-title { font-size: 8.1cqw; }
+.ss-screen-definition .ss-header-title { font-size: 4.5cqw; }
+.ss-logo { position: absolute; top: 9.5cqw; left: 3cqw; width: 17cqw; height: 11.6cqw; overflow: hidden; }
+.work-page .card-sharedstandard .ss-logo img {
+  position: absolute;
+  width: 100cqw;
+  max-width: none;
+  height: auto;
+  left: -3cqw;
+  top: -9.5cqw;
+  border-radius: 0;
+  object-fit: initial;
+}
+.ss-screen .ss-settings {
+  position: absolute;
+  width: 10.2cqw;
+  height: 8.75cqw;
+  right: 4.6cqw;
+  top: 10.925cqw;
+  color: #000;
+}
+.ss-back { position: absolute; width: 8.1cqw; height: 8.1cqw; left: 4.8cqw; top: 11.25cqw; color: #101b2b; }
+.ss-home-content { padding: 0 2.5cqw; }
+.ss-section-heading { font-size: 4.8cqw; font-weight: 700; line-height: 5.8cqw; }
+.ss-spaces-heading { margin: 1cqw 0 2.6cqw; padding-left: 2.5cqw; }
+.ss-room { position: relative; height: 15.4cqw; padding: 3.4cqw 5cqw 2.5cqw 2.5cqw; border-bottom: .22cqw solid #dfe4eb; }
+.ss-room-top { display: flex; gap: 2.5cqw; align-items: baseline; white-space: nowrap; line-height: 5cqw; }
+.ss-room-name { flex: 1; font-size: 4.1cqw; }
+.ss-count, .ss-add { font-size: 3.4cqw; }
+.ss-count, .ss-room-sub { color: #687c99; }
+.ss-add { color: #11813e; }
+.ss-room-sub { margin-top: 2cqw; font-size: 3.6cqw; line-height: 4.2cqw; }
+.ss-chevron { position: absolute; top: 7.4cqw; right: 1.4cqw; width: 1.8cqw; height: 1.8cqw; border-top: .45cqw solid #6e7d91; border-right: .45cqw solid #6e7d91; transform: rotate(45deg); }
+.ss-due .ss-section-heading { margin: 2cqw 0 2.8cqw; }
+.ss-due-room { display: flex; justify-content: space-between; align-items: center; font-size: 4cqw; line-height: 4.6cqw; }
+.ss-status { padding: .45cqw .65cqw; background: #edf9f2; color: #168642; font-size: 3.4cqw; }
+.ss-due-description { margin-top: 1.2cqw; font-size: 3.5cqw; font-weight: 600; line-height: 4.3cqw; }
+.ss-due-time { margin-top: 2.6cqw; color: #687c99; font-size: 3.6cqw; line-height: 4.4cqw; }
+.ss-outline-action { display: flex; width: fit-content; height: 8cqw; align-items: center; justify-content: center; padding: 0 3.4cqw; border: .25cqw solid #11813e; border-radius: 2.5cqw; color: #11813e; font-size: 3.65cqw; line-height: 1; white-space: nowrap; }
+.ss-due .ss-outline-action { margin-top: 2.6cqw; }
+.ss-recents .ss-section-heading { margin: 3.9cqw 0 3.7cqw; }
+.ss-recent-row { font-size: 4cqw; line-height: 5cqw; }
+.ss-recent-row + .ss-recent-row { margin-top: 3cqw; }
+.ss-recents .ss-outline-action { margin-top: 3.5cqw; }
+.ss-actions {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4.3cqw;
+  padding: 6.1cqw 3.8cqw 9.7cqw;
+  background: #fff;
+}
+.ss-action { display: flex; height: 12.2cqw; flex: 0 0 12.2cqw; align-items: center; justify-content: center; border-radius: 3cqw; font-size: 4.3cqw; line-height: 1; }
+.ss-action-disabled { background: #d9d9d9; color: #6b7280; font-weight: 500; }
+.ss-action-primary { background: #14833e; color: #fff; }
+.ss-action-secondary { border: .25cqw solid #d8d8d8; background: #fff; color: #000; }
+.ss-definition-content { padding: 4.1cqw 5.1cqw 0; }
+.ss-definition-heading { font-size: 5.7cqw; font-weight: 700; line-height: 6.8cqw; white-space: nowrap; }
+.ss-definition-note { margin-top: 3.6cqw; color: #687c99; font-size: 3.55cqw; line-height: 5cqw; white-space: nowrap; }
+.ss-checklist { margin-top: 7.2cqw; overflow: hidden; border-radius: 3cqw; background: #f7f7f7; }
+.ss-check-row { display: flex; height: 16.9cqw; align-items: center; gap: 4.6cqw; padding: 0 4.8cqw; font-size: 4.05cqw; line-height: 1.25; white-space: nowrap; }
+.ss-check-row + .ss-check-row { border-top: .22cqw solid #d5d5d5; }
+.ss-checkbox { width: 6.6cqw; height: 6.6cqw; flex: 0 0 6.6cqw; border: .5cqw solid #a5a5a5; border-radius: 1.8cqw; }
+.ss-checkbox-filled { border-color: #27a14e; background: #14833e; }

@@ -25,7 +25,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/style.css?v=dbb266ed79" />
+    <link rel="stylesheet" href="styles/velvet-preview.css?v=b0383281e5" />
+    <script src="scripts/velvet-preview.js?v=1d41522c9a" defer></script>
   </head>
 
   <body class="project-2" id="top">
@@ -167,14 +169,35 @@ z"
           </div>
         </aside>
 
-        <figure class="case-hero-image velvet-pour-hero-image">
-          <img
-            src="assets/project-2-images/velvethomepagemockup.jpg"
-            width="1920"
-            height="1080"
-            loading="lazy"
-            alt="Velvet Pour homepage mockup"
-          />
+        <figure class="vp-preview" id="screen-preview" data-velvet-preview data-autoplay="true" aria-label="Velvet Pour website screen preview">
+          <div class="vp-stage">
+            <div class="vp-stage-top"><span>Velvet Pour · Website preview</span><span class="vp-stage-count" aria-hidden="true">01 / 03</span></div>
+            <div class="vp-browser">
+              <div class="vp-browser-bar" aria-hidden="true"><span class="vp-browser-dots"><i></i><i></i><i></i></span><span>Velvet Pour</span><span></span></div>
+              <div class="vp-viewport" id="velvet-screen-stage">
+                <div class="vp-screen is-active" data-caption="The homepage introduces the bar and gives the menu and reservation actions a clear place.">
+                  <img src="assets/home-mockups/velvet-home.jpg" width="1200" height="3781" alt="Velvet Pour homepage with a warm bar interior, a Reserve a Table action and a View Menu action" decoding="async" fetchpriority="high" />
+                </div>
+                <div class="vp-screen" aria-hidden="true" data-caption="The menu brings cocktail categories, descriptions and prices into a consistent layout.">
+                  <img src="assets/home-mockups/velvet-menu.jpg" width="1363" height="936" alt="Velvet Pour menu with cocktail categories, descriptions and prices" decoding="async" />
+                </div>
+                <div class="vp-screen vp-screen--visit" aria-hidden="true" data-caption="The closing section repeats the reservation and menu actions, followed by hours and contact information.">
+                  <img src="assets/home-mockups/velvet-home.jpg" width="1200" height="3781" alt="The end of the Velvet Pour homepage with reservation prompts, hours and contact information" decoding="async" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="vp-controls" hidden>
+            <div class="vp-screen-selectors" role="group" aria-label="Select a Velvet Pour screen">
+              <button class="vp-screen-button" type="button" data-vp-screen="0" data-title="Homepage" aria-pressed="true" aria-controls="velvet-screen-stage"><span aria-hidden="true">01</span> Home</button>
+              <button class="vp-screen-button" type="button" data-vp-screen="1" data-title="Menu" aria-pressed="false" aria-controls="velvet-screen-stage"><span aria-hidden="true">02</span> Menu</button>
+              <button class="vp-screen-button" type="button" data-vp-screen="2" data-title="Visit information" aria-pressed="false" aria-controls="velvet-screen-stage"><span aria-hidden="true">03</span> Visit</button>
+            </div>
+            <button class="vp-play" type="button" aria-label="Pause Velvet Pour screen preview"><span class="vp-play-symbol" aria-hidden="true">Ⅱ</span><span class="vp-play-label">Pause</span></button>
+            <span class="vp-reduced-note" hidden>Motion reduced. Select a screen.</span>
+          </div>
+          <figcaption><p class="vp-caption-text">The homepage introduces the bar and gives the menu and reservation actions a clear place.</p><a class="vp-source-link" href="assets/home-mockups/velvet-home.jpg" target="_blank" rel="noopener">View full capture ↗</a></figcaption>
+          <span class="vp-sr-only" aria-live="polite" aria-atomic="true"></span>
         </figure>
       </section>
 
@@ -472,9 +495,5 @@ z"
       </div>
     </footer>
 
-    <script>
-      document.getElementById("copyright-years").textContent +=
-        new Date().getFullYear();
-    </script>
   </body>
 </html>

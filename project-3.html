@@ -25,14 +25,17 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./styles/style.css" />
-  </head>
+    <link rel="stylesheet" href="./styles/style.css?v=dbb266ed79" />
+    <link rel="stylesheet" href="./styles/lynn-valley.css?v=8ea299a589" />
+    <link rel="stylesheet" href="styles/lynn-reveal.css?v=efeba0acbb">
+  <script src="scripts/lynn-reveal.js?v=e54006d3e3" defer></script>
+</head>
 
   <body class="project-3" id="top">
     <header class="hero-header">
       <ul class="nav-branding">
         <li class="nav-branding-logo">
-          <a href="index.html">
+          <a href="index.html" aria-label="Ian Johnstone, home">
             <svg
               version="1.1"
               id="Layer_1"
@@ -135,15 +138,14 @@ z"
           <p class="case-eyebrow">Responsive Web Design / UX/UI</p>
           <h1 class="case-title">Lynn Valley Link Trail</h1>
           <p class="case-subtitle">
-            A responsive redesign that transforms a text-heavy local trail
-            website into a clearer, more inviting experience for discovering
-            walks, route highlights, and trail-side stops.
+            A desktop and mobile concept for discovering walks, comparing
+            routes, and exploring places along the Lynn Valley Link Trail.
           </p>
           <p class="case-intro">
-            This project reimagines Lynn Valley Link as a calmer, more
-            structured digital experience that helps users choose a route
-            quickly, understand what they will find along the way, and feel
-            encouraged to explore in person.
+            I designed this individual project for IXD 107, Responsive Web
+            Design at Capilano University. My focus was the relationship between
+            the homepage, trail guide, and map, and how that structure changes
+            on a smaller screen.
           </p>
 
           <ul class="case-chip-list">
@@ -174,11 +176,21 @@ z"
           </div>
         </aside>
 
-        <figure class="case-hero-image lynn-hero-image">
-          <img
-            src="assets/project-3/lvlthero.jpg"
-            alt="Lynn Valley Link desktop and mobile mockup"
-          />
+        <figure class="case-hero-image lynn-hero-image lynn-motion" id="project-preview" data-lynn-reveal>
+          <div class="lynn-motion-track">
+            <div class="lynn-motion-sticky">
+              <div class="lynn-motion-stage">
+                <span class="lynn-motion-label">Desktop → Mobile</span>
+                <div class="lynn-motion-desktop">
+                  <div class="lynn-motion-bar" aria-hidden="true"><span>● ● ●</span><span>Lynn Valley Link Trail</span><span></span></div>
+                  <div class="lynn-motion-desktop-view"><img src="assets/project-3/screens/desktop-home.webp" width="1728" height="5580" fetchpriority="high" alt="Desktop homepage with a creek image, Explore Map and View Guide actions, and a trail map introduction"></div>
+                </div>
+                <div class="lynn-motion-phone"><div class="lynn-motion-phone-view"><img src="assets/project-3/screens/mobile-home.webp" width="393" height="4848" alt="Mobile homepage with the same creek image, stacked actions, and trail map"></div></div>
+              </div>
+              <div class="lynn-motion-actions"><button class="lynn-motion-replay" type="button" data-lynn-replay hidden>Replay reveal</button></div>
+            </div>
+          </div>
+          <figcaption><span>Original desktop and mobile designs. Student concept; nature imagery generated with ChatGPT.</span></figcaption>
         </figure>
       </section>
 
@@ -275,150 +287,154 @@ z"
       </section>
 
       <!-- FINAL RESPONSIVE SCREENS -->
-      <section class="case-section">
+      <section class="case-section" id="responsive-screens">
         <div class="case-section-grid">
-          <div>
-            <p class="case-section-label">Final responsive screens</p>
-          </div>
-
+          <p class="case-section-label">Final responsive screens</p>
           <div class="case-section-content">
-            <h2>
-              A calmer, more structured browsing experience across desktop and
-              mobile
-            </h2>
-
-            <div class="lynn-mockup-gallery">
-              <figure class="case-visual lynn-gallery-feature">
-                <img
-                  src="assets/project-3/lvlthomepagescreens1.jpg"
-                  alt="Desktop mockup of Lynn Valley Link homepage"
-                />
-                <figcaption>
-                  Desktop homepage designed as a decision hub for comparing
-                  routes, exploring highlights, and orienting users quickly.
-                </figcaption>
+            <h2>One trail, three ways to explore</h2>
+            <p>Home introduces route choices, the Trail Guide brings places together, and About gives the trail its community context. These are the original desktop compositions, shown at their full proportions.</p>
+            <div class="lynn-desktop-gallery">
+              <figure>
+                <div class="lynn-screen-heading"><span>01</span><h3>Home</h3></div>
+                <a href="assets/project-3/screens/desktop-home.webp" target="_blank" rel="noopener" aria-label="Open the full desktop homepage image">
+                  <img src="assets/project-3/screens/desktop-home.webp" width="1728" height="5580" loading="lazy" decoding="async" alt="Full desktop Home design, from trail introduction and map through route cards, highlights, and footer" />
+                </a>
+                <figcaption>Map introduction, route cards, and featured places.</figcaption>
               </figure>
-
-              <div class="lynn-gallery-side">
-                <figure class="case-visual">
-                  <img
-                    src="assets/project-3/project-3-mobile-1.jpg"
-                    alt="Mobile mockup showing Lynn Valley Link route browsing"
-                  />
-                  <figcaption>
-                    Mobile browsing optimized for quick route comparison and
-                    scanning on the go.
-                  </figcaption>
-                </figure>
-
-                <figure class="case-visual">
-                  <img
-                    src="assets/project-3/project-3-mobile-2.jpg"
-                    alt="Mobile mockup showing Lynn Valley Link detail screen"
-                  />
-                  <figcaption>
-                    Responsive detail view preserving hierarchy and readability
-                    on smaller screens.
-                  </figcaption>
-                </figure>
-              </div>
+              <figure>
+                <div class="lynn-screen-heading"><span>02</span><h3>Trail Guide</h3></div>
+                <a href="assets/project-3/screens/desktop-guide.webp" target="_blank" rel="noopener" aria-label="Open the full desktop Trail Guide image">
+                  <img src="assets/project-3/screens/desktop-guide.webp" width="1728" height="5257" loading="lazy" decoding="async" alt="Full desktop Trail Guide design with search, filters, scenic highlights, and trail stops" />
+                </a>
+                <figcaption>A repeated card layout for browsing highlights and stops.</figcaption>
+              </figure>
+              <figure>
+                <div class="lynn-screen-heading"><span>03</span><h3>About</h3></div>
+                <a href="assets/project-3/screens/desktop-about.webp" target="_blank" rel="noopener" aria-label="Open the full desktop About image">
+                  <img src="assets/project-3/screens/desktop-about.webp" width="1728" height="5565" loading="lazy" decoding="async" alt="Full desktop About concept showing community information and involvement sections" />
+                </a>
+                <figcaption>Community information and ways to get involved.</figcaption>
+              </figure>
+            </div>
+            <p class="lynn-figure-note">Original concept content includes illustrative route details and unverified community copy. Select a screen to view the full image.</p>
+            <div class="lynn-mobile-gallery" id="mobile-screens">
+              <figure>
+                <div class="lynn-mobile-stage lynn-route-stage">
+                  <div class="lynn-stage-kicker" aria-hidden="true">01 / Route comparison</div>
+                  <div class="lynn-phone-device">
+                    <div class="lynn-phone-speaker" aria-hidden="true"></div>
+                    <div class="lynn-phone-viewport lynn-route-viewport">
+                      <img src="assets/project-3/screens/mobile-home.webp" width="393" height="4848" loading="lazy" decoding="async" alt="Mobile route cards showing the route name, duration, distance, starting point, and map action" />
+                    </div>
+                    <div class="lynn-phone-home" aria-hidden="true"></div>
+                  </div>
+                </div>
+                <figcaption><h3>Compare routes in a vertical stack</h3><p>Time, distance, and starting point stay together in each card. The mobile layout gives each route its own row.</p><a href="assets/project-3/screens/mobile-home.webp" target="_blank" rel="noopener">View full mobile Home <span aria-hidden="true">↗</span></a></figcaption>
+              </figure>
+              <figure>
+                <div class="lynn-mobile-stage lynn-guide-stage">
+                  <div class="lynn-stage-kicker" aria-hidden="true">02 / Guide browsing</div>
+                  <div class="lynn-phone-device">
+                    <div class="lynn-phone-speaker" aria-hidden="true"></div>
+                    <div class="lynn-phone-viewport lynn-guide-viewport">
+                      <img src="assets/project-3/screens/mobile-guide.webp" width="393" height="4810" loading="lazy" decoding="async" alt="Mobile Trail Guide with search, categories, filter chips, and a Cedar Cathedral place card" />
+                    </div>
+                    <div class="lynn-phone-home" aria-hidden="true"></div>
+                  </div>
+                </div>
+                <figcaption><h3>Browse places with a consistent card</h3><p>Search and filters sit above the results. Each place combines an image, a short description, and a map action.</p><a href="assets/project-3/screens/mobile-guide.webp" target="_blank" rel="noopener">View full mobile Guide <span aria-hidden="true">↗</span></a></figcaption>
+              </figure>
             </div>
           </div>
         </div>
       </section>
 
       <!-- PROCESS -->
-      <section class="case-section">
+      <section class="case-section" id="structure">
         <div class="case-section-grid">
-          <div>
-            <p class="case-section-label">Process</p>
-          </div>
-
+          <p class="case-section-label">Process</p>
           <div class="case-section-content">
-            <h2>Early structure and content planning</h2>
-            <p>
-              Early hand-drawn wireframes helped define the core page structure,
-              content hierarchy, and the relationship between route discovery,
-              supporting information, and responsive layout decisions.
-            </p>
-            <p>
-              From there, the concept evolved into higher-fidelity desktop and
-              mobile screens with a stronger visual rhythm, clearer hierarchy,
-              and a more inviting tone.
-            </p>
-
-            <div class="lynn-process-grid">
-              <div class="case-card">
-                <h3 class="case-mini-heading">What the process focused on</h3>
-                <ul class="case-list">
-                  <li>Improving route choice and clarity</li>
-                  <li>Building a stronger mobile-to-desktop hierarchy</li>
-                  <li>Creating a more nature-forward and engaging tone</li>
-                  <li>Documenting type, contrast, and responsive decisions</li>
-                </ul>
-              </div>
-
-              <div class="lynn-sketch-collage">
-                <figure class="lynn-sketch-card lynn-sketch-one">
-                  <img
-                    src="assets/project-3/project-3-sketch-1.jpg"
-                    alt="Hand-drawn wireframe for Lynn Valley Link"
-                  />
-                </figure>
-                <figure class="lynn-sketch-card lynn-sketch-two">
-                  <img
-                    src="assets/project-3/project-3-sketch-2.jpg"
-                    alt="Hand-drawn homepage concept sketch"
-                  />
-                </figure>
-                <figure class="lynn-sketch-card lynn-sketch-three">
-                  <img
-                    src="assets/project-3/project-3-sketch-3.jpg"
-                    alt="Hand-drawn responsive layout sketch"
-                  />
-                </figure>
-              </div>
+            <h2>Page structure and responsive planning</h2>
+            <p>I explored the page structure in Figma using simple image placeholders, text blocks, and repeated cards. These saved wireframe exports show the page regions and the shift from desktop columns to a mobile stack.</p>
+            <div class="lynn-wireframe-gallery">
+              <figure>
+                <a href="assets/project-3/screens/home-wire.webp" target="_blank" rel="noopener" aria-label="Open the archived desktop Home wireframe">
+                  <img src="assets/project-3/screens/home-wire.webp" width="601" height="2000" loading="lazy" decoding="async" alt="Original Figma desktop Home wireframe showing hero, map, route cards, featured places, and footer blocks" />
+                </a>
+                <figcaption><h3>Desktop Home</h3><p>A broad introduction leads into the map and repeated route cards.</p></figcaption>
+              </figure>
+              <figure>
+                <a href="assets/project-3/screens/guide-wire.webp" target="_blank" rel="noopener" aria-label="Open the archived desktop Guide wireframe">
+                  <img src="assets/project-3/screens/guide-wire.webp" width="714" height="2000" loading="lazy" decoding="async" alt="Original Figma Trail Guide wireframe showing a desktop grid of place cards" />
+                </a>
+                <figcaption><h3>Desktop Guide</h3><p>Repeated image and text regions establish the card grid.</p></figcaption>
+              </figure>
+              <figure>
+                <a href="assets/project-3/screens/mobile-wire.webp" target="_blank" rel="noopener" aria-label="Open the archived mobile wireframe">
+                  <img src="assets/project-3/screens/mobile-wire.webp" width="139" height="2000" loading="lazy" decoding="async" alt="Original Figma mobile wireframe with vertically stacked page content" />
+                </a>
+                <figcaption><h3>Mobile structure</h3><p>Content moves into a single reading sequence on the narrower screen.</p></figcaption>
+              </figure>
             </div>
           </div>
         </div>
       </section>
 
       <!-- VISUAL SYSTEM -->
-      <section class="case-section">
+      <section class="case-section" id="visual-system">
         <div class="case-section-grid">
-          <div>
-            <p class="case-section-label">Visual system</p>
-          </div>
-
+          <p class="case-section-label">Visual system</p>
           <div class="case-section-content">
-            <h2>
-              Typography, colour, and accessibility decisions supported the
-              final interface
-            </h2>
-
-            <div class="case-card-grid three-up">
-              <article class="case-card">
-                <h3 class="case-mini-heading">Type scale</h3>
-                <p>
-                  A consistent hierarchy was established across desktop and
-                  mobile to support scanning, page rhythm, and readability.
-                </p>
+            <h2>Type, colour, and contrast</h2>
+            <p>My original Figma boards document Montserrat, a forest-green palette, and colour-pair contrast checks. The values below come from those boards and their text layers.</p>
+            <div class="lynn-type-grid">
+              <article class="lynn-system-card">
+                <div class="lynn-system-heading"><h3>Desktop type scale</h3><a href="https://www.figma.com/design/vhn4h5H8J98P4XTP3aw7im/Lynn-Valley-Link?node-id=326-716" target="_blank" rel="noopener" aria-label="View desktop type board in Figma">Figma ↗</a></div>
+                <p class="lynn-font-specimen">Montserrat<span>Aa Bb Cc / 012345</span></p>
+                <table class="lynn-type-table"><caption>Desktop text layers, sizes in pixels</caption><thead><tr><th scope="col">Role</th><th scope="col">Weight</th><th scope="col">Size</th></tr></thead><tbody>
+                  <tr><th scope="row">H1</th><td>Semibold</td><td>76</td></tr>
+                  <tr><th scope="row">H2</th><td>Semibold</td><td>64</td></tr>
+                  <tr><th scope="row">H3</th><td>Semibold</td><td>48</td></tr>
+                  <tr><th scope="row">H4</th><td>Light</td><td>48</td></tr>
+                  <tr><th scope="row">H5</th><td>Medium</td><td>36</td></tr>
+                  <tr><th scope="row">Paragraph</th><td>Semibold*</td><td>32</td></tr>
+                  <tr><th scope="row">Subtext</th><td>Medium</td><td>20</td></tr>
+                </tbody></table>
               </article>
-
-              <article class="case-card">
-                <h3 class="case-mini-heading">Colour palette</h3>
-                <p>
-                  The interface used a calm, nature-forward palette to align
-                  with the trail context while maintaining clarity.
-                </p>
+              <article class="lynn-system-card">
+                <div class="lynn-system-heading"><h3>Mobile type scale</h3><a href="https://www.figma.com/design/vhn4h5H8J98P4XTP3aw7im/Lynn-Valley-Link?node-id=326-725" target="_blank" rel="noopener" aria-label="View mobile type board in Figma">Figma ↗</a></div>
+                <p class="lynn-font-specimen lynn-font-mobile">Montserrat<span>Aa Bb Cc / 012345</span></p>
+                <table class="lynn-type-table"><caption>Mobile text layers, sizes in pixels</caption><thead><tr><th scope="col">Role</th><th scope="col">Weight</th><th scope="col">Size</th></tr></thead><tbody>
+                  <tr><th scope="row">H1</th><td>Semibold</td><td>32</td></tr>
+                  <tr><th scope="row">H2</th><td>Semibold</td><td>24</td></tr>
+                  <tr><th scope="row">H3</th><td>Semibold</td><td>20</td></tr>
+                  <tr><th scope="row">Subheader</th><td>Light</td><td>20</td></tr>
+                  <tr><th scope="row">Paragraph</th><td>Semibold*</td><td>16</td></tr>
+                </tbody></table>
               </article>
-
-              <article class="case-card">
-                <h3 class="case-mini-heading">Contrast checks</h3>
-                <p>
-                  Colour combinations were evaluated to improve legibility and
-                  create a more accessible browsing experience.
-                </p>
+            </div>
+            <p class="lynn-figure-note">*The paragraph specimens use semibold, although their labels specify regular on desktop and medium on mobile. The boards record the intended system; the final screens also contain Futura and Inter.</p>
+            <div class="lynn-system-grid">
+              <article class="lynn-system-card">
+                <div class="lynn-system-heading"><h3>Colour palette</h3><a href="https://www.figma.com/design/vhn4h5H8J98P4XTP3aw7im/Lynn-Valley-Link?node-id=325-715" target="_blank" rel="noopener" aria-label="View original colour and contrast board in Figma">Figma ↗</a></div>
+                <ul class="lynn-palette">
+                  <li><span class="lynn-swatch" style="--swatch:#3b5633"></span><span>Forest green<code>#3B5633</code></span></li>
+                  <li><span class="lynn-swatch" style="--swatch:#e4ede9"></span><span>Mint grey<code>#E4EDE9</code></span></li>
+                  <li><span class="lynn-swatch" style="--swatch:#f9f9f5"></span><span>Off-white<code>#F9F9F5</code></span></li>
+                  <li><span class="lynn-swatch" style="--swatch:#ffffff"></span><span>White<code>#FFFFFF</code></span></li>
+                  <li><span class="lynn-swatch" style="--swatch:#929090"></span><span>Mid grey<code>#929090</code></span></li>
+                  <li><span class="lynn-swatch" style="--swatch:#000000"></span><span>Black<code>#000000</code></span></li>
+                </ul>
+              </article>
+              <article class="lynn-system-card">
+                <div class="lynn-system-heading"><h3>Contrast checks</h3><span>Normal text</span></div>
+                <ul class="lynn-contrast-list">
+                  <li><span class="lynn-contrast-sample lynn-green-white" aria-hidden="true">Aa</span><div><strong>White / forest green</strong><span>8.19:1 · Passes AA</span></div></li>
+                  <li><span class="lynn-contrast-sample lynn-green-offwhite" aria-hidden="true">Aa</span><div><strong>Forest green / off-white</strong><span>7.76:1 · Passes AA</span></div></li>
+                  <li><span class="lynn-contrast-sample lynn-green-mint" aria-hidden="true">Aa</span><div><strong>Forest green / mint grey</strong><span>6.86:1 · Passes AA</span></div></li>
+                  <li><span class="lynn-contrast-sample lynn-grey-white" aria-hidden="true">Aa</span><div><strong>Mid grey / white</strong><span class="lynn-contrast-review">3.17:1 · Below AA</span></div></li>
+                </ul>
+                <p class="lynn-contrast-note">Ratios recalculated from the documented hex colours. <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html" target="_blank" rel="noopener">WCAG AA requires 4.5:1 for normal text</a>. The grey labels need revision; these palette checks do not establish full interface accessibility.</p>
               </article>
             </div>
           </div>
@@ -470,7 +486,7 @@ z"
       </section>
 
       <!-- OUTCOME -->
-      <section class="case-section case-last-section">
+      <section class="case-section case-last-section" id="outcome">
         <div class="case-section-grid">
           <div>
             <p class="case-section-label">Outcome</p>
@@ -480,20 +496,23 @@ z"
             <div class="lynn-outcome-grid">
               <figure class="case-visual lynn-outcome-image">
                 <img
-                  src="assets/project-3/project-3-final-showcase.jpg"
-                  alt="Final Lynn Valley Link device mockup showcase"
+                  src="assets/project-3/lynn-outcome-studio.webp"
+                  width="1536" height="1024" loading="lazy" decoding="async"
+                  alt="Studio mockup of the Lynn Valley Link desktop homepage and mobile homepage on a monitor and phone"
                 />
+                <figcaption>AI-generated presentation mockup based on my original screens.</figcaption>
               </figure>
 
               <div class="case-card lynn-outcome-copy">
                 <h2>
-                  A clearer, more inviting digital entry point into Lynn Valley
+                  A responsive concept for exploring the LINK
                 </h2>
                 <p>
-                  The final concept transforms Lynn Valley Link into a more
-                  navigable and motivating experience, helping users choose a
-                  route, understand what they will find, and feel encouraged to
-                  explore in person.
+                  I brought route comparison, place discovery, and community
+                  information into a connected set of desktop and mobile layouts.
+                  The project demonstrates my approach to hierarchy and responsive
+                  composition. Usability testing and a working route-selection flow
+                  remain next steps.
                 </p>
               </div>
             </div>
@@ -551,23 +570,6 @@ z"
       </div>
     </footer>
 
-    <div id="myID" class="bottomMenu hide">
-      <a href="project-2.html">Previous Project</a>
-    </div>
 
-    <script type="text/javascript">
-      myID = document.getElementById("myID");
-
-      var myScrollFunc = function () {
-        var y = window.scrollY;
-        if (y >= 800) {
-          myID.className = "bottomMenu show";
-        } else {
-          myID.className = "bottomMenu hide";
-        }
-      };
-
-      window.addEventListener("scroll", myScrollFunc);
-    </script>
   </body>
 </html>

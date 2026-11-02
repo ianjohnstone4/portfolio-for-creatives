@@ -14,9 +14,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/style.css?v=dbb266ed79">
   <link rel="stylesheet" href="styles/scootroute.css">
   <script src="scripts/scootroute.js" defer></script>
+    <link rel="stylesheet" href="styles/trip-comparison.css?v=28dc048292">
+  <script src="scripts/trip-comparison.js?v=e9cf9d3acf" defer></script>
 </head>
 <body class="scootroute-page" id="top">
   <a class="sr-skip" href="#main">Skip to content</a>
@@ -89,7 +91,19 @@
     </section>
 
     <section class="sr-shell sr-complete-trip sr-section" id="whole-trip" aria-labelledby="whole-trip-title">
-      <div class="sr-trip-copy"><p class="sr-eyebrow">Make the trade-off visible</p><h2 id="whole-trip-title">A short ride can<br>still be a long trip.</h2><p>I made total time and walking visible in the comparison. Each option brings together the access walk, ride and final walk, with an allowance for unlocking and returning.</p><p>This gives the rider a way to compare the commitment before choosing a route. The estimates remain model outputs, not measured trip times.</p><dl class="sr-decisions"><div><dt>My decision</dt><dd>Compare the complete trip, rather than rank options only by riding time.</dd></div><div><dt>The trade-off</dt><dd>More information helps expose the journey, but also makes each result denser. Whether the distinction is clear needs evaluation.</dd></div></dl><a class="sr-text-link" href="https://www.sciencedirect.com/science/article/pii/S2950105923000049" target="_blank" rel="noopener noreferrer">Access-distance research in the source review</a></div>
+      <div class="sr-trip-copy"><p class="sr-eyebrow">Make the trade-off visible</p><h2 id="whole-trip-title">A short ride can<br>still be a long trip.</h2><p>I made total time and walking visible in the comparison. Each option brings together the access walk, ride and final walk, with an allowance for unlocking and returning.</p><p>This gives the rider a way to compare the commitment before choosing a route. The estimates remain model outputs, not measured trip times.</p><div class="sr-trip-compare" data-trip-comparison>
+        <p class="sr-trip-label">Compare the demo options</p>
+        <div class="sr-trip-options" role="group" aria-label="Compare demo journey estimates">
+          <button type="button" data-trip-option="scooter" aria-pressed="true">Lime Scooter</button><button type="button" data-trip-option="bike" aria-pressed="false">Mobi E-bike</button>
+        </div>
+        <dl class="sr-trip-metrics">
+          <div><dt>Estimated total</dt><dd><span class="sr-trip-number" data-trip-number="total"><span class="trip-sr-only" data-trip-value>14</span><span data-trip-digits aria-hidden="true">14</span></span><span class="sr-trip-unit">min</span></dd></div>
+          <div><dt>Walking distance</dt><dd><span class="sr-trip-number" data-trip-number="walk"><span class="trip-sr-only" data-trip-value>250</span><span data-trip-digits aria-hidden="true">250</span></span><span class="sr-trip-unit">m</span></dd></div>
+        </dl>
+        <p class="sr-trip-summary" data-trip-summary>2.6 km ride · 250 m walk</p>
+        <p class="sr-trip-demo-note">Sample estimates from the prototype capture. Availability and journeys are simulated.</p>
+        <span class="trip-sr-only" data-trip-announcement role="status"></span>
+      </div><dl class="sr-decisions"><div><dt>My decision</dt><dd>Compare the complete trip, rather than rank options only by riding time.</dd></div><div><dt>The trade-off</dt><dd>More information helps expose the journey, but also makes each result denser. Whether the distinction is clear needs evaluation.</dd></div></dl><a class="sr-text-link" href="https://www.sciencedirect.com/science/article/pii/S2950105923000049" target="_blank" rel="noopener noreferrer">Access-distance research in the source review</a></div>
       <figure class="sr-route-art"><div class="sr-screen-heading"><span>Original comparison screen</span><button class="sr-inline-button" type="button" data-image="compare">Enlarge</button></div><button type="button" class="sr-image-button" data-image="compare" aria-label="Enlarge ScootRoute’s complete-journey comparison"><img src="assets/scootroute/02-compare-current.jpg" width="390" height="844" alt="ScootRoute compares three sample journeys, showing total minutes, riding distance and walking distance. All options are marked simulated."></button><figcaption>Original UI · Demo routes and availability<br>Distances and timings are illustrative.</figcaption></figure>
     </section>
 

@@ -1,0 +1,273 @@
+/* Homepage artboards. Screen images remain separate, so each mockup can move. */
+.work-page .portfolio { padding: 16px; }
+.work-page .project-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  grid-auto-rows: clamp(300px, 25vw, 440px);
+  gap: 16px;
+}
+.work-page .project-tile,
+.work-page .project-tile:first-child {
+  min-width: 0;
+  min-height: 0;
+  height: auto;
+  border-radius: 28px;
+}
+.work-page .project-tile:first-child { grid-row: span 2; }
+.project-card {
+  --ink: #173c2d;
+  --paper: #e1eee3;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  isolation: isolate;
+  border-radius: inherit;
+  color: var(--ink);
+  background: var(--paper);
+  -webkit-tap-highlight-color: transparent;
+  container-type: size;
+}
+.project-card:visited { color: var(--ink); }
+.project-card:focus-visible { outline: 3px solid var(--ink); outline-offset: -7px; }
+.project-card::after {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  inset: 40% 0 0;
+  pointer-events: none;
+  background: linear-gradient(0deg, var(--paper) 0%, transparent 95%);
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+.project-index {
+  position: absolute;
+  z-index: 3;
+  top: 24px;
+  left: 28px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: .1em;
+  opacity: .6;
+}
+.project-arrow {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  opacity: 0;
+  transform: translate(-6px, 6px);
+  transition: opacity 350ms ease, transform 500ms cubic-bezier(.2,.7,.2,1);
+}
+.project-arrow svg { width: 16px; height: 16px; }
+.mockup-stage { position: absolute; inset: 0; pointer-events: none; }
+.mockup-item {
+  --angle: 0deg;
+  --lift: -10px;
+  --hover-angle: 0deg;
+  position: absolute;
+  transform: translate(-50%, -50%) rotate(var(--angle));
+  transition: transform 850ms cubic-bezier(.2,.75,.2,1), box-shadow 850ms ease;
+}
+.work-page .project-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 0;
+}
+.phone-mockup {
+  aspect-ratio: 786 / 1704;
+  padding: clamp(4px, .7cqw, 7px);
+  overflow: hidden;
+  border: 1px solid #67716b;
+  border-radius: 13% / 6%;
+  background: #202622;
+  box-shadow: 0 2px 1px #ffffff66 inset, 8px 20px 32px #14251c24, 1px 3px 5px #14251c38;
+}
+.work-page .phone-mockup img { border-radius: 10% / 4.5%; }
+.browser-mockup {
+  padding: 15px 5px 5px;
+  aspect-ratio: 1.55;
+  border: 1px solid #ffffff40;
+  border-radius: 9px;
+  background: #f6f6f2;
+  box-shadow: 0 1px 2px #ffffff90 inset, 8px 24px 35px #0c1e2726, 0 2px 4px #0c1e2714;
+}
+.browser-mockup::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 9px;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #9baca2;
+  box-shadow: 6px 0 #bdc9c1, 12px 0 #d3dcd6;
+}
+.work-page .browser-mockup img { border-radius: 2px; }
+.project-caption {
+  position: absolute;
+  z-index: 3;
+  left: 28px;
+  right: 24px;
+  bottom: 26px;
+  color: var(--ink);
+}
+.project-caption::before {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 2px;
+  margin-bottom: 12px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 550ms cubic-bezier(.2,.7,.2,1);
+}
+.project-title {
+  margin: 0;
+  overflow: hidden;
+  color: inherit;
+  font-family: var(--font-family-body);
+  font-size: clamp(24px, 5.3cqw, 46px);
+  font-weight: 500;
+  letter-spacing: -.045em;
+  line-height: 1.16;
+}
+.title-word { display: inline-block; white-space: nowrap; }
+.title-letter {
+  display: inline-block;
+  transform: translateY(115%) rotate(7deg);
+  opacity: 0;
+  transition: transform 600ms cubic-bezier(.16,1,.3,1), opacity 250ms ease;
+  transition-delay: 0ms;
+}
+.project-category {
+  margin: 8px 0 0;
+  font-size: clamp(12px, 2.2cqw, 15px);
+  line-height: 1.4;
+  color: inherit;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 450ms ease, transform 450ms ease;
+}
+.project-card:is(:hover, :focus-visible)::after { opacity: .95; }
+.project-card:is(:hover, :focus-visible) .project-arrow { opacity: 1; transform: translate(0, 0); }
+.project-card:is(:hover, :focus-visible) .project-caption::before { transform: scaleX(1); }
+.project-card:is(:hover, :focus-visible) .title-letter {
+  opacity: 1;
+  transform: translateY(0) rotate(0);
+  transition-delay: calc(50ms + var(--letter) * 14ms);
+}
+.project-card:is(:hover, :focus-visible) .project-category {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 180ms;
+}
+.project-card:is(:hover, :focus-visible) .mockup-item {
+  transform: translate(-50%, calc(-50% + var(--lift))) rotate(calc(var(--angle) + var(--hover-angle)));
+}
+.art-orbit, .art-route, .art-disc { position: absolute; transition: transform 1s cubic-bezier(.2,.7,.2,1); }
+.art-orbit { border: 1px solid currentColor; border-radius: 50%; opacity: .13; }
+.project-card:is(:hover, :focus-visible) .art-orbit { transform: rotate(-8deg) scale(1.04); }
+
+/* SharedStandard: a pair of screens balanced around a soft circular field. */
+.card-sharedstandard { --paper: #dceadd; --ink: #193d2a; }
+.card-sharedstandard .art-disc {
+  width: 93%; aspect-ratio: 1; left: -17%; top: 12%;
+  border-radius: 50%; background: #bdd9bf;
+  box-shadow: 0 0 80px #d7ebd7 inset;
+}
+.card-sharedstandard .art-orbit { width: 118%; aspect-ratio: 1; left: -27%; top: 7%; }
+.card-sharedstandard .phone-one { width: 32%; left: 32%; top: 44%; --angle: -12deg; --hover-angle: 3deg; --lift: -12px; }
+.card-sharedstandard .phone-two { width: 32%; left: 66%; top: 54%; --angle: 9deg; --hover-angle: -3deg; --lift: -22px; }
+.card-sharedstandard .project-title { font-size: clamp(30px, 6.2cqw, 60px); }
+
+/* Velvet Pour: warm, dark browser panels with the proportions of a menu. */
+.card-velvet { --paper: #302822; --ink: #f4e2c4; }
+.card-velvet .art-orbit { width: 90%; height: 150%; left: 26%; top: -26%; transform: rotate(24deg); border-color: #d4a769; opacity: .35; }
+.card-velvet .browser-mockup { background: #171715; border-color: #b5a28755; }
+.card-velvet .browser-one { width: 71%; left: 44%; top: 45%; --angle: -7deg; --hover-angle: 2deg; --lift: -8px; }
+.card-velvet .browser-two { width: 43%; left: 74%; top: 66%; --angle: 9deg; --hover-angle: -3deg; --lift: -18px; }
+
+/* Lynn Valley: contour lines and two views of the original trail site. */
+.card-lynn { --paper: #e3e8d9; --ink: #283c2a; }
+.card-lynn .art-orbit { width: 85%; height: 150%; left: -28%; top: -24%; box-shadow: 0 0 0 24px #435d2a0b, 0 0 0 48px #435d2a0b, 0 0 0 72px #435d2a0b, 0 0 0 96px #435d2a0b; opacity: .75; }
+.card-lynn .browser-one { width: 76%; left: 46%; top: 46%; --angle: -4deg; --hover-angle: 2deg; --lift: -11px; }
+.card-lynn .phone-one { width: 22%; left: 81%; top: 55%; --angle: 8deg; --hover-angle: -3deg; --lift: -18px; }
+
+/* Granville Island: two finished desktop pages, with no wireframe inset. */
+.card-granville { --paper: #e4dff0; --ink: #382d55; }
+.card-granville .art-disc { width: 57%; aspect-ratio: 1; right: -5%; top: -29%; border-radius: 50%; background: #c5b5e3; }
+.card-granville .art-orbit { width: 70%; aspect-ratio: 1; left: -14%; top: 27%; }
+.card-granville .browser-one { width: 67%; max-width: 140cqh; left: 39%; top: 44%; aspect-ratio: 1.75; --angle: -4deg; --hover-angle: 2deg; --lift: -8px; }
+.card-granville .browser-two { width: 40%; max-width: 88cqh; aspect-ratio: 1.38; left: 75%; top: 60%; --angle: 7deg; --hover-angle: -3deg; --lift: -16px; }
+
+/* CoSpace: a fan of working spaces on a blue and yellow field. */
+.card-cospace { --paper: #cbdfe9; --ink: #173e53; }
+.card-cospace .art-disc { width: 68%; aspect-ratio: 1; left: 20%; top: -10%; border-radius: 50%; background: #e9ca67; }
+.card-cospace .phone-one { width: min(25%, 32cqh); left: 28%; top: 49%; --angle: -14deg; --hover-angle: -3deg; --lift: -10px; }
+.card-cospace .phone-two { width: min(27%, 35cqh); left: 52%; top: 47%; --angle: -1deg; --lift: -12px; }
+.card-cospace .phone-three { width: min(25%, 32cqh); left: 77%; top: 51%; --angle: 13deg; --hover-angle: 3deg; --lift: -13px; }
+
+/* Crave: a dark screening room with two overlapping browsing views. */
+.card-crave { --paper: #121b2b; --ink: #e4f6fc; }
+.card-crave .art-disc { width: 80%; height: 80%; left: 20%; top: -22%; border-radius: 50%; background: radial-gradient(ellipse, #13536d, transparent 70%); }
+.card-crave .browser-mockup { background: #171d29; border-color: #77849b66; aspect-ratio: 1.44; }
+.card-crave .browser-one { width: min(65%, 110cqh); left: 62%; top: 47%; --angle: 7deg; --hover-angle: -2deg; --lift: -10px; }
+.card-crave .browser-two { width: min(70%, 120cqh); left: 37%; top: 52%; --angle: -5deg; --hover-angle: 2deg; --lift: -8px; }
+
+/* ScootRoute: two complete trip views against a single drawn route. */
+.card-scootroute { --paper: #e4e9db; --ink: #304b35; }
+.art-route { width: 85%; height: 67%; left: 8%; top: 14%; overflow: visible; color: #8aa77b; }
+.card-scootroute .phone-one { width: min(27%, 34cqh); left: 35%; top: 46%; --angle: -9deg; --hover-angle: 3deg; --lift: -10px; }
+.card-scootroute .phone-two { width: min(27%, 34cqh); left: 67%; top: 51%; --angle: 9deg; --hover-angle: -3deg; --lift: -16px; }
+.project-card:is(:hover, :focus-visible) .art-route { transform: scale(1.05) rotate(-3deg); }
+
+@media (min-width: 1800px) {
+  .work-page .project-grid { grid-auto-rows: 25vw; }
+}
+@media (max-width: 800px) {
+  .work-page .project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 32vw; gap: 12px; }
+  .work-page .portfolio { padding: 12px; }
+  .work-page .project-tile { border-radius: 22px; }
+  .project-index { top: 18px; left: 20px; }
+  .project-caption { left: 20px; bottom: 20px; right: 18px; }
+  .project-arrow { right: 16px; top: 14px; width: 32px; height: 32px; }
+}
+@media (max-width: 600px) {
+  .work-page .project-grid { grid-template-columns: minmax(0, 1fr); grid-auto-rows: auto; }
+  .work-page .project-tile, .work-page .project-tile:first-child { grid-row: auto; aspect-ratio: 1.16; }
+  .work-page .project-tile:first-child { aspect-ratio: .94; }
+  .card-sharedstandard .phone-one { width: 31%; top: 42%; }
+  .card-sharedstandard .phone-two { width: 31%; top: 47%; }
+  .project-title, .card-sharedstandard .project-title { font-size: clamp(26px, 6.8cqw, 40px); }
+  .project-category { font-size: 13px; }
+  .project-card::after { opacity: .95; }
+  .project-card .project-caption::before { transform: scaleX(1); }
+  .project-card .title-letter, .project-card .project-category { opacity: 1; transform: none; }
+  .project-card .project-arrow { opacity: .8; transform: none; }
+}
+/* Touch visitors can identify and open a project with one tap. */
+@media (hover: none), (pointer: coarse) {
+  .project-card::after { opacity: .95; }
+  .project-card .project-caption::before { transform: scaleX(1); }
+  .project-card .title-letter, .project-card .project-category { opacity: 1; transform: none; }
+  .project-card .project-arrow { opacity: .8; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .project-card *, .project-card::after { transition: none !important; }
+  .project-card:is(:hover, :focus-visible) .mockup-item { transform: translate(-50%, -50%) rotate(var(--angle)); }
+  .project-card:is(:hover, :focus-visible) .art-orbit,
+  .project-card:is(:hover, :focus-visible) .art-route { transform: none; }
+  .card-velvet:is(:hover, :focus-visible) .art-orbit { transform: rotate(24deg); }
+}

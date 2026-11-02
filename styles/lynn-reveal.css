@@ -1,0 +1,36 @@
+.lynn-motion { --lv-progress: 1; }
+.lynn-motion-stage { position: relative; height: min(62vw,calc(100svh - 190px),570px); min-height: 340px; width: 100%; overflow: hidden; border-radius: calc(8px + var(--lv-progress)*18px); background: #e4ede9; }
+.lynn-motion-label { position: absolute; top: 6%; left: 5%; z-index: 3; color: #405c45; font-size: 11px; }
+.lynn-motion-desktop { position: absolute; top: 12%; left: 7%; width: 75%; max-width: min(750px,calc((100svh - 260px)*1.6)); border: 6px solid #28332c; border-radius: 12px; overflow: hidden; box-shadow: 0 24px 45px #2d4e3430; transform: translateX(calc(var(--lv-progress)*-5%)) scale(calc(1 - var(--lv-progress)*.2)); transform-origin: left center; }
+.lynn-motion-bar { display: flex; justify-content: space-between; align-items: center; height: 24px; padding-inline: 10px; color: #6a786e; background: #ecefe9; font: 8px/1 Arial,sans-serif; }
+.lynn-motion-bar > span:first-child,.lynn-motion-bar > span:last-child { width: 45px; }
+.lynn-motion-bar > span:first-child { letter-spacing: 2px; color: #a9b5a9; }
+.lynn-motion-desktop-view { width: 100%; aspect-ratio: 1.78; overflow: hidden; background: white; }
+.lynn-valley-page .lynn-motion-desktop-view img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; border: 0; border-radius: 0; box-shadow: none; }
+.lynn-motion-phone { position: absolute; width: 18%; right: 8%; bottom: 8%; border: 5px solid #28332c; border-radius: 11% / 5%; padding-block: 6px; overflow: hidden; background: #28332c; box-shadow: 0 22px 35px #2d4e3440; transform: translateX(calc((1 - var(--lv-progress))*85%)) translateY(calc((1 - var(--lv-progress))*30px)) rotate(calc((1 - var(--lv-progress))*8deg)); opacity: calc(.2 + var(--lv-progress)*.8); }
+.lynn-motion-phone-view { width: 100%; aspect-ratio: 393/820; overflow: hidden; border-radius: 7% / 3%; }
+.lynn-valley-page .lynn-motion-phone-view img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; border: 0; border-radius: 0; box-shadow: none; }
+.lynn-motion > figcaption { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px 25px; }
+.lynn-motion-actions { display: flex; justify-content: flex-end; padding-top: 12px; }
+.lynn-motion-replay { display: inline-flex; align-items: center; min-height: 44px; padding: 8px 14px; border: 1px solid #bbc9bb; border-radius: 24px; background: transparent; color: #405c45; font: inherit; font-size: 12px; cursor: pointer; }
+.lynn-motion-replay[hidden] { display: none; }
+.lynn-motion-replay:hover { background: #e9efe7; }
+.lynn-motion-replay:focus-visible { outline: 2px solid #3b5633; outline-offset: 4px; }
+@media (min-width: 801px) {
+  .lynn-motion.is-motion-ready .lynn-motion-track { height: 145vh; min-height: 850px; }
+  .lynn-motion.is-motion-ready .lynn-motion-sticky { position: sticky; top: 96px; }
+}
+@media (max-width: 800px) {
+  .lynn-motion-stage { height: auto; min-height: 0; aspect-ratio: 1.6; }
+  .lynn-motion-label { font-size: 8px; }
+  .lynn-motion-desktop { border-width: 3px; border-radius: 5px; }
+  .lynn-motion-bar { height: 15px; padding-inline: 5px; font-size: 5px; }
+  .lynn-motion-bar > span:first-child { letter-spacing: 0; font-size: 4px; }
+  .lynn-motion-phone { border-width: 3px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lynn-motion { --lv-progress: 1!important; }
+  .lynn-motion.is-motion-ready .lynn-motion-track { height: auto; min-height: 0; }
+  .lynn-motion.is-motion-ready .lynn-motion-sticky { position: static; }
+  .lynn-motion-replay { display: none; }
+}

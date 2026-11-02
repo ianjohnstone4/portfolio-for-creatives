@@ -1,0 +1,95 @@
+/* The broad, soft field from the supplied Framer reference. */
+.work-page .hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  overflow: clip;
+  background: radial-gradient(
+    650px circle at 50% 50%,
+    rgb(111 179 150 / 17%) 0%,
+    rgb(126 167 190 / 11%) 42%,
+    rgb(126 167 190 / 3%) 70%,
+    transparent 100%
+  ) #ebf7f1;
+}
+
+.work-page .hero.has-cursor-gradient { background: #ebf7f1; }
+
+.work-page .hero-name {
+  min-width: 0;
+  max-width: 100%;
+  font-size: clamp(1.5rem, 2.5vw, 2.15rem);
+  line-height: 1.25;
+  white-space: normal;
+  text-wrap: balance;
+}
+
+.work-page .hero-cursor-glow {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 1300px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(
+    closest-side,
+    rgb(111 179 150 / 17%) 0%,
+    rgb(126 167 190 / 11%) 42%,
+    rgb(126 167 190 / 3%) 70%,
+    transparent 100%
+  );
+  opacity: 0;
+  transform: translate3d(var(--glow-x, 0px), var(--glow-y, 0px), 0)
+    translate(-50%, -50%);
+  transition: opacity 420ms ease;
+}
+
+.work-page .hero-cursor-glow.is-visible {
+  opacity: 1;
+  will-change: transform;
+}
+
+@media (hover: none), (pointer: coarse), (prefers-reduced-motion: reduce) {
+  .work-page .hero-cursor-glow {
+    display: none;
+    transition: none;
+  }
+}
+
+/* Keep the main statement readable instead of shrinking it to one line. */
+@media (max-width: 64rem) {
+  .work-page .hero { --rotating-line-height: 7rem; }
+  .work-page .hero-name { font-size: clamp(1.3rem, 2.3vw, 1.7rem); }
+
+  .work-page .hero-subheader {
+    width: min(100%, 42rem);
+    height: var(--rotating-line-height);
+  }
+
+  .work-page .hero-subheader .line {
+    box-sizing: border-box;
+    width: 100%;
+    height: var(--rotating-line-height);
+    padding: .25rem 0;
+    white-space: normal;
+    font-size: clamp(1.75rem, 3.85vw, 2.4rem);
+    line-height: 1.18;
+    letter-spacing: -.025em;
+    text-wrap: balance;
+  }
+}
+
+@media (max-width: 40rem) {
+  .work-page .hero-name { font-size: clamp(1.3rem, 5.6vw, 1.5rem); }
+  .work-page .hero-subheader { width: min(100%, 30rem); }
+  .work-page .hero-subheader .line {
+    font-size: clamp(1.625rem, 6.7vw, 1.75rem);
+  }
+}
+
+@media (max-width: 64rem) and (prefers-reduced-motion: reduce) {
+  .work-page .hero-subheader,
+  .work-page .hero-subheader .line { height: auto; }
+}

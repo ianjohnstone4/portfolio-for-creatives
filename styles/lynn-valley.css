@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+
+/* Lynn Valley case study: original source screens and presentation layouts. */
+.lynn-valley-page { --lynn-green: #3b5633; --lynn-mint: #e4ede9; --lynn-paper: #f9f9f5; }
+.lynn-valley-page .case-title { max-width: 12ch; }
+.lynn-valley-page .case-section-content h2 { max-width: 24ch; }
+.lynn-valley-page figure { margin: 0; min-width: 0; }
+.lynn-valley-page figcaption { color: #4d5d54; font-size: .9rem; line-height: 1.5; }
+.lynn-valley-page figcaption h3 { color: #202a24; font-size: 1.05rem; font-weight: 600; margin: 0 0 .4rem; }
+.lynn-valley-page figcaption p { margin: 0 0 .7rem; }
+.lynn-valley-page .lynn-figure-note { margin: 1rem 0 0; color: #526057; font-size: .82rem; line-height: 1.6; }
+.lynn-valley-page .case-section-content a { text-underline-offset: .2em; }
+.lynn-valley-page .case-section-content a:hover { text-decoration: underline; }
+
+/* Homepage opening: realistic viewports keep the UI at a readable scale. */
+.lynn-valley-page .lynn-hero-image { padding: 0; overflow: visible; background: transparent; border-radius: 0; box-shadow: none; }
+.lynn-hero-image > figcaption { padding: .8rem .1rem 0; font-size: .78rem; }
+.lynn-device-stage { position: relative; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 1.5rem; background: #e4ede9; }
+.lynn-stage-label { position: absolute; top: 7%; left: 6%; right: 6%; display: flex; justify-content: space-between; gap: 1rem; color: #344c35; font-size: clamp(.65rem,1.1vw,.9rem); font-weight: 600; letter-spacing: .04em; }
+.lynn-stage-label span { font-weight: 400; }
+.lynn-desktop-device { position: absolute; top: 13%; left: 6%; width: 68%; background: #242b27; padding: .65%; border-radius: clamp(5px,1.2vw,16px); box-shadow: 0 20px 34px -16px #293b3445; }
+.lynn-browser-bar { display: flex; align-items: center; gap: .5%; height: clamp(12px,2vw,27px); padding: 0 1.3%; background: #f1f2f0; border-radius: .3rem .3rem 0 0; }
+.lynn-browser-bar i { width: .7%; aspect-ratio: 1; background: #bcc3bd; border-radius: 50%; }
+.lynn-browser-bar span { flex: 1; text-align: center; font-family: Arial,sans-serif; font-size: clamp(5px,.6vw,9px); color: #5b665e; }
+.lynn-desktop-viewport { width: 100%; aspect-ratio: 1.75; overflow: hidden; background: white; }
+.lynn-valley-page .lynn-desktop-viewport img { width: 100%; height: 100%; object-fit: cover; object-position: center top; border: 0; border-radius: 0; box-shadow: none; }
+.lynn-device-chin { height: clamp(6px,1.9vw,26px); border-radius: 0 0 .45rem .45rem; background: linear-gradient(100deg,#b8bfba,#e5e8e4 50%,#b5bdb6); margin: 0 -.2% -.2%; }
+.lynn-device-stand { position: absolute; top: 100%; left: 39%; width: 22%; height: 9%; background: linear-gradient(90deg,#a9b3ac,#d4dbd4,#a8b1aa); clip-path: polygon(18% 0,82% 0,91% 85%,100% 94%,100% 100%,0 100%,0 94%,9% 85%); }
+.lynn-phone-device { position: relative; background: #242a26; padding: 4% 2.8% 4.5%; border-radius: 12% / 6%; border: 1px solid #808981; box-shadow: 0 16px 30px -12px #263a3350, inset 0 0 0 2px #4b524d; }
+.lynn-phone-speaker { width: 21%; height: 3px; border-radius: 5px; background: #101914; margin: 0 auto 5%; }
+.lynn-phone-home { width: 30%; height: 3px; border-radius: 5px; background: #aeb5af; margin: 5% auto 0; }
+.lynn-phone-viewport { aspect-ratio: 393 / 820; width: 100%; overflow: hidden; border-radius: 4% / 2%; background: #fff; }
+.lynn-valley-page .lynn-phone-viewport img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top; border: 0; border-radius: 0; box-shadow: none; }
+.lynn-hero-phone { position: absolute; width: 20%; right: 7%; bottom: 7%; padding: 1.2% .6% 1.1%; }
+
+/* Full desktop pages are separate images; none is stretched or cropped. */
+.lynn-desktop-gallery { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: clamp(.8rem,2vw,1.5rem); padding: clamp(1rem,2.6vw,2rem); margin-top: 2rem; border-radius: 1.25rem; background: var(--lynn-mint); align-items: start; }
+.lynn-screen-heading { display: flex; align-items: baseline; gap: .65rem; margin-bottom: .8rem; }
+.lynn-screen-heading span { font-size: .7rem; color: #526759; }
+.lynn-screen-heading h3 { font-size: .9rem; font-weight: 600; margin: 0; }
+.lynn-desktop-gallery a { display: block; }
+.lynn-desktop-gallery img { display: block; width: 100%; height: auto; min-height: 0; border: 1px solid #cbd5ce; border-radius: .25rem; box-shadow: 0 8px 18px #273d3112; }
+.lynn-desktop-gallery figcaption { margin-top: .8rem; font-size: .78rem; }
+.lynn-mobile-gallery { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1.5rem; margin-top: 2.25rem; }
+.lynn-mobile-stage { position: relative; display: grid; justify-items: center; padding: 4rem 1.5rem 2.5rem; border-radius: 1.25rem; background: #e9eee8; }
+.lynn-guide-stage { background: #edece4; }
+.lynn-stage-kicker { position: absolute; top: 1.25rem; left: 1.5rem; font-size: .72rem; letter-spacing: .05em; color: #425647; }
+.lynn-mobile-stage .lynn-phone-device { width: min(69%,240px); padding: 13px 7px 12px; }
+.lynn-valley-page .lynn-route-viewport img { object-position: center 20%; }
+.lynn-valley-page .lynn-guide-viewport img { object-position: center 9%; }
+.lynn-mobile-gallery figcaption { padding: 1.2rem .15rem 0; }
+.lynn-mobile-gallery figcaption a { font-size: .82rem; font-weight: 600; text-decoration: underline; }
+
+/* Archived process evidence replaces the empty sketch slots. */
+.lynn-wireframe-gallery { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1rem; margin-top: 2rem; }
+.lynn-wireframe-gallery a { display: block; height: 430px; background: #f3f4ef; padding: 1rem; border: 1px solid #dde2d9; border-radius: .75rem; }
+.lynn-wireframe-gallery img { display: block; width: 100%; height: 100%; object-fit: contain; object-position: top center; }
+.lynn-wireframe-gallery figcaption { margin-top: 1rem; font-size: .85rem; }
+
+/* Source-based typography and contrast values remain selectable text. */
+.lynn-type-grid,.lynn-system-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1rem; margin-top: 1.75rem; }
+.lynn-system-card { min-width: 0; padding: clamp(1.1rem,2.4vw,1.7rem); border: 1px solid #dce3da; border-radius: 1rem; background: #f5f7f2; }
+.lynn-system-heading { display: flex; align-items: baseline; justify-content: space-between; gap: .7rem; margin-bottom: 1.2rem; }
+.lynn-system-heading h3 { margin: 0; font-size: 1.05rem; font-weight: 600; }
+.lynn-system-heading a,.lynn-system-heading > span { font-size: .73rem; white-space: nowrap; color: #4d6250; }
+.lynn-system-heading a { text-decoration: underline; }
+.lynn-valley-page .lynn-font-specimen { font-family: 'Montserrat',sans-serif; font-size: clamp(1.35rem,2.5vw,2rem); font-weight: 600; letter-spacing: -.04em; line-height: 1.3; padding: 1rem 0 1.5rem; margin: 0; }
+.lynn-font-specimen span { display: block; font-size: .7em; font-weight: 400; letter-spacing: 0; margin-top: .6rem; }
+.lynn-type-table { width: 100%; border-collapse: collapse; font-size: .82rem; font-variant-numeric: tabular-nums; }
+.lynn-type-table caption { text-align: left; font-size: .7rem; color: #526257; margin-bottom: .65rem; }
+.lynn-type-table td,.lynn-type-table th { padding: .6rem .1rem; text-align: left; border-bottom: 1px solid #dfe5dc; line-height: 1.35; }
+.lynn-type-table thead th { font-weight: 500; color: #526257; font-size: .7rem; }
+.lynn-type-table tbody th { font-weight: 500; }
+.lynn-type-table tr > :last-child { text-align: right; }
+.lynn-palette { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1.2rem .8rem; margin: 0; padding: 0; list-style: none; }
+.lynn-palette li { display: flex; gap: .7rem; align-items: center; font-size: .8rem; }
+.lynn-swatch { display: block; width: 40px; height: 46px; flex-shrink: 0; border-radius: .45rem; background: var(--swatch); border: 1px solid #0000001c; }
+.lynn-palette code { display: block; margin-top: .12rem; font-family: ui-monospace,monospace; font-size: .65rem; color: #526257; }
+.lynn-contrast-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; }
+.lynn-contrast-list li { display: flex; align-items: center; gap: .85rem; }
+.lynn-contrast-list strong { display: block; font-size: .78rem; font-weight: 500; }
+.lynn-contrast-list div span { display: block; font-size: .75rem; color: #3b5633; }
+.lynn-contrast-sample { display: grid; place-items: center; width: 50px; height: 42px; flex-shrink: 0; font-family: 'Montserrat',sans-serif; font-size: 1rem; font-weight: 500; border-radius: .35rem; border: 1px solid #00000012; }
+.lynn-green-white { color: #fff; background: #3b5633; }
+.lynn-green-offwhite { color: #3b5633; background: #f9f9f5; }
+.lynn-green-mint { color: #3b5633; background: #e4ede9; }
+.lynn-grey-white { color: #929090; background: #fff; }
+.lynn-contrast-list div .lynn-contrast-review { color: #7b3c20; }
+.lynn-valley-page .lynn-contrast-note { font-size: .74rem; margin: 1.2rem 0 0; line-height: 1.6; }
+.lynn-contrast-note a { text-decoration: underline; }
+.lynn-valley-page .lynn-outcome-grid { grid-template-columns: 1fr; }
+.lynn-valley-page .lynn-outcome-image { border: 0; background: transparent; gap: .65rem; }
+.lynn-valley-page .lynn-outcome-image img { min-height: 0; width: 100%; height: auto; object-fit: contain; border: 0; border-radius: 1.2rem; box-shadow: none; }
+.lynn-outcome-image figcaption { font-size: .75rem; }
+.lynn-valley-page .lynn-outcome-copy { margin-top: .5rem; padding: 0; border: 0; background: transparent; border-radius: 0; }
+.lynn-valley-page .lynn-outcome-copy h2 { max-width: 25ch; }
+.lynn-outcome-copy p { max-width: 64ch; }
+
+@media (min-width: 992px) {
+  .lynn-valley-page .case-hero { grid-template-columns: minmax(0,1fr) 300px; grid-template-areas: 'copy meta' 'image image'; column-gap: 3rem; row-gap: 2.5rem; }
+  .lynn-valley-page .case-meta { position: static; }
+}
+@media (max-width: 991px) {
+  .lynn-valley-page .case-hero { grid-template-columns: 1fr; grid-template-areas: 'copy' 'image' 'meta'; }
+  .lynn-valley-page .case-hero-copy { grid-area: copy; }
+  .lynn-valley-page .case-hero-image { grid-area: image; }
+  .lynn-valley-page .case-meta { grid-area: meta; }
+}
+@media (max-width: 767px) {
+  .lynn-valley-page .case-section-content h2 { font-size: clamp(1.8rem,7vw,2.7rem); }
+  .lynn-device-stage { border-radius: .9rem; }
+  .lynn-desktop-device { top: 13%; width: 65%; }
+  .lynn-stage-label { font-size: .55rem; }
+  .lynn-desktop-gallery { gap: .8rem; padding: .8rem; }
+  .lynn-screen-heading { gap: .3rem; }
+  .lynn-screen-heading h3 { font-size: .68rem; }
+  .lynn-screen-heading span { display: none; }
+  .lynn-desktop-gallery figcaption { display: none; }
+  .lynn-mobile-gallery,.lynn-type-grid,.lynn-system-grid { grid-template-columns: 1fr; }
+  .lynn-mobile-stage .lynn-phone-device { width: min(64%,240px); }
+  .lynn-wireframe-gallery { grid-template-columns: 1fr; gap: 1.5rem; }
+  .lynn-wireframe-gallery a { height: 480px; }
+  .lynn-wireframe-gallery figcaption { max-width: 34ch; }
+  .lynn-system-card { padding: 1.25rem; }
+  .lynn-hero-image > figcaption { font-size: .7rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lynn-valley-page * { scroll-behavior: auto; }
+}
