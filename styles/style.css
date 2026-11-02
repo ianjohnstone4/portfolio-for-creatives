@@ -2774,11 +2774,7 @@ Thatâ€™s a wrap, class! ðŸ§‘â€ðŸŽ“âœ¨
 }
 
 .about-photo-frame {
-  background: linear-gradient(180deg, #edf8f2 0%, #e6f4ec 100%);
-  border-radius: 2rem;
-  padding: 1rem;
-  border: 1px solid rgba(31, 42, 36, 0.08);
-  box-shadow: 0 24px 60px rgba(31, 42, 36, 0.08);
+  margin: 0;
 }
 
 .about-photo-frame img {
@@ -2889,6 +2885,12 @@ Thatâ€™s a wrap, class! ðŸ§‘â€ðŸŽ“âœ¨
     position: sticky;
     top: 6.5rem;
   }
+
+  .about-photo-frame img {
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: 58% center;
+  }
 }
 
 @media (max-width: 767px) {
@@ -2899,10 +2901,6 @@ Thatâ€™s a wrap, class! ðŸ§‘â€ðŸŽ“âœ¨
 
   .about-copy-title {
     font-size: clamp(2.8rem, 14vw, 4.8rem);
-  }
-
-  .about-photo-frame {
-    padding: 0.8rem;
   }
 }
 /* =========================
