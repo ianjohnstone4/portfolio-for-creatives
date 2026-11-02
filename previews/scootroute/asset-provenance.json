@@ -1,0 +1,56 @@
+[
+  {
+    "id": "compare",
+    "file": "assets/02-compare-current.jpg",
+    "width": 390,
+    "height": 844,
+    "sha256": "222dc456cc25f07feca560bce4ae82e28c7c59a8ee3b45af0e87782116f56179",
+    "status": "Prototype capture, October 30, 2026 · Demo data",
+    "source_workspace_relative": "outputs/scootroute-mobile-case-study/screens/02-compare-current.jpg"
+  },
+  {
+    "id": "stages",
+    "file": "assets/04-stages-current.jpg",
+    "width": 390,
+    "height": 844,
+    "sha256": "c8736352a8f3d43fa0e22e9bdf01a5bfb1d0444b57963a306b19953ebe37cc00",
+    "status": "Prototype capture, October 30, 2026 · Demo data",
+    "source_workspace_relative": "outputs/scootroute-mobile-case-study/screens/04-stages-current.jpg"
+  },
+  {
+    "id": "riding",
+    "file": "assets/05-riding-simulated.jpg",
+    "width": 390,
+    "height": 844,
+    "sha256": "4a28a940970454843a7143de3501d76ec5b9b83d9497b963e4dd6e7babe996f5",
+    "status": "Existing components · Simulated GPS",
+    "source_workspace_relative": "outputs/scootroute-mobile-case-study/screens/05-riding-simulated.jpg"
+  },
+  {
+    "id": "return",
+    "file": "assets/06-return-simulated.jpg",
+    "width": 390,
+    "height": 844,
+    "sha256": "6c1a9773169d16414a03d452f52149ea6fbf7efded2248790be6dc009c02c13f",
+    "status": "Existing components · Simulated GPS",
+    "source_workspace_relative": "outputs/scootroute-mobile-case-study/screens/06-return-simulated.jpg"
+  },
+  {
+    "id": "gps",
+    "file": "assets/07-gps-simulated.jpg",
+    "width": 390,
+    "height": 844,
+    "sha256": "29f6dd6dd8abdc61d0f1e954d696ed901e52f3b66ba3f410dfa178783cde2fb8",
+    "status": "Existing components · Simulated GPS",
+    "source_workspace_relative": "outputs/scootroute-mobile-case-study/screens/07-gps-simulated.jpg"
+  },
+  {
+    "id": "lime-parking",
+    "file": "assets/lime-published-parking-map.png",
+    "width": 1348,
+    "height": 1148,
+    "sha256": "33a58008f400a7830063c2966a8aea0512f1be8cf74d1a9b50d73d305592c332",
+    "status": "Lime-published illustration · Other market",
+    "source_workspace_relative": "outputs/scootroute-figma-portfolio/assets/lime-published-parking-map.png"
+  }
+]

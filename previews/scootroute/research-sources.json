@@ -1,0 +1,170 @@
+[
+  {
+    "id": "R01",
+    "title": "Lime shared e-scooter system",
+    "url": "https://vancouver.ca/streets-transportation/shared-e-scooter-system.aspx",
+    "kind": "Official local context",
+    "summary": "Vancouver requires station returns and publishes availability data. This makes the return location a planning constraint. It does not establish how often returns fail or guarantee space at arrival."
+  },
+  {
+    "id": "R02",
+    "title": "Vancouver location information",
+    "url": "https://www.li.me/en-ca/locations/vancouver",
+    "kind": "Existing Lime capability",
+    "summary": "Lime documents destination-area capacity checks and alternatives for full stations. This narrows the opportunity to how a complete trip is presented, not an absent parking feature."
+  },
+  {
+    "id": "R03",
+    "title": "Lime now goes over Granville",
+    "url": "https://www.reddit.com/r/vancouver/comments/1oouyqa/lime_now_goes_over_granville/",
+    "kind": "Public discussion, November 2025",
+    "summary": "Includes full-station concerns and a recollection of encountering a restricted area. Dates and causes are not verified. Positive comments favour orderly docking. Anecdotes do not establish prevalence."
+  },
+  {
+    "id": "R04",
+    "title": "Vancouver Bike Share 2018 Member Survey Results",
+    "url": "https://cyclingincities-spph.sites.olt.ubc.ca/files/2019/06/MobiMemberSurvey_2018Results.pdf",
+    "kind": "Published survey, Vancouver, 2018",
+    "summary": "The Mobi member survey received 1,722 responses. Empty and full stations prompted some members to use alternatives. This is historical bicycle-share context, not a Lime failure rate."
+  },
+  {
+    "id": "R05",
+    "title": "Access distance to e-scooters",
+    "url": "https://www.sciencedirect.com/science/article/pii/S2950105923000049",
+    "kind": "Published research, Stockholm, 2023",
+    "summary": "Wincent, Jenelius and Burghout analysed scooter access distance using app openings and trip records. It supports including the access walk. Parking conditions and geography differ from Vancouver."
+  },
+  {
+    "id": "R06",
+    "title": "Vancity Lookout article",
+    "url": "https://www.vancitylookout.com/p/vancouver-s-shared-e-scooters-are-growing-in-popularity-but-challenges-remain-one-year-in",
+    "kind": "Local first-person reporting, 2025",
+    "summary": "Nate Lewis describes destination coverage and more frequent use after expansion. This is one journalist’s historical experience, not a representative study or today’s service boundary."
+  },
+  {
+    "id": "R07",
+    "title": "Lime e-scooter question",
+    "url": "https://www.reddit.com/r/askvan/comments/1tq73g6/lime_escooter/",
+    "kind": "Public visitor question, May 2026",
+    "summary": "A visitor asks about Stanley Park access after encountering older information. This supports planning uncertainty, not a verified failed ride. Replies are not current permission to ride."
+  },
+  {
+    "id": "R08",
+    "title": "Differences in route choice behavior when riding shared e-scooters vs bicycles",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/38858059/",
+    "kind": "Published research, Dresden, 2024",
+    "summary": "Ringhand and colleagues studied 52 participants. Scooter riders placed greater importance on surface and safety than cyclists. It cautions against assuming bicycle routes fully suit scooters."
+  },
+  {
+    "id": "R09",
+    "title": "Lime Scooter won't dock into station",
+    "url": "https://www.reddit.com/r/askvan/comments/1wsw8y1/lime_scooter_wont_dock_into_station/",
+    "kind": "Public rider report, September 2026",
+    "summary": "The author describes docking difficulty, continued charges and eventual completion after an update. The cause, charge and refund outcome are unverified. Another commenter reports successful recovery."
+  },
+  {
+    "id": "R10",
+    "title": "Using a parking station",
+    "url": "https://help.li.me/hc/en-us/articles/29147595964571-Using-a-parking-station",
+    "kind": "Official Vancouver service flow",
+    "summary": "Lime describes securing the scooter and helmet at a station, after which the rental ends automatically and the app confirms completion. Arrival alone is not completion."
+  },
+  {
+    "id": "R11",
+    "title": "I'm still getting charged after ending my ride",
+    "url": "https://help.li.me/hc/en-us/articles/115004747227-I-m-still-getting-charged-after-ending-my-ride",
+    "kind": "Official support scenario",
+    "summary": "Lime explains delayed ride completion and recovery steps. The help page establishes a supported scenario; it does not establish its frequency or confirm a specific rider’s account."
+  },
+  {
+    "id": "R12",
+    "title": "Can Someone Explain the LimePass",
+    "url": "https://www.reddit.com/r/NiceVancouver/comments/1o06428/can_someone_explain_the_limepass/",
+    "kind": "Public discussion, October 2025",
+    "summary": "The author asks about pass terms and later corrects their understanding. Preserve that correction. The thread supports comprehension questions, not the original misconception or current pricing."
+  },
+  {
+    "id": "R13",
+    "title": "Cost of Lime e-scooter",
+    "url": "https://www.reddit.com/r/askvan/comments/1umrz9b/cost_of_lime_escooter/",
+    "kind": "Public discussion, July 2026",
+    "summary": "A commenter asks how to compare repeated short trips. Calculations are disputed. This supports comparison effort, not verified savings, a fare model or purchase advice."
+  },
+  {
+    "id": "R14",
+    "title": "Record usage discussion",
+    "url": "https://www.reddit.com/r/vancouver/comments/1u5tlzq/yesterday_was_the_biggest_day_for_lime_scooters/",
+    "kind": "Public discussion, June 2026",
+    "summary": "A rider asks where to find passes; another commenter explains. Positive value comments provide counterevidence. The title’s record-usage claim is not used as a verified statistic."
+  },
+  {
+    "id": "R15",
+    "title": "Ride costs and rates",
+    "url": "https://help.li.me/hc/en-us/articles/115004914208-Ride-costs-and-rates",
+    "kind": "Official pricing documentation",
+    "summary": "Lime explains unlock and time-based charges, varying rates and pass terms. Fare comparison is a separate data problem. No current Vancouver tariff was verified for ScootRoute."
+  },
+  {
+    "id": "R16",
+    "title": "Canadian user agreement",
+    "url": "https://www.li.me/en-ca/user-agreement",
+    "kind": "Official product context",
+    "summary": "The Canadian agreement describes conditional destination-based route, parking and price suggestions. This contradicts an absolute claim that Lime lacks planning. It does not verify each account’s experience."
+  },
+  {
+    "id": "R17",
+    "title": "Making Scooters Usable",
+    "url": "https://citymapper.com/news/2515/making-scooters-usable",
+    "kind": "Competitor documentation",
+    "summary": "Citymapper documents pickup walking, scooter navigation, parking and final walking. Whole-journey planning is not a new category. Vancouver Lime coverage and comparative usability were not verified."
+  },
+  {
+    "id": "R18",
+    "title": "Using bikeshare and scooters",
+    "url": "https://help.transitapp.com/article/100-using-bikeshare-and-scooters",
+    "kind": "Competitor documentation",
+    "summary": "Transit documents pickup and return planning, alternatives and provider handoffs. Capabilities vary by service and city. This does not establish which features work with Vancouver Lime."
+  },
+  {
+    "id": "V01",
+    "title": "Lime parking guidance and refusal screens",
+    "url": "https://www.li.me/en-de/locations/stuttgart",
+    "kind": "Published app illustration, accessed October 31, 2026",
+    "summary": "The two-screen image is published by Lime on its Stuttgart page. It shows parking pins and a parking refusal message. Screenshot location, app version and capture date are unverified. It is not a Vancouver app audit."
+  },
+  {
+    "id": "V02",
+    "title": "Lime end-trip photo screen",
+    "url": "https://www.li.me/nl-nl/locations/utrecht",
+    "kind": "Published app illustration, accessed October 31, 2026",
+    "summary": "The image is published by Lime on its Utrecht page. It illustrates a photo-based completion step in another market. Vancouver has a different physical docking flow. Screenshot version and capture date are unverified."
+  },
+  {
+    "id": "D01",
+    "title": "Work & Co: MTA Live Subway Map",
+    "url": "https://work.co/clients/mta/",
+    "kind": "Professional presentation reference",
+    "summary": "Informed the transportation-focused opening and the connection between map information and journey decisions. Its research, assets and outcomes are not ScootRoute evidence."
+  },
+  {
+    "id": "D02",
+    "title": "Lin Ong: Slice App Redesign",
+    "url": "https://www.curiouslin.com/slicecasestudy",
+    "kind": "Professional presentation reference",
+    "summary": "Informed the pairing of mobile screens with concrete design goals and clear research provenance. The case-study structure was adapted; its findings and outcomes were not reused."
+  },
+  {
+    "id": "D03",
+    "title": "Natalia Koldaeva: Numerade Navigation",
+    "url": "https://anotherone.app/work/case-studies/numerade.html",
+    "kind": "Professional presentation reference",
+    "summary": "Informed early role framing and the problem-to-interface narrative. Published performance claims were not independently audited and were not transferred to this project."
+  },
+  {
+    "id": "T01",
+    "title": "MDN: Geolocation watchPosition()",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/watchPosition",
+    "kind": "Technical reference",
+    "summary": "Documents location updates, permission and secure-context requirements. API availability is not evidence of reliable outdoor tracking, background behaviour or successful rider outcomes."
+  }
+]
