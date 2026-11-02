@@ -27,7 +27,7 @@
     />
     <link rel="stylesheet" href="./styles/style.css?v=dbb266ed79" />
     <link rel="stylesheet" href="./styles/sharedstandard-motion.css" />
-    <link rel="stylesheet" href="./styles/sharedstandard-page.css" />
+    <link rel="stylesheet" href="./styles/sharedstandard-page.css?v=role-20261102" />
     <script src="./scripts/sharedstandard-motion.js" defer></script>
     <script src="./scripts/sharedstandard-page.js" defer></script>
   </head>
@@ -139,19 +139,28 @@ z"
           <h1 class="case-title">SharedStandard</h1>
           <p class="case-subtitle">Shared standards for shared spaces.</p>
           <p class="case-intro">
-            SharedStandard is a UX concept and high fidelity mobile prototype
-            developed to address roommate conflict around shared-space chores.
-            Instead of treating chores as a motivation problem, the project
-            reframed the issue as a coordination problem shaped by informal
-            expectations, mismatched definitions of done, and reminders that
-            quickly start to feel personal.
+            SharedStandard is a mobile concept for making shared chore
+            expectations explicit. Roommates define what a chore includes,
+            choose its timing, and review the agreement together.
           </p>
+          <section class="ss-role-summary" id="my-role" aria-labelledby="role-title">
+            <h2 id="role-title">My contribution</h2>
+            <p>
+              I conducted <strong>5 of the team’s 7 interview sessions</strong>
+              and <strong>2 contextual inquiries</strong>.
+            </p>
+            <p>
+              I developed the <strong>concept and design guide</strong> and
+              contributed significant <strong>wireframe and prototype work</strong>
+              within our three-person team.
+            </p>
+          </section>
         </div>
 
         <aside class="case-meta">
           <div class="case-meta-item">
-            <p class="case-meta-label">Team</p>
-            <p>Ian, Jaden, and Aurod</p>
+            <p class="case-meta-label">Team project</p>
+            <p>Ian Johnstone, Jaden, and Aurod</p>
           </div>
 
           <div class="case-meta-item">
@@ -189,6 +198,8 @@ z"
           />
         </figure>
         <nav class="ss-section-nav" aria-label="SharedStandard sections">
+          <a href="#my-role">My contribution <span aria-hidden="true">↗</span></a>
+          <a href="#research">Research <span aria-hidden="true">↗</span></a>
           <a href="#process">Process <span aria-hidden="true">↗</span></a>
           <a href="#design-guide">Design guide <span aria-hidden="true">↗</span></a>
           <a href="#walkthrough">Screen walkthrough <span aria-hidden="true">↗</span></a>
@@ -240,43 +251,56 @@ z"
         </div>
       </section>
 
-      <section class="case-section">
+      <section class="case-section" id="research" aria-labelledby="research-title">
         <div class="case-section-grid">
           <div class="case-section-label">Research</div>
           <div class="case-section-content">
-            <h2>
-              Discovery research mapped where roommate coordination breaks down
-            </h2>
+            <h2 id="research-title">My research into shared-space expectations</h2>
+            <p>
+              Our research narrowed from broader roommate coordination to the
+              different expectations people brought to shared spaces.
+            </p>
 
             <div class="case-card-grid two-up">
               <article class="case-card">
-                <h3 class="case-mini-heading">Methods</h3>
+                <h3 class="case-mini-heading">My research contribution</h3>
                 <ul class="case-list">
-                  <li>6 one on one interviews</li>
-                  <li>1 two person interview</li>
-                  <li>2 contextual inquiry walkthroughs</li>
                   <li>
-                    Secondary observations including a grocery store trip and
-                    shared laundry room
+                    I conducted <strong>5 of the team’s 7 interview sessions</strong>.
                   </li>
                   <li>
-                    Participants included students and working professionals
+                    I completed <strong>2 contextual inquiries</strong>,
+                    one on-site and one remote, alongside contextual observations.
                   </li>
                 </ul>
+                <div class="ss-research-scope">
+                  <h4 class="case-mini-heading">Team research scope</h4>
+                  <p>
+                    Across the team, we conducted 6 individual interview
+                    sessions and 1 two-person session.
+                  </p>
+                  <p class="ss-scope-note">
+                    These counts refer to sessions, not unique participants.
+                  </p>
+                </div>
               </article>
 
               <article class="case-card">
-                <h3 class="case-mini-heading">What emerged</h3>
+                <h3 class="case-mini-heading">What our research suggested</h3>
                 <ul class="case-list">
                   <li>
-                    Expectations were usually implied rather than agreed on
+                    <strong>Completion meant different things.</strong>
+                    People could finish a chore and still disagree about the
+                    result. Dishwasher loading was a specific example.
                   </li>
-                  <li>Definitions of done were mismatched</li>
-                  <li>Reminder tolerance was low</li>
-                  <li>People wanted calm, direct, low drama coordination</li>
                   <li>
-                    Any solution had to fit daily routines or it would be
-                    abandoned
+                    <strong>Reminders could feel personal.</strong>
+                    Repeated follow-ups created social discomfort.
+                  </li>
+                  <li>
+                    <strong>Existing routines mattered.</strong>
+                    Some households used chat or a whiteboard successfully;
+                    other calendars went unchecked.
                   </li>
                 </ul>
               </article>
@@ -290,15 +314,14 @@ z"
           <div class="case-section-label">Opportunity</div>
           <div class="case-section-content">
             <h2>
-              The gap was not scheduling. It was agreeing on what “clean enough”
-              means.
+              Choosing a shared definition of done
             </h2>
             <p>
-              Existing tools could handle assignments, lists, or expenses, but
-              they did not solve the social problem of aligning expectations for
-              shared spaces. That gap shaped the opportunity for SharedStandard:
-              build a calm, lightweight tool that helps roommates agree on what
-              a finished task actually looks like before conflict starts.
+              I chose the Shared Standard Reset concept to focus on expectation
+              alignment. The other concepts explored contribution visibility
+              and routine cues. I made a shared definition of done the centre
+              of the interaction so roommates could discuss the expected result
+              before agreeing to a task.
             </p>
           </div>
         </div>
@@ -318,9 +341,9 @@ z"
                 <div class="process-timeline-content">
                   <h3 class="process-timeline-title">Research</h3>
                   <p>
-                    Interviews, contextual inquiry, and observation revealed
-                    that chore tension often came from implied expectations and
-                    mismatched definitions of done.
+                    I conducted five of our seven interview sessions and both
+                    contextual inquiries to understand how roommates coordinated
+                    shared spaces.
                   </p>
                 </div>
               </li>
@@ -330,9 +353,9 @@ z"
                 <div class="process-timeline-content">
                   <h3 class="process-timeline-title">Synthesis</h3>
                   <p>
-                    Patterns were organized into the key themes of ambiguity,
-                    reminder friction, low tolerance for repeated follow up, and
-                    the need for calm coordination.
+                    Our synthesis identified mismatched definitions of done,
+                    discomfort with repeated reminders, and the importance of
+                    existing household routines.
                   </p>
                 </div>
               </li>
@@ -354,9 +377,9 @@ z"
                 <div class="process-timeline-content">
                   <h3 class="process-timeline-title">Concept narrowing</h3>
                   <p>
-                    The concept focused on the Shared Standard Reset direction
-                    because it best addressed the strongest research signal:
-                    different standards, not lack of effort.
+                    I chose Shared Standard Reset to focus on expectation
+                    alignment and developed the concept around a shared
+                    definition of done.
                   </p>
                 </div>
               </li>
@@ -368,9 +391,9 @@ z"
                     Wireframes and wireflow
                   </h3>
                   <p>
-                    Early sketches and wireflows translated research into
-                    interaction structure, helping define the flow before moving
-                    into polished interface design.
+                    I contributed substantial wireframe work to the shared
+                    project. Our sketches explored the sequence of a shared
+                    space, chore criteria, and agreement.
                   </p>
                 </div>
               </li>
@@ -380,9 +403,9 @@ z"
                 <div class="process-timeline-content">
                   <h3 class="process-timeline-title">Prototype</h3>
                   <p>
-                    A mobile first prototype was built around spaces,
-                    definitions of done, timing rules, agreement states,
-                    reminders, and lightweight updates.
+                    I created the design guide and contributed significant
+                    prototype work. The final mobile prototype includes shared
+                    work from our three-person team.
                   </p>
                 </div>
               </li>
@@ -392,9 +415,9 @@ z"
                 <div class="process-timeline-content">
                   <h3 class="process-timeline-title">Usability testing</h3>
                   <p>
-                    Moderated testing checked whether users could create
-                    standards, understand agreement states, use reminders, and
-                    update expectations when the system was not working.
+                    The evaluative summary documents four moderated think-aloud
+                    tests. I completed two follow-up tests after that round;
+                    those notes are not currently available.
                   </p>
                 </div>
               </li>
@@ -404,9 +427,9 @@ z"
                 <div class="process-timeline-content">
                   <h3 class="process-timeline-title">Iteration</h3>
                   <p>
-                    Templates, clearer approval language, more visible edit
-                    actions, and lighter weight completion flows were introduced
-                    based on testing feedback.
+                    Testing identified priorities for clearer wording, visible
+                    examples, easier editing, and brief completion steps. The
+                    effect of those refinements still needs evaluation.
                   </p>
                 </div>
               </li>
@@ -421,10 +444,10 @@ z"
           <div class="case-section-content">
             <h2>From rough ideas to a working flow</h2>
             <p>
-              These early sketches helped translate research insights into
-              possible interaction flows. Starting with hand-drawn wireframes
-              made it easier to explore structure, priorities, and task sequence
-              before moving into wireflows and the high-fidelity prototype.
+              I developed the concept and design guide, then contributed
+              substantial wireframe and prototype work to make the agreement
+              tangible. The early sketches and final prototype also include
+              shared team work.
             </p>
 
             <div class="case-visual-grid three-up ss-process-gallery">
@@ -433,7 +456,7 @@ z"
                   src="assets/project-1/sswireframes.jpeg"
                   alt="Hand-drawn wireframes"
                 />
-                <figcaption>Early hand-drawn wireframes</figcaption>
+                <figcaption>Early team wireframes</figcaption>
               </figure>
 
               <figure class="case-visual">
@@ -441,7 +464,7 @@ z"
                   <img src="assets/project-1/design-guide-original.jpg" width="1406" height="1556" loading="lazy"
                     alt="Original SharedStandard design guide with colour, typography, spacing, buttons, cards, lists, chips, and forms." />
                 </a>
-                <figcaption>Design guide <span aria-hidden="true">↗</span></figcaption>
+                <figcaption>My design guide <span aria-hidden="true">↗</span></figcaption>
               </figure>
 
               <figure class="case-visual">
@@ -449,7 +472,7 @@ z"
                   src="assets/project-1/hfproto.jpg"
                   alt="High fidelity prototype"
                 />
-                <figcaption>High fidelity mobile prototype</figcaption>
+                <figcaption>Team mobile prototype</figcaption>
               </figure>
             </div>
           </div>
@@ -458,10 +481,10 @@ z"
 
       <section class="case-section ss-guide" id="design-guide" aria-labelledby="guide-title">
         <div class="case-section-grid">
-          <div class="case-section-label">Design guide</div>
+          <div class="case-section-label">My design guide</div>
           <div class="case-section-content">
             <h2 id="guide-title">A consistent language for shared tasks</h2>
-            <p>The original guide brings colour, typography, spacing, and interaction states together. It gives the screens a common structure while keeping the tone calm and direct.</p>
+            <p>I created the design guide to give our screens a consistent reference. I used a neutral base, green actions, and Inter to support a calm tone, and defined spacing, action hierarchy, status labels, and input feedback.</p>
             <div class="ss-guide-layout">
               <div class="ss-guide-notes">
                 <article>
@@ -492,7 +515,7 @@ z"
                   <img src="assets/project-1/design-guide-original.jpg" width="1406" height="1556" loading="lazy" alt="Full original design guide showing the colour palette, Inter type scale, spacing rules, and component states." />
                   <span class="ss-image-action">View full size <span aria-hidden="true">↗</span></span>
                 </a>
-                <figcaption>Original project design guide</figcaption>
+                <figcaption>My original project design guide</figcaption>
               </figure>
             </div>
           </div>
@@ -777,9 +800,15 @@ z"
           <div class="case-section-label">Testing</div>
           <div class="case-section-content">
             <h2>
-              Moderated usability testing showed the concept had value, but the
-              language and actions needed refinement
+              Testing clarified what needed refinement
             </h2>
+            <p>
+              The team’s evaluative summary documents <strong>4 moderated
+              think-aloud tests</strong>. I completed <strong>2 follow-up
+              tests</strong> after the initial round. Those follow-up notes are
+              not currently available, so I am not claiming a measured
+              improvement from those sessions.
+            </p>
 
             <div class="case-card-grid two-up">
               <article class="case-card">
@@ -794,16 +823,16 @@ z"
               </article>
 
               <article class="case-card">
-                <h3 class="case-mini-heading">What changed</h3>
+                <h3 class="case-mini-heading">Priorities from testing</h3>
                 <ul class="case-list">
-                  <li>Added templates and suggested checklist items</li>
+                  <li>Keep examples and suggested checklist items prominent</li>
                   <li>
-                    Replaced vague agreement language with “waiting for
-                    approval”
+                    Make the relationship between a chore, its criteria, and
+                    timing explicit
                   </li>
-                  <li>Made edit and update actions more visible</li>
-                  <li>Kept completion lightweight, ideally one tap</li>
-                  <li>Improved action feedback and accessibility</li>
+                  <li>Give editing a clear, predictable entry point</li>
+                  <li>Keep completion brief and test the value of each added step</li>
+                  <li>Check whether roommates understand the pending agreement state</li>
                 </ul>
               </article>
             </div>
@@ -851,11 +880,11 @@ z"
           <div class="case-section-content">
             <h2>What this project taught me</h2>
             <p>
-              SharedStandard reinforced that friction in digital products often
-              reflects friction already present in everyday relationships. The
-              strongest design move was not adding more features, but reducing
-              emotional overhead through clearer expectations, calmer wording,
-              and lower effort interactions.
+              I delivered the concept, design guide, and substantial wireframe
+              and prototype work within a three-person team. I learned to make
+              expectations tangible before asking people to agree. Next, I would
+              test whether roommates can explain the pending state and update
+              a standard without help.
             </p>
           </div>
         </div>

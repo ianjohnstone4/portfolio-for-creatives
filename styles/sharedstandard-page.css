@@ -20,6 +20,30 @@
 .sharedstandard-page .case-hero-image { box-shadow: none; }
 .sharedstandard-page .case-hero-image img { aspect-ratio: 4 / 3; object-fit: contain; }
 
+/* Make individual contribution visible before the shared project artifacts. */
+.ss-role-summary {
+  margin-top: 1.75rem;
+  padding: 1.25rem 1.5rem;
+  border-left: 3px solid var(--ss-green);
+  border-radius: 0 1rem 1rem 0;
+  background: var(--ss-mint);
+}
+.ss-role-summary h2 {
+  margin: 0 0 0.75rem;
+  color: var(--ss-green);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.ss-role-summary p { margin: 0; line-height: 1.55; }
+.ss-role-summary p + p { margin-top: 0.65rem; }
+.sharedstandard-page strong { font-weight: 600; }
+.ss-research-scope { margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid var(--ss-border); }
+.ss-research-scope h4 { color: var(--ss-green); }
+.ss-research-scope p { margin-bottom: 0.6rem; }
+.sharedstandard-page .ss-scope-note { font-size: 0.88rem; color: var(--color-text-secondary); }
+
 .ss-section-nav {
   display: flex;
   flex-wrap: wrap;
