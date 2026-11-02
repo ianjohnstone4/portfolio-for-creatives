@@ -1,0 +1,118 @@
+.ss-motion {
+  scroll-margin-top: 2rem;
+}
+
+.ss-motion .ss-motion-context,
+.ss-motion .ss-motion-number {
+  color: var(--color-text-secondary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.ss-motion .ss-motion-context {
+  margin-bottom: 0.8rem;
+}
+
+.ss-motion .ss-motion-note {
+  max-width: 65ch;
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+}
+
+.ss-motion-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.65rem 1.5rem;
+  margin-top: 1.4rem;
+}
+
+.ss-motion-links a {
+  color: var(--color-accent-primary);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.ss-motion-links p {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.ss-motion a:focus-visible,
+.ss-motion video:focus-visible {
+  outline: 3px solid var(--color-accent-primary);
+  outline-offset: 5px;
+}
+
+.ss-motion-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.ss-motion-card {
+  min-width: 0;
+  margin: 0;
+}
+
+.ss-motion-media {
+  padding: clamp(0.65rem, 1.4vw, 1.2rem);
+  border: 1px solid rgba(31, 42, 36, 0.1);
+  border-radius: 1.4rem;
+  background: #e5efe8;
+}
+
+.ss-motion video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 393 / 927;
+  border: 1px solid rgba(31, 42, 36, 0.12);
+  border-radius: 0.85rem;
+  background: #fff;
+  object-fit: contain;
+}
+
+.ss-motion-card figcaption {
+  margin-top: 1.25rem;
+}
+
+.ss-motion .ss-motion-number {
+  margin-bottom: 0.6rem;
+}
+
+.ss-motion-card h3 {
+  margin: 0 0 0.65rem;
+  font-size: clamp(1.15rem, 1.8vw, 1.4rem);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.ss-motion-card figcaption > p:last-child {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 767px) {
+  .ss-motion-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .ss-motion-media {
+    width: min(100%, 354px);
+    box-sizing: border-box;
+    margin-inline: auto;
+    padding: 1rem;
+  }
+
+  .ss-motion-card figcaption {
+    max-width: 52ch;
+    margin-inline: auto;
+  }
+}
