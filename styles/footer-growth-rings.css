@@ -1,0 +1,41 @@
+/* About-page tree cross-section. The shared footer supplies layout and light. */
+.about-page [data-footer-art="growth-rings"] {
+  background: #edf6ef;
+}
+
+.about-page [data-footer-art="growth-rings"] :is(.footer-contours-base, .footer-contours-light) {
+  -webkit-mask-image: url('../assets/footer-terrain/tree-growth-rings.svg?v=20261103b');
+  mask-image: url('../assets/footer-terrain/tree-growth-rings.svg?v=20261103b');
+  -webkit-mask-size: auto 116%;
+  mask-size: auto 116%;
+  -webkit-mask-position: calc(50% + min(25vw, 430px)) center;
+  mask-position: calc(50% + min(25vw, 430px)) center;
+}
+
+.about-page [data-footer-art="growth-rings"] .footer-contours-base {
+  background: #49664d;
+  opacity: .24;
+}
+
+.about-page [data-footer-art="growth-rings"] .footer-contours-light {
+  background: radial-gradient(
+    var(--footer-light-radius) circle at var(--footer-light-x, 65%) var(--footer-light-y, 50%),
+    rgb(59 89 60 / 22%),
+    rgb(86 108 69 / 8%) 48%,
+    transparent 100%
+  );
+}
+
+@media (max-width: 768px) {
+  .about-page [data-footer-art="growth-rings"] :is(.footer-contours-base, .footer-contours-light) {
+    -webkit-mask-size: 620px 620px;
+    mask-size: 620px 620px;
+    -webkit-mask-position: calc(50% + 105px) center;
+    mask-position: calc(50% + 105px) center;
+  }
+  .about-page [data-footer-art="growth-rings"] .footer-contours-base { opacity: .17; }
+}
+
+@media (forced-colors: active), print {
+  .about-page [data-footer-art="growth-rings"] { background: Canvas; }
+}

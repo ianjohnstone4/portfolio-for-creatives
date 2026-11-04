@@ -19,7 +19,9 @@
   <script src="scripts/scootroute.js" defer></script>
     <link rel="stylesheet" href="styles/trip-comparison.css?v=28dc048292">
   <script src="scripts/trip-comparison.js?v=e9cf9d3acf" defer></script>
-</head>
+    <link rel="stylesheet" href="styles/footer-contours.css?v=1e110ecbe5ac" />
+    <script src="scripts/footer-contours.js?v=643546d43909" defer></script>
+  </head>
 <body class="scootroute-page" id="top">
   <a class="sr-skip" href="#main">Skip to content</a>
   <header class="sr-header">
@@ -159,7 +161,48 @@
 
     <nav class="sr-shell sr-project-nav" aria-label="More projects"><a href="https://ianjohnstone.ca/cospace.html"><span class="sr-eyebrow">Another mobile project</span><strong>CoSpace</strong></a><a href="https://ianjohnstone.ca/"><span class="sr-eyebrow">Keep exploring</span><strong>All work</strong></a></nav>
   </main>
-  <footer class="sr-footer"><div class="sr-shell"><p class="sr-eyebrow">Get in touch</p><h2>Interested in working together?</h2><p>I’m a UI/UX designer focused on calm, clear digital experiences. Currently open to internships, freelance opportunities, and creative collaborations.</p><a class="sr-text-link" href="mailto:ian.johnstone1998@gmail.com">Email me</a><div class="sr-footer-bottom"><span>© 2026 Ian Johnstone</span><a href="#top">Back to top</a></div></div></footer>
+  <footer class="site-footer" id="contact" data-footer-contours>
+      <div class="footer-contours-layer" aria-hidden="true">
+        <div class="footer-contours-wash"></div>
+        <div class="footer-contours-base"></div>
+        <div class="footer-contours-light"></div>
+      </div>
+      <div class="site-footer-inner">
+        <div class="site-footer-top">
+          <p class="site-footer-eyebrow">Get in touch</p>
+          <h2 class="site-footer-heading">Interested in working together?</h2>
+          <p class="site-footer-copy">
+            I’m a UI/UX designer focused on calm, clear digital experiences.
+            Currently open to internships, freelance opportunities, and creative
+            collaborations.
+          </p>
+        </div>
+
+        <ul class="site-footer-links">
+          <li>
+            <a
+              href="mailto:ian.johnstone1998@gmail.com"
+              class="nav-link-primary"
+              >Email</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/ian__johnstone/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="nav-link-primary"
+              >Instagram</a
+            >
+          </li>
+        </ul>
+
+        <div class="site-footer-bottom">
+          <p class="site-footer-small">© 2026 Ian Johnstone</p>
+          <a href="#top" class="nav-link-primary">Back to top</a>
+        </div>
+      </div>
+    </footer>
 
   <dialog class="sr-viewer" aria-labelledby="viewer-title" aria-describedby="viewer-caption"><div class="sr-viewer-header"><h2 id="viewer-title">Project screen</h2><button type="button" id="viewer-close" autofocus>Close</button></div><div class="sr-viewer-toolbar"><button type="button" id="viewer-size" aria-pressed="false">Actual size</button><a id="viewer-original" href="assets/scootroute/04-stages-current.jpg" target="_blank" rel="noopener">Open original image</a></div><div class="sr-viewer-stage"><img id="viewer-image" alt="" width="390" height="844"></div><p id="viewer-caption"></p></dialog>
 </body>

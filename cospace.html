@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="styles/style.css?v=dbb266ed79" />
     <link rel="stylesheet" href="styles/cospace.css" />
     <script src="js/cospace.js" defer></script>
+    <link rel="stylesheet" href="styles/footer-contours.css?v=1e110ecbe5ac" />
+    <script src="scripts/footer-contours.js?v=643546d43909" defer></script>
   </head>
   <body class="cospace-page" id="top">
     <a class="cs-skip" href="#main">Skip to content</a>
@@ -118,7 +120,48 @@
       <nav class="cs-project-nav" aria-label="More projects"><a href="granville-island.html"><span class="cs-eyebrow">Previous project</span><strong><span aria-hidden="true">↖</span> Granville Island</strong></a><a href="index.html"><span class="cs-eyebrow">Keep exploring</span><strong>All work <span aria-hidden="true">↗</span></strong></a></nav>
     </main>
 
-    <footer class="cs-footer"><div class="cs-shell"><p class="cs-eyebrow">Get in touch</p><h2>Interested in working together?</h2><p>I’m a UI/UX designer focused on calm, clear digital experiences. Currently open to internships, freelance opportunities, and creative collaborations.</p><a class="cs-text-link" href="mailto:ian.johnstone1998@gmail.com">Email me <span aria-hidden="true">↗</span></a><div class="cs-footer-bottom"><span>© 2026 Ian Johnstone</span><a href="#top">Back to top <span aria-hidden="true">↑</span></a></div></div></footer>
+    <footer class="site-footer" id="contact" data-footer-contours>
+      <div class="footer-contours-layer" aria-hidden="true">
+        <div class="footer-contours-wash"></div>
+        <div class="footer-contours-base"></div>
+        <div class="footer-contours-light"></div>
+      </div>
+      <div class="site-footer-inner">
+        <div class="site-footer-top">
+          <p class="site-footer-eyebrow">Get in touch</p>
+          <h2 class="site-footer-heading">Interested in working together?</h2>
+          <p class="site-footer-copy">
+            I’m a UI/UX designer focused on calm, clear digital experiences.
+            Currently open to internships, freelance opportunities, and creative
+            collaborations.
+          </p>
+        </div>
+
+        <ul class="site-footer-links">
+          <li>
+            <a
+              href="mailto:ian.johnstone1998@gmail.com"
+              class="nav-link-primary"
+              >Email</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/ian__johnstone/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="nav-link-primary"
+              >Instagram</a
+            >
+          </li>
+        </ul>
+
+        <div class="site-footer-bottom">
+          <p class="site-footer-small">© 2026 Ian Johnstone</p>
+          <a href="#top" class="nav-link-primary">Back to top</a>
+        </div>
+      </div>
+    </footer>
 
     <dialog class="cs-viewer" aria-labelledby="viewer-title"><div class="cs-viewer-top"><h2 id="viewer-title">CoSpace screen</h2><button type="button" id="viewer-close" aria-label="Close enlarged screen">Close <span aria-hidden="true">×</span></button></div><div class="cs-viewer-content"><div class="cs-viewer-artwork"><img decoding="async" id="viewer-image" src="assets/cospace/screens/home.webp" alt="" width="402" height="874" /><span class="cs-schedule-layers" id="viewer-schedule-layers" hidden aria-hidden="true"><span class="cs-schedule-check-in"><img decoding="async" src="assets/cospace/screens/schedule-check-in.webp" width="354" height="97" alt="" loading="lazy" /></span><img decoding="async" class="cs-schedule-next-block" src="assets/cospace/screens/schedule-next-block.webp" width="360" height="133" alt="" loading="lazy" /></span></div></div><p id="viewer-caption"></p></dialog>
   </body>

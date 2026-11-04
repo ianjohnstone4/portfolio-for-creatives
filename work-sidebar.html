@@ -11,9 +11,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./styles/style.css?v=dbb266ed79" />
+    <link rel="stylesheet" href="styles/footer-contours.css?v=1e110ecbe5ac" />
+    <script src="scripts/footer-contours.js?v=643546d43909" defer></script>
   </head>
 
-  <body class="work-sidebar-page">
+  <body class="work-sidebar-page" id="top">
     <div class="work-sidebar-wrapper">
       <aside class="work-sidebar border">
         <header class="hero-header">
@@ -110,18 +112,52 @@
           </div>
           <div class="project-description col-2"><p>To create additional pages, copy this file and rename it to something else. Adjust the hyperlinks to go to the right pages.</p></div>
         </div>
-        <div class="footer-global-wrapper">
-          <h2>Minimal Footer</h2>
-          <div class="footer-full-width">
-            <p class="footer-fineprint">
-              &copy; 2020-2025. Hand crafted with
-              <span class="heart">❤</span>
-              by James Neufeld.
-            </p>
-          </div>
-        </div>
+
       </main>
     </div>
+    <footer class="site-footer" id="contact" data-footer-contours>
+      <div class="footer-contours-layer" aria-hidden="true">
+        <div class="footer-contours-wash"></div>
+        <div class="footer-contours-base"></div>
+        <div class="footer-contours-light"></div>
+      </div>
+      <div class="site-footer-inner">
+        <div class="site-footer-top">
+          <p class="site-footer-eyebrow">Get in touch</p>
+          <h2 class="site-footer-heading">Interested in working together?</h2>
+          <p class="site-footer-copy">
+            I’m a UI/UX designer focused on calm, clear digital experiences.
+            Currently open to internships, freelance opportunities, and creative
+            collaborations.
+          </p>
+        </div>
+
+        <ul class="site-footer-links">
+          <li>
+            <a
+              href="mailto:ian.johnstone1998@gmail.com"
+              class="nav-link-primary"
+              >Email</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/ian__johnstone/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="nav-link-primary"
+              >Instagram</a
+            >
+          </li>
+        </ul>
+
+        <div class="site-footer-bottom">
+          <p class="site-footer-small">© 2026 Ian Johnstone</p>
+          <a href="#top" class="nav-link-primary">Back to top</a>
+        </div>
+      </div>
+    </footer>
+
     <div id="myID" class="bottomMenu hide"><a href="project-2.html">Next Project</a></div>
 
     <script>

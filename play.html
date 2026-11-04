@@ -35,9 +35,11 @@
     <link rel="stylesheet" href="./styles/masonry.css" />
     <link rel="stylesheet" href="./lightbox2/dist/css/lightbox.min.css" />
     <link rel="stylesheet" href="./styles/style.css?v=dbb266ed79" />
+    <link rel="stylesheet" href="styles/footer-contours.css?v=1e110ecbe5ac" />
+    <script src="scripts/footer-contours.js?v=643546d43909" defer></script>
   </head>
 
-  <body class="play-page">
+  <body class="play-page" id="top">
     <section class="hero">
       <header class="hero-header">
         <ul class="nav-branding">
@@ -263,53 +265,48 @@
       </section>
     </main>
 
-    <ul class="footer-global">
-      <li class="footer-tagline">
-        <h2>Let's Connect!</h2>
-        <p>
-          Feel free to reach out with any questions, collaborations, or just to
-          chat about design.
-        </p>
-      </li>
-      <li class="footer-highlights">
-        <h2>Awards & Recognition</h2>
-        <ul class="footer-awards-list">
-          <li class="footer-item">
-            <a href="#">Dean’s List – Year or Term</a>
+    <footer class="site-footer" id="contact" data-footer-contours>
+      <div class="footer-contours-layer" aria-hidden="true">
+        <div class="footer-contours-wash"></div>
+        <div class="footer-contours-base"></div>
+        <div class="footer-contours-light"></div>
+      </div>
+      <div class="site-footer-inner">
+        <div class="site-footer-top">
+          <p class="site-footer-eyebrow">Get in touch</p>
+          <h2 class="site-footer-heading">Interested in working together?</h2>
+          <p class="site-footer-copy">
+            I’m a UI/UX designer focused on calm, clear digital experiences.
+            Currently open to internships, freelance opportunities, and creative
+            collaborations.
+          </p>
+        </div>
+
+        <ul class="site-footer-links">
+          <li>
+            <a
+              href="mailto:ian.johnstone1998@gmail.com"
+              class="nav-link-primary"
+              >Email</a
+            >
           </li>
-          <li class="footer-item">
-            <a href="#">Your Award – Name of Student Award and Year</a>
-          </li>
-          <li class="footer-item">
-            <a href="#">Honourable Mention – Project or Competition Name</a>
-          </li>
-          <li class="footer-item">
-            <a href="#">Other Recognition or Accolade</a>
+          <li>
+            <a
+              href="https://www.instagram.com/ian__johnstone/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="nav-link-primary"
+              >Instagram</a
+            >
           </li>
         </ul>
-      </li>
 
-      <li class="footer-contact-social">
-        <h2>Contact & Social</h2>
-        <ul class="footer-socials-list">
-          <li class="footer-item"><a href="https://www.instagram.com/ian__johnstone/">Insta</a></li>
-          <li class="footer-item"><a href="#">Behance</a></li>
-        </ul>
-      </li>
-
-      <li class="footer-full-width">
-        <p><a href="#top">Smooth scroll to the top</a></p>
-        <p class="footer-fineprint">
-          &copy; <span id="copyright-years">2020-</span>. Hand crafted with
-          <span class="heart">❤</span>
-          by James Neufeld.
-        </p>
-        <script>
-          document.getElementById("copyright-years").textContent +=
-            new Date().getFullYear();
-        </script>
-      </li>
-    </ul>
+        <div class="site-footer-bottom">
+          <p class="site-footer-small">© 2026 Ian Johnstone</p>
+          <a href="#top" class="nav-link-primary">Back to top</a>
+        </div>
+      </div>
+    </footer>
     <script src="./lightbox2/dist/js/lightbox-plus-jquery.min.js"></script>
   </body>
 </html>
