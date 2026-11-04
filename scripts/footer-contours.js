@@ -1,4 +1,4 @@
-/* Spread the Lions' contour gaps locally around the pointer, then close them. */
+/* Open contour and tree-ring gaps locally, then restore them quickly. */
 (() => {
   'use strict';
   const footers = document.querySelectorAll('[data-footer-contours]');
@@ -7,7 +7,7 @@
     '(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)'
   );
   const ns = 'http://www.w3.org/2000/svg';
-  let sourcePromise;
+  const sources = new Map();
   const svgElement = (tag, attributes, parent) => {
     const element = document.createElementNS(ns, tag);
     Object.entries(attributes).forEach(([name, value]) => element.setAttribute(name, value));
@@ -15,28 +15,42 @@
     return element;
   };
   const loadSource = url => {
-    if (!sourcePromise) sourcePromise = fetch(url).then(response => {
+    if (!sources.has(url)) sources.set(url, fetch(url).then(response => {
       if (!response.ok) throw new Error('Contour artwork could not be loaded.');
       return response.text();
     }).then(text => {
-      const document = new DOMParser().parseFromString(text, 'image/svg+xml');
-      const paths = [...document.querySelectorAll('g > path')].map(path => {
+      const artwork = new DOMParser().parseFromString(text, 'image/svg+xml');
+      const arity = { M: 2, L: 2, Q: 4, C: 6, Z: 0 };
+      const paths = [...artwork.querySelectorAll('g > path')].map(path => {
         const d = path.getAttribute('d') || '';
-        const commands = d.match(/[a-z]/gi) || [];
-        const values = (d.match(/[-+]?(?:\d*\.)?\d+(?:e[-+]?\d+)?/gi) || []).map(Number);
-        if (commands[0] !== 'M' || commands.slice(1).some(command => command !== 'C') ||
-            values.length < 8 || (values.length - 2) % 6 || values.some(value => !Number.isFinite(value))) {
-          throw new Error('Unsupported contour geometry.');
+        const tokens = d.match(/[a-z]|[-+]?(?:\d*\.)?\d+(?:e[-+]?\d+)?/gi) || [];
+        const values = [];
+        const segments = [];
+        if (tokens[0] !== 'M') throw new Error('Unsupported contour geometry.');
+        for (let i = 0; i < tokens.length;) {
+          const command = tokens[i++];
+          const count = arity[command];
+          if (count === undefined) throw new Error('Unsupported contour geometry.');
+          segments.push({ command, start: values.length, count });
+          for (let j = 0; j < count; j++) {
+            const value = Number(tokens[i++]);
+            if (!Number.isFinite(value)) throw new Error('Invalid contour coordinates.');
+            values.push(value);
+          }
         }
-        return { values, strokeWidth: path.getAttribute('stroke-width') || '1.15' };
+        return { values, segments, strokeWidth: path.getAttribute('stroke-width') || '1.15',
+          opacity: path.getAttribute('opacity') || '1' };
       });
       if (!paths.length) throw new Error('Contour artwork contains no paths.');
       return paths;
-    });
-    return sourcePromise;
+    }));
+    return sources.get(url);
   };
 
   function createField(footer, layer, source, index) {
+    const rings = footer.dataset.footerArt === 'growth-rings';
+    // Keep the approved timing; About's displacement is 30% below the prototype.
+    const strength = rings ? .85 * .7 : .85;
     const svg = svgElement('svg', {
       class: 'footer-contours-deform-svg', 'aria-hidden': 'true', focusable: 'false'
     }, layer);
@@ -45,7 +59,9 @@
     const gradient = svgElement('radialGradient', {
       id: gradientId, gradientUnits: 'userSpaceOnUse'
     }, definitions);
-    [[0, '#315d43', .18], [.42, '#416b51', .09], [1, '#416b51', 0]].forEach(([offset, color, opacity]) => {
+    const stops = rings ? [[0, '#3b593c', .18], [.48, '#566c45', .08], [1, '#566c45', 0]] :
+      [[0, '#315d43', .18], [.42, '#416b51', .09], [1, '#416b51', 0]];
+    stops.forEach(([offset, color, opacity]) => {
       svgElement('stop', { offset, 'stop-color': color, 'stop-opacity': opacity }, gradient);
     });
     const base = svgElement('g', { fill: 'none', 'stroke-linejoin': 'round', 'stroke-linecap': 'round' }, svg);
@@ -56,23 +72,27 @@
       const id = `footer-contour-${index}-${lineIndex}`;
       const path = svgElement('path', {
         id, class: 'footer-contour-path', 'stroke-width': spec.strokeWidth,
+        opacity: spec.opacity,
         'vector-effect': 'non-scaling-stroke'
       }, definitions);
       svgElement('use', { href: `#${id}` }, base);
       svgElement('use', { href: `#${id}` }, shine);
-      return { source: spec.values, points: new Float64Array(spec.values.length),
-        offsets: new Float64Array(spec.values.length / 2), xText: [], path };
+      return { source: spec.values, segments: spec.segments, points: new Float64Array(spec.values.length),
+        offsets: new Float64Array(spec.values.length), path };
     });
     let width = 0;
     let height = 0;
     let radiusX = 0;
     let radiusY = 0;
     const paintLine = line => {
-      const coordinates = [];
-      for (let i = 0; i < line.points.length; i += 2) {
-        coordinates.push(line.xText[i / 2], (line.points[i + 1] + line.offsets[i / 2]).toFixed(2));
+      const pieces = [];
+      for (const segment of line.segments) {
+        pieces.push(segment.command);
+        for (let i = segment.start; i < segment.start + segment.count; i++) {
+          pieces.push((line.points[i] + line.offsets[i]).toFixed(2));
+        }
       }
-      line.path.setAttribute('d', `M${coordinates[0]},${coordinates[1]}C${coordinates.slice(2).join(',')}`);
+      line.path.setAttribute('d', pieces.join(' '));
     };
     const reset = () => {
       lines.forEach(line => { line.offsets.fill(0); if (width) paintLine(line); });
@@ -82,10 +102,21 @@
         if (bounds.width === width && bounds.height === height) return;
         width = bounds.width;
         height = bounds.height;
-        const artworkWidth = Math.max(width, 720);
-        const left = (width - artworkWidth) / 2;
-        radiusX = Math.max(140, Math.min(220, width * .12));
-        radiusY = Math.max(70, Math.min(105, height * .14));
+        let scaleX, scaleY, left, top;
+        if (rings) {
+          const size = width <= 768 ? 620 : height * 1.16;
+          scaleX = scaleY = size / 1000;
+          left = width / 2 + (width <= 768 ? 105 : Math.min(width * .25, 430)) - size / 2;
+          top = (height - size) / 2;
+        } else {
+          const artworkWidth = Math.max(width, 720);
+          scaleX = artworkWidth / 1000;
+          scaleY = height / 480;
+          left = (width - artworkWidth) / 2;
+          top = 0;
+        }
+        radiusX = rings ? Math.max(90, Math.min(140, width * .16)) : Math.max(140, Math.min(220, width * .12));
+        radiusY = rings ? radiusX : Math.max(70, Math.min(105, height * .14));
         svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
         gradient.setAttribute('r', Math.max(260, Math.min(600, innerWidth * .45)));
         gradient.setAttribute('cx', width / 2);
@@ -96,9 +127,8 @@
         shine.setAttribute('opacity', getComputedStyle(layer.querySelector('.footer-contours-light')).opacity);
         lines.forEach(line => {
           for (let i = 0; i < line.source.length; i += 2) {
-            line.points[i] = left + line.source[i] * artworkWidth / 1000;
-            line.points[i + 1] = line.source[i + 1] * height / 480;
-            line.xText[i / 2] = line.points[i].toFixed(2);
+            line.points[i] = left + line.source[i] * scaleX;
+            line.points[i + 1] = top + line.source[i + 1] * scaleY;
           }
         });
         reset();
@@ -113,18 +143,21 @@
         lines.forEach(line => {
           let dirty = false;
           for (let i = 0; i < line.points.length; i += 2) {
-            const dx = (line.points[i] - pointer.x) / radiusX;
+            const dx = line.points[i] - pointer.x;
             const dy = line.points[i + 1] - pointer.y;
-            // This increasing vertical mapping opens nearby gaps without line crossings.
-            let target = inside ? dy * .85 * Math.exp(-.5 * (dx * dx + dy * dy / (radiusY * radiusY))) : 0;
-            if (Math.abs(target) < .025) target = 0;
-            const old = line.offsets[i / 2];
-            const returning = Math.abs(target) < Math.abs(old);
-            const follow = 1 - Math.exp(-elapsed / (returning ? 55 : 70));
-            const next = Math.abs(target - old) < .025 ? target : old + (target - old) * follow;
-            if (next !== old) dirty = true;
-            line.offsets[i / 2] = next;
-            error = Math.max(error, Math.abs(target - next));
+            const amount = inside ? strength * Math.exp(-.5 *
+              (dx * dx / (radiusX * radiusX) + dy * dy / (radiusY * radiusY))) : 0;
+            for (let axis = 0; axis < 2; axis++) {
+              let target = axis === 0 ? (rings ? dx * amount : 0) : dy * amount;
+              if (Math.abs(target) < .025) target = 0;
+              const old = line.offsets[i + axis];
+              const returning = Math.abs(target) < Math.abs(old);
+              const follow = 1 - Math.exp(-elapsed / (returning ? 55 : 70));
+              const next = Math.abs(target - old) < .025 ? target : old + (target - old) * follow;
+              if (next !== old) dirty = true;
+              line.offsets[i + axis] = next;
+              error = Math.max(error, Math.abs(target - next));
+            }
           }
           if (dirty) paintLine(line);
         });
@@ -136,7 +169,6 @@
 
   footers.forEach((footer, index) => {
     const layer = footer.querySelector('.footer-contours-layer');
-    const isLions = footer.dataset.footerArt !== 'growth-rings';
     let field;
     let fieldLoading = false;
     let fieldFailed = false;
@@ -163,8 +195,9 @@
       if (!frame && canAnimate()) frame = requestAnimationFrame(render);
     };
     const ensureField = () => {
-      if (!isLions || !layer || field || fieldLoading || fieldFailed || !canAnimate()) return;
-      const mask = getComputedStyle(layer.querySelector('.footer-contours-base')).maskImage;
+      if (!layer || field || fieldLoading || fieldFailed || !canAnimate()) return;
+      const baseStyle = getComputedStyle(layer.querySelector('.footer-contours-base'));
+      const mask = baseStyle.maskImage || baseStyle.webkitMaskImage;
       const url = mask.match(/^url\(["']?(.*?)["']?\)$/)?.[1];
       if (!url) return;
       fieldLoading = true;

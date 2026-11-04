@@ -105,6 +105,7 @@ body.padding-large > .site-footer[data-footer-contours] {
 }
 
 .footer-contours-wash,
+.footer-contours-photo,
 .footer-contours-base,
 .footer-contours-light {
   position: absolute;
@@ -120,6 +121,16 @@ body.padding-large > .site-footer[data-footer-contours] {
     rgb(126 167 190 / 2%) 70%,
     transparent 100%
   );
+}
+
+/* This photo shares the artwork's crop, but never follows or deforms with the cursor. */
+.footer-contours-photo {
+  background: url('../assets/footer-terrain/lions-photo.svg') center / max(100%, 720px) 100% no-repeat;
+  opacity: .12;
+  filter: grayscale(1);
+  mix-blend-mode: multiply;
+  -webkit-mask-image: linear-gradient(180deg, transparent 2%, #000 24%, #000 45%, transparent 94%);
+  mask-image: linear-gradient(180deg, transparent 2%, #000 24%, #000 45%, transparent 94%);
 }
 
 .footer-contours-base,
@@ -162,6 +173,11 @@ body.padding-large > .site-footer[data-footer-contours] {
 
 .footer-contours-deform-ready :is(.footer-contours-base, .footer-contours-light) { visibility: hidden; }
 .footer-contours-deform-ready .footer-contours-deform-svg { display: block; }
+
+[data-footer-art="growth-rings"] .footer-contours-deform-svg {
+  -webkit-mask-image: none;
+  mask-image: none;
+}
 
 @media (prefers-reduced-motion: reduce), (hover: none), (pointer: coarse) {
   .footer-contours-deform-ready :is(.footer-contours-base, .footer-contours-light) { visibility: visible; }
