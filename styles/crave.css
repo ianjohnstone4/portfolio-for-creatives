@@ -133,6 +133,12 @@ html:has(.crave-page) { scroll-behavior:auto; }
 .cr-refinement-bottom { display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:start; gap:60px; margin-top:27px; }
 .cr-refinement-bottom p { color:#bbc2cd; font-size:12px; max-width:77ch; }
 .cr-refinement-bottom .cr-text-link { padding-top:0; }
+.cr-home-studies { margin-top:48px; padding-top:34px; border-top:1px solid #424955; }
+.cr-home-heading { margin-bottom:27px; }
+.cr-home-heading h3 { margin:12px 0 15px; font-size:29px; line-height:1.25; letter-spacing:-.025em; }
+.cr-home-heading>p:last-child { max-width:85ch; color:#c6cbd4; font-size:14px; line-height:1.65; }
+.cr-home-gallery { display:grid; gap:34px; }
+.cr-home-gallery .cr-state-art { display:block; }
 .cr-outcome { padding-bottom:44px; }
 .cr-outcome-register { border-top:1px solid var(--cr-line); }
 .cr-outcome-register>div { display:grid; grid-template-columns:230px 1fr; gap:50px; padding:23px 0; border-bottom:1px solid var(--cr-line); }
