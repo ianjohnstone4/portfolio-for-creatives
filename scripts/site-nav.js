@@ -35,6 +35,7 @@
   links.className = 'site-nav-links';
   [
     ['Work', workUrl.href, workCurrent],
+    ['Museum', new URL('#museum', base).href, false],
     ['About', aboutUrl.href, aboutCurrent],
     ['Contact', footer ? `#${footer.id}` : `${aboutUrl.href}#contact`, false]
   ].forEach(([label, href, current]) => {

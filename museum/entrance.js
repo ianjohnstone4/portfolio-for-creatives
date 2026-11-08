@@ -14,12 +14,8 @@ function setUpMuseumEntrance() {
   const links = [...nav.querySelectorAll('.site-nav-links a')];
   const work = links.find(link => link.textContent === 'Work');
   const contact = links.find(link => link.textContent === 'Contact');
-  const museumItem = document.createElement('li');
-  const museumLink = document.createElement('a');
-  museumLink.href = '#museum';
-  museumLink.textContent = 'Museum';
-  museumItem.append(museumLink);
-  work.closest('li').after(museumItem);
+  const museumLink = nav.querySelector('.site-nav-links a[href$="#museum"]');
+  const museumItem = museumLink?.closest('li');
 
   const exit = document.createElement('button');
   exit.type = 'button';
@@ -46,7 +42,7 @@ function setUpMuseumEntrance() {
 
     home.hidden = home.inert = true;
     experience.hidden = exit.hidden = false;
-    museumItem.hidden = true;
+    if (museumItem) museumItem.hidden = true;
     work.removeAttribute('aria-current');
     document.body.classList.add('museum-preview-active');
     if (addHistory) history.pushState({ museum: true, returnHash, returnScroll }, '', '#museum');
@@ -58,7 +54,7 @@ function setUpMuseumEntrance() {
     if (experience.hidden) return;
     home.hidden = home.inert = false;
     experience.hidden = exit.hidden = true;
-    museumItem.hidden = false;
+    if (museumItem) museumItem.hidden = false;
     work.setAttribute('aria-current', 'page');
     document.body.classList.remove('museum-preview-active');
     if (addHistory) history.pushState({ museum: false }, '', location.pathname + location.search + hash);
@@ -68,7 +64,8 @@ function setUpMuseumEntrance() {
 
   frame.addEventListener('load', focusMuseum);
   entry.addEventListener('click', () => enterMuseum(true, entry));
-  museumLink.addEventListener('click', event => {
+  museumLink?.addEventListener('click', event => {
+    if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
     event.preventDefault();
     enterMuseum(true, museumLink);
   });
