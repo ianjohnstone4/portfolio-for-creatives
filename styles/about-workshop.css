@@ -1,0 +1,198 @@
+.workshop {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  align-items: start;
+  gap: clamp(2rem, 6vw, 5rem);
+  margin-top: clamp(4.5rem, 8vw, 7rem);
+  scroll-margin-top: 6rem;
+}
+
+.workshop [hidden] {
+  display: none;
+}
+
+.workshop-intro {
+  padding-top: clamp(0rem, 2vw, 1.6rem);
+}
+
+.workshop-intro > p {
+  max-width: 33ch;
+  margin: 1.1rem 0 0;
+  color: var(--color-text-secondary);
+  font-size: clamp(1.06rem, 1.65vw, 1.27rem);
+  line-height: 1.55;
+}
+
+.workshop-choices,
+.workshop-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.workshop-choices {
+  margin-top: 1.5rem;
+}
+
+.workshop button {
+  min-height: 44px;
+  padding: 0.45rem 1rem;
+  border: 1px solid #bdcbc1;
+  border-radius: 999px;
+  background: #f7f9f6;
+  color: #294837;
+  font: 500 1rem/1.2 var(--font-family-body);
+  cursor: pointer;
+}
+
+.workshop button:hover {
+  background: #e7eee7;
+}
+
+.workshop button[aria-pressed="true"] {
+  border-color: #294837;
+  background: #294837;
+  color: #fff;
+}
+
+.workshop :is(button, summary, a):focus-visible {
+  outline: 3px solid #34664a;
+  outline-offset: 3px;
+}
+
+.workshop-gallery {
+  min-width: 0;
+}
+
+.workshop-project {
+  overflow: hidden;
+  margin: 0 0 0.75rem;
+  padding: 0;
+  border: 1px solid #dce4dd;
+  border-radius: 1.4rem;
+  background: #f8f9f5;
+}
+
+.workshop-stage {
+  background: #f1f4ed;
+}
+
+#workshop-woodworking .workshop-stage {
+  background: #f4f0e5;
+}
+
+#workshop-welding .workshop-stage {
+  background: #edf1ef;
+}
+
+.workshop video {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 22rem;
+  aspect-ratio: 3 / 2;
+  object-fit: contain;
+}
+
+.workshop-controls {
+  justify-content: flex-end;
+  gap: 0.25rem;
+  padding: 0.35rem 0.65rem 0.55rem;
+}
+
+.workshop-controls button {
+  padding-inline: 0.8rem;
+  font-size: 0.88rem;
+}
+
+.workshop-controls [data-jump] {
+  border-color: transparent;
+  background: transparent;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.workshop-controls [data-jump]:hover {
+  background: rgba(31, 42, 36, 0.05);
+}
+
+.workshop-project figcaption {
+  padding: clamp(1.15rem, 2vw, 1.8rem) clamp(1.2rem, 2.5vw, 2.1rem);
+}
+
+.workshop-project h3 {
+  margin: 0 0 0.5rem;
+  color: var(--color-text-primary);
+  font-size: clamp(1.3rem, 2.2vw, 1.7rem);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.workshop-project figcaption p,
+.workshop-notes p {
+  max-width: 57ch;
+  margin: 0;
+  color: #394c40;
+  line-height: 1.55;
+}
+
+.workshop-notes {
+  color: #4c5f53;
+  font-size: 0.88rem;
+}
+
+.workshop-notes summary {
+  display: list-item;
+  width: fit-content;
+  min-height: 44px;
+  padding: 0.65rem 0.25rem;
+  list-style: inside disclosure-closed;
+  cursor: pointer;
+}
+
+.workshop-notes[open] summary {
+  list-style-type: disclosure-open;
+}
+
+.workshop-notes p {
+  margin: 0 0.3rem 0.5rem;
+}
+
+@media (max-width: 740px) {
+  .workshop {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.1rem;
+  }
+
+  .workshop-intro {
+    padding: 0;
+  }
+
+  .workshop-intro > p {
+    max-width: 45ch;
+  }
+
+  .workshop-choices {
+    margin-top: 1rem;
+  }
+}
+
+@media print {
+  .workshop {
+    display: block;
+  }
+
+  .workshop .workshop-project[hidden] {
+    display: block;
+  }
+
+  .workshop-project {
+    break-inside: avoid;
+  }
+
+  .workshop-choices,
+  .workshop-controls {
+    display: none;
+  }
+}

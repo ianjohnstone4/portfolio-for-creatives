@@ -34,6 +34,8 @@
     <link rel="stylesheet" href="styles/footer-growth-rings.css?v=5bf7c646a677" />
       <link rel="stylesheet" href="styles/site-nav.css?v=c8a4a1fcb575" />
     <script src="scripts/site-nav.js?v=ea4e08de83f8" defer></script>
+    <link rel="stylesheet" href="styles/about-workshop.css" />
+    <script src="scripts/about-workshop.js" defer></script>
   </head>
 
   <body class="about-page" id="top">
@@ -192,6 +194,7 @@ z"
           </div>
 
           <div class="about-links">
+            <a href="#cabin-and-workshop" class="about-link-pill">Cabin &amp; workshop</a>
             <a
               href="mailto:ian.johnstone1998@gmail.com"
               class="about-link-pill"
@@ -303,6 +306,80 @@ z"
               </p>
             </div>
           </article>
+        </div>
+      </section>
+
+      <section class="workshop" id="cabin-and-workshop" aria-labelledby="workshop-title">
+        <div class="workshop-intro">
+          <h2 class="about-strengths-heading" id="workshop-title">Cabin &amp; workshop</h2>
+          <p>I like making things I can put to use. A few of them live at the cabin, in the kitchen, or in my toolbox.</p>
+          <div class="workshop-choices" role="group" aria-label="Choose a workshop project" hidden>
+              <button type="button" aria-pressed="true" aria-controls="workshop-cabin">Cabin</button>
+              <button type="button" aria-pressed="false" aria-controls="workshop-woodworking">Woodworking</button>
+              <button type="button" aria-pressed="false" aria-controls="workshop-welding">Welding</button>
+          </div>
+        </div>
+        <div class="workshop-gallery">
+          <figure class="workshop-project" id="workshop-cabin">
+            <div class="workshop-stage">
+              <video width="576" height="384" muted playsinline controls preload="none"
+                poster="assets/workshop/cabin.webp"
+                aria-label="Cat’s Whiskers with a green metal roof, barn-red log walls and its wooden sign above the porch. The animation stacks bare logs, adds the green roof, cuts the window and door openings as the deck appears, paints the logs red and hangs the sign.">
+                <source src="assets/workshop/cabin.mp4" type="video/mp4">
+                <a href="assets/workshop/cabin.mp4">Watch the cabin animation</a>
+              </video>
+              <div class="workshop-controls" hidden>
+                <button type="button" data-jump="end">Show finished cabin</button>
+                <button type="button" data-play="Play build">Play build</button>
+              </div>
+            </div>
+            <figcaption>
+              <h3>Our off-grid log cabin</h3>
+              <p>My family’s off-grid cabin on Hollyburn Mountain is called Cat’s Whiskers. One of my favourite ways to spend a weekend is working on it. I’ve cut lumber and set up solar lights there, and there’s usually another project waiting for the next trip.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="workshop-project" id="workshop-woodworking">
+            <div class="workshop-stage">
+              <video width="640" height="426" muted playsinline controls preload="none"
+                poster="assets/workshop/woodworking.webp"
+                aria-label="On the left, a straight whittling knife chips a spoon blank to shape. A curved hook knife scoops out the bowl. On the right, striped wood is clamped and cut into my surfboard-shaped cutting board.">
+                <source src="assets/workshop/woodworking.mp4" type="video/mp4">
+                <a href="assets/workshop/woodworking.mp4">Watch the woodworking animation</a>
+              </video>
+              <div class="workshop-controls" hidden>
+                <button type="button" data-jump="5.08">See hook knife</button>
+                <button type="button" data-play="Play carving">Play carving</button>
+              </div>
+            </div>
+            <figcaption>
+              <h3>Woodworking</h3>
+              <p>Whittling is the kind of woodworking I do most. I like seeing what I can carve from a small piece of wood with just a knife. I take on bigger projects, too. When I made these striped cutting boards, I kept one rectangular and gave the other a surfboard shape, right down to the fishtail.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="workshop-project" id="workshop-welding">
+            <div class="workshop-stage">
+              <video width="576" height="384" muted playsinline controls preload="none"
+                poster="assets/workshop/welding.webp"
+                aria-label="My black steel tray resting on the three-post stand I welded. In the animation the pieces assemble, the joints are welded, both pieces are painted black, and the tray lowers onto the stand.">
+                <source src="assets/workshop/welding.mp4" type="video/mp4">
+                <a href="assets/workshop/welding.mp4">Watch the welding animation</a>
+              </video>
+              <div class="workshop-controls" hidden>
+                <button type="button" data-jump="end">Show finished project</button>
+                <button type="button" data-play="Play build">Play build</button>
+              </div>
+            </div>
+            <figcaption>
+              <h3>A welded tray and stand for my toolbox</h3>
+              <p>I designed and welded both a removable steel tray and the three-post stand it sits on. On fitness equipment service calls, I could lift the tray out to reach the tools underneath. When I ran out of angle steel, I switched to round tubing for the stand’s base. I used the setup for six months.</p>
+            </figcaption>
+          </figure>
+          <details class="workshop-notes">
+            <summary>About the illustrations</summary>
+            <p>The illustrations use AI and are based on my photos. The welding animation follows the component drawings in my IDEA application. The cabin colours come from my family’s photos, and the woodworking animation shows two projects side by side.</p>
+          </details>
         </div>
       </section>
     </main>
