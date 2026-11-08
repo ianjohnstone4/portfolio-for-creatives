@@ -5,6 +5,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Instrument Serif";
+  src: url("./fonts/instrument-serif.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* The original header reserves space for the floating navigation. */
 @media screen {
   .work-page .hero-header.site-nav-placeholder > .nav-branding {
@@ -19,9 +27,11 @@
 
 .work-page .hero-name {
   margin: 0;
-  font-family: "Portfolio Jost", Jost, sans-serif;
-  font-weight: 500;
+  font-family: "Instrument Serif", Georgia, serif;
+  font-weight: 400;
   font-size: clamp(1.5rem, 1rem + 2.5vw, 2.25rem);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
   font-synthesis: none;
   overflow-wrap: anywhere;
 }
