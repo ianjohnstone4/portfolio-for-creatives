@@ -29,8 +29,7 @@
 
     const controls = project.querySelector(".workshop-controls");
     const toggle = controls.querySelector("[data-play]");
-    const jump = controls.querySelector("[data-jump]");
-    const jumpsToEnd = jump.dataset.jump === "end";
+    const finish = controls.querySelector('[data-jump="end"]');
     let seen = false;
     let inView = false;
     let pendingSeek = null;
@@ -44,7 +43,7 @@
       else if (!video.paused) toggle.textContent = "Pause";
       else if (video.currentTime > 0.015) toggle.textContent = "Resume";
       else toggle.textContent = toggle.dataset.play;
-      jump.hidden = jumpsToEnd && atEnd();
+      if (finish) finish.hidden = atEnd();
     }
 
     function play() {
@@ -65,6 +64,7 @@
 
     toggle.addEventListener("click", () => {
       seen = true;
+      pendingSeek = null;
       if (!video.paused && !atEnd()) {
         video.pause();
       } else {
@@ -73,12 +73,11 @@
       }
     });
 
-    jump.addEventListener("click", () => {
+    finish?.addEventListener("click", () => {
       seen = true;
-      const focusReplay = jumpsToEnd && document.activeElement === jump;
-      if (jumpsToEnd || reducedMotion.matches) video.pause();
-      seek(jumpsToEnd ? "end" : Number(jump.dataset.jump));
-      if (!jumpsToEnd && !reducedMotion.matches) play();
+      const focusReplay = document.activeElement === finish;
+      video.pause();
+      seek("end");
       if (focusReplay) toggle.focus({ preventScroll: true });
     });
 
