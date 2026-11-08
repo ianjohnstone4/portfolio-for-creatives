@@ -34,9 +34,12 @@
     <script src="scripts/footer-contours.js?v=0585ed147b5c" defer></script>
       <link rel="stylesheet" href="styles/site-nav.css?v=c8a4a1fcb575" />
     <script src="scripts/site-nav.js?v=ea4e08de83f8" defer></script>
+    <link rel="stylesheet" href="./museum/entrance.css" />
+    <script type="module" src="./museum/entrance.js"></script>
   </head>
 
   <body class="work-page" id="top">
+    <div id="portfolio-home">
     <section class="hero">
       <header class="hero-header">
         <ul class="nav-branding">
@@ -147,6 +150,10 @@ z"
             <div class="line">I care about clarity, usability, and craft</div>
             <div class="line">I design calm digital experiences</div>
           </div>
+        </div>
+        <div class="museum-invitation">
+          <button type="button" id="enter-museum" class="museum-entry-button" aria-controls="museum-experience">Explore my miniature museum</button>
+          <p>Walk through my projects in a miniature Vancouver.</p>
         </div>
       </div>
       <footer class="hero-footer">
@@ -360,5 +367,9 @@ z"
         </div>
       </div>
     </footer>
+    </div>
+    <section id="museum-experience" aria-label="Portfolio museum" hidden>
+      <iframe id="museum-frame" title="Playable portfolio museum" data-src="./museum/" allow="fullscreen"></iframe>
+    </section>
   </body>
 </html>

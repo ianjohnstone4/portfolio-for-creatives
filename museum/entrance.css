@@ -1,0 +1,97 @@
+@font-face {
+  font-family: "Portfolio Jost";
+  src: url("./fonts/jost.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+
+/* The original header reserves space for the floating navigation. */
+@media screen {
+  .work-page .hero-header.site-nav-placeholder > .nav-branding {
+    display: none;
+  }
+}
+
+.work-page .hero-headline-wrapper {
+  row-gap: clamp(1.5rem, 10svh - 1.75rem, 4.5rem);
+  padding-block: clamp(1rem, 3svh, 3rem);
+}
+
+.work-page .hero-name {
+  margin: 0;
+  font-family: "Portfolio Jost", Jost, sans-serif;
+  font-weight: 500;
+  font-size: clamp(1.5rem, 1rem + 2.5vw, 2.25rem);
+  font-synthesis: none;
+  overflow-wrap: anywhere;
+}
+
+.work-page .hero-subheader {
+  height: auto;
+  max-width: 100%;
+  margin: 0;
+}
+
+/* All phrases size one grid cell. Each scrolling step is one full cell,
+   including when the longest phrase wraps. */
+.work-page .rotating-text {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  --rotating-line-height: 100%;
+}
+
+.work-page .hero-subheader .line {
+  grid-area: 1 / 1;
+  height: auto;
+  padding: 0;
+  line-height: 1.2;
+  white-space: normal;
+  text-wrap: balance;
+}
+
+.work-page .rotating-text > :nth-child(2) { transform: translateY(100%); }
+.work-page .rotating-text > :nth-child(3) { transform: translateY(200%); }
+.work-page .rotating-text > :nth-child(4) { transform: translateY(300%); }
+.work-page .rotating-text > :nth-child(5) { transform: translateY(400%); }
+
+#portfolio-home[hidden],#museum-experience[hidden],.museum-exit-button[hidden],.site-nav-links li[hidden]{display:none!important}
+.museum-invitation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+  gap: 12px;
+}
+.museum-entry-button,
+.museum-exit-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 11px 23px;
+  border: 1px solid #27483b;
+  border-radius: 999px;
+  background: #27483b;
+  color: #f4f7ef;
+  font: 500 15px/1.3 "Portfolio Jost", Jost, sans-serif;
+  cursor: pointer;
+}
+.museum-entry-button:hover,.museum-exit-button:hover{background:#385e4d}
+.museum-entry-button:focus-visible,.museum-exit-button:focus-visible{outline:3px solid #b86637;outline-offset:4px}
+.museum-invitation p{font:400 14px/1.5 "Jost",sans-serif;color:#4a6658;margin:0}
+#museum-experience{position:fixed;inset:72px 0 0;z-index:1000;background:#f7f1e5}
+#museum-frame{display:block;width:100%;height:100%;border:0}
+.museum-preview-active{overflow:hidden;overscroll-behavior:none}
+.museum-preview-active .site-nav-header{padding-top:0}
+.museum-preview-active .site-nav-bar{width:100%;max-width:none;height:72px;border:0;border-bottom:1px solid #34534430;border-radius:0;background:#ebf7f1;backdrop-filter:none;box-shadow:none;padding:0 30px}
+.museum-preview-active .site-nav-links{margin-left:auto}
+.museum-exit-button{font-size:14px;min-height:42px;padding:9px 18px;gap:8px;white-space:nowrap}
+@media(max-width:600px){
+  .work-page .hero-header.site-nav-placeholder{min-height:84px}
+  #museum-experience{top:64px}
+  .museum-preview-active .site-nav-bar{height:64px;gap:12px;padding:0 12px}
+  .museum-preview-active .site-nav-brand{width:32px;flex-basis:32px}.museum-preview-active .site-nav-brand img{height:32px}
+  .museum-preview-active .site-nav-links{gap:12px}.museum-preview-active .site-nav-links a{font-size:12px}
+  .museum-exit-button{font-size:12px;padding:8px 12px}
+  .museum-invitation p{font-size:12px;max-width:250px}
+}
