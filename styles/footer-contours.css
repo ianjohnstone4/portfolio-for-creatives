@@ -125,7 +125,7 @@ body.padding-large > .site-footer[data-footer-contours] {
 
 /* This photo shares the artwork's crop, but never follows or deforms with the cursor. */
 .footer-contours-photo {
-  background: url('../assets/footer-terrain/lions-photo.svg') center / max(100%, 720px) 100% no-repeat;
+  background: url('../assets/footer-terrain/lions-photo.svg?v=592cb4c2c00e') center / max(100%, 720px) 100% no-repeat;
   opacity: .12;
   filter: grayscale(1);
   mix-blend-mode: multiply;
@@ -201,6 +201,18 @@ body.padding-large > .site-footer[data-footer-contours] {
 @media (max-width: 768px) {
   .site-footer[data-footer-contours] { padding: 4rem 1.25rem 2rem; }
   .site-footer[data-footer-contours] .site-footer-bottom { flex-direction: column; align-items: flex-start; }
+
+  /* Keep the Lions in proportion as the footer content stacks on mobile. */
+  [data-footer-contours]:not([data-footer-art="growth-rings"]) .footer-contours-photo {
+    background-size: max(100%, 720px) auto;
+    background-position: center bottom;
+  }
+  [data-footer-contours]:not([data-footer-art="growth-rings"]) :is(.footer-contours-base, .footer-contours-light) {
+    -webkit-mask-size: max(100%, 720px) auto;
+    mask-size: max(100%, 720px) auto;
+    -webkit-mask-position: center bottom;
+    mask-position: center bottom;
+  }
 }
 
 @media (max-width: 640px) {

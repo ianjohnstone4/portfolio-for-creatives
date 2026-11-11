@@ -110,10 +110,11 @@
           top = (height - size) / 2;
         } else {
           const artworkWidth = Math.max(width, 720);
+          const mobile = window.matchMedia('(max-width: 768px)').matches;
           scaleX = artworkWidth / 1000;
-          scaleY = height / 480;
+          scaleY = mobile ? scaleX : height / 480;
           left = (width - artworkWidth) / 2;
-          top = 0;
+          top = mobile ? height - artworkWidth * 480 / 1000 : 0;
         }
         radiusX = rings ? Math.max(90, Math.min(140, width * .16)) : Math.max(140, Math.min(220, width * .12));
         radiusY = rings ? radiusX : Math.max(70, Math.min(105, height * .14));
