@@ -45,7 +45,7 @@ html:has(.scootroute-page) { scroll-behavior: auto; }
 .sr-button { display: inline-flex; align-items: center; justify-content: center; min-height: 54px; padding: 12px 28px; background: var(--sr-green); color: white!important; border-radius: var(--radius-sm,8px); text-decoration: none!important; font-size: 18px; font-weight: 500; transition: background var(--duration-fast,.15s); }
 .sr-button:hover { background: var(--sr-ink); }
 .sr-text-link { display: inline-block; padding-block: 10px; font-weight: 500; font-size: 16px; }
-.sr-preview-note { margin-top: 16px!important; font-size: 13px; max-width: 43ch; }
+.sr-preview-note { margin: 18px 0 0; font-size: 17px; line-height: 1.5; color: var(--sr-muted); max-width: 47ch; }
 .sr-hero-art { align-self: stretch; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 8px 20px 16px; background: #edf1e8; border-radius: var(--radius-sm,8px); }
 .sr-device { display: block; position: relative; width: min(100%,340px); aspect-ratio: 1/2; }
 .sr-device .sr-hardware { width: 100%; height: 100%; }
@@ -270,7 +270,7 @@ html:has(.scootroute-page) { scroll-behavior: auto; }
   .sr-actions { margin-top: 28px; gap: 16px; }
   .sr-actions .sr-button { width: 100%; min-height: 54px; }
   .sr-actions .sr-text-link { font-size: 16px; }
-  .sr-preview-note { margin-top: 8px!important; font-size: 12px; }
+  .sr-preview-note { margin-top: 14px; font-size: 16px; }
   .sr-hero-art { width: 100%; padding: 16px 24px 24px; }
   .sr-device { width: min(100%,260px); }
   .sr-hero-art figcaption { font-size: 14px; }

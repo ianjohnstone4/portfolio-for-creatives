@@ -7,7 +7,7 @@
   <meta name="description" content="An independent mobile journey-planning project by Ian Johnstone. How secondary research and a critique of published Lime screens shaped ScootRoute's return planning and final walk.">
   <link rel="canonical" href="https://ianjohnstone.ca/scootroute.html">
   <meta property="og:title" content="ScootRoute | Ian Johnstone">
-  <meta property="og:description" content="Planning the return and final walk before unlocking. A mobile UX case study with annotated Lime screens and an interactive prototype.">
+  <meta property="og:description" content="Planning the return and final walk before unlocking. A mobile UX case study with annotated Lime screens and a guided journey demo.">
   <meta property="og:image" content="https://ianjohnstone.ca/assets/scootroute/homepage-card-1280.webp">
   <meta name="theme-color" content="#f6f5ef">
   <link rel="icon" href="assets/branding-images/ijblackfill.svg" type="image/svg+xml">
@@ -15,8 +15,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/style.css?v=dbb266ed79">
-  <link rel="stylesheet" href="styles/scootroute.css?v=20261102-layout-audit">
-  <script src="scripts/scootroute.js?v=746da0c2ff76" defer></script>
+  <link rel="stylesheet" href="styles/scootroute.css?v=20261113-demo">
+  <script src="scripts/scootroute.js?v=20261113-demo" defer></script>
     <link rel="stylesheet" href="styles/trip-comparison.css?v=28dc048292">
   <script src="scripts/trip-comparison.js?v=e9cf9d3acf" defer></script>
     <link rel="stylesheet" href="styles/footer-contours.css?v=69cc83c0102c" />
@@ -38,8 +38,8 @@
           <p class="sr-eyebrow">ScootRoute <span>/</span> Independent project <span>/</span> Vancouver</p>
           <h1 id="project-title">The journey<br>doesn’t end<br>at the scooter.</h1>
           <p class="sr-lede">I designed a mobile planner that brings pickup, riding, return and the final walk into one journey.</p>
-          <div class="sr-actions"><a class="sr-button" href="https://scootroute.ian-johnstone4444.chatgpt.site/" target="_blank" rel="noopener" aria-describedby="prototype-note">View prototype</a><a class="sr-text-link" href="https://ianjohnstone.ca/">Explore other work</a></div>
-          <p class="sr-caption sr-preview-note" id="prototype-note">Public interactive demo. Sample availability and simulated navigation. Opens in a new tab.</p>
+          <p class="sr-preview-note" id="prototype-note">Try the planning flow with a sample trip from Canada Place. Choose a destination, compare routes and play the pickup, ride, return and final walk. Vehicles and location updates are simulated.</p>
+          <div class="sr-actions"><a class="sr-button" href="scootroute-demo/" aria-describedby="prototype-note">Try the sample journey</a><a class="sr-text-link" href="https://ianjohnstone.ca/">Explore other work</a></div>
         </div>
         <figure class="sr-hero-art">
           <button class="sr-device sr-image-button" type="button" data-image="stages" aria-label="Enlarge the ScootRoute journey plan">
@@ -123,7 +123,7 @@
     </section>
 
     <section class="sr-shell sr-data-integration sr-section" id="live-data" aria-labelledby="live-data-title">
-      <div class="sr-section-heading"><p class="sr-eyebrow">From interface to implementation</p><div><h2 id="live-data-title">I built the live-data connection, too.</h2><p class="sr-section-lede">The prototype includes an adapter for Lime’s public Vancouver GBFS feeds. These are data endpoints, not shared API keys. The adapter reads scooter coordinates, station locations and reported return availability.</p><dl class="sr-decisions"><div><dt>Implemented</dt><dd>Vehicle and station feeds are normalized into pickup and return options. Disabled or outdated records are excluded, and the interface refreshes availability every minute when live mode is enabled.</dd></div><div><dt>Public walkthrough</dt><dd>Visitors explore a complete sample journey using fictional availability and simulated navigation. That core interaction works without Lime, geocoding or street-routing services.</dd></div><div><dt>Deployment boundary</dt><dd>Lime’s published terms restrict public display and aggregation. Live Lime data remains disabled in this public deployment while the applicable permission is unresolved. Public access to a feed is not the same as permission to redistribute it.</dd></div></dl><p class="sr-data-links"><a href="https://vancouver.ca/streets-transportation/shared-e-scooter-system.aspx" target="_blank" rel="noopener noreferrer">City of Vancouver: public GBFS feeds</a><a href="https://www.li.me/legal/public-gbfs-terms" target="_blank" rel="noopener noreferrer">Lime: public GBFS terms</a></p></div></div>
+      <div class="sr-section-heading"><p class="sr-eyebrow">From interface to implementation</p><div><h2 id="live-data-title">I built the live-data connection, too.</h2><p class="sr-section-lede">The prototype includes an adapter for Lime’s public Vancouver GBFS feeds. These are data endpoints, not shared API keys. The adapter reads scooter coordinates, station locations and reported return availability.</p><dl class="sr-decisions"><div><dt>Implemented</dt><dd>Vehicle and station feeds are normalized into pickup and return options. Disabled or outdated records are excluded, and the interface refreshes availability every minute when live mode is enabled.</dd></div><div><dt>Public walkthrough</dt><dd>The portfolio demo offers three preset trips from Canada Place. It replays saved walking and cycling paths using sample vehicles and parking. The original planner uses a separate live-data adapter.</dd></div><div><dt>Deployment boundary</dt><dd>Lime’s published terms restrict public display and aggregation. Live Lime data remains disabled in this public deployment while the applicable permission is unresolved. Public access to a feed is not the same as permission to redistribute it.</dd></div></dl><p class="sr-data-links"><a href="https://vancouver.ca/streets-transportation/shared-e-scooter-system.aspx" target="_blank" rel="noopener noreferrer">City of Vancouver: public GBFS feeds</a><a href="https://www.li.me/legal/public-gbfs-terms" target="_blank" rel="noopener noreferrer">Lime: public GBFS terms</a></p></div></div>
     </section>
 
     <section class="sr-shell sr-outcome sr-section" id="outcome" aria-labelledby="outcome-title">
