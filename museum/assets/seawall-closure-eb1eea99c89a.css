@@ -1,0 +1,30 @@
+.seawall-closed-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  gap: 2px;
+  width: max-content;
+  padding: 13px 11px 8px;
+  border: 2px solid #30342c;
+  border-radius: 4px;
+  background: #fff4d0;
+  color: #252921;
+  box-shadow: 0 3px 9px #182b3226;
+  font: 600 11px/1.2 system-ui, sans-serif;
+  text-align: center;
+  pointer-events: none;
+}
+.seawall-closed-label::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto;
+  height: 6px;
+  background: repeating-linear-gradient(-55deg, #30342c 0 7px, #f5cf48 7px 14px);
+}
+.seawall-closed-label strong { font-size: 12px; }
+.seawall-closed-label[hidden] { display: none; }
+@media (max-width: 600px) {
+  .seawall-closed-label { font-size: 9px; padding: 11px 7px 6px; }
+  .seawall-closed-label strong { font-size: 10px; }
+}
