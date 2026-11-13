@@ -15,8 +15,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/style.css?v=dbb266ed79">
-  <link rel="stylesheet" href="styles/scootroute.css?v=20261113-street-network">
-  <script src="scripts/scootroute.js?v=20261113-mapped-captures" defer></script>
+  <link rel="stylesheet" href="styles/scootroute.css?v=20261113-walking-legs">
+  <script src="scripts/scootroute.js?v=20261113-walking-legs" defer></script>
     <link rel="stylesheet" href="styles/trip-comparison.css?v=28dc048292">
   <script src="scripts/trip-comparison.js?v=20261113-street-network" defer></script>
     <link rel="stylesheet" href="styles/footer-contours.css?v=69cc83c0102c" />
@@ -70,11 +70,13 @@
           <figcaption>Lime-published UI on its Stuttgart page. Not a Vancouver capture. App version and capture date unknown. <a href="https://www.li.me/en-de/locations/stuttgart" target="_blank" rel="noopener noreferrer">View Lime’s source</a> · <button class="sr-inline-button" type="button" data-image="lime">Enlarge original</button></figcaption>
         </figure>
         <figure class="sr-design-response">
-          <div class="sr-callout sr-callout--response"><span class="sr-marker">3</span><div><h3>Make the final leg visible</h3><p>I brought the named return station, reported spaces and final walk into the pre-ride plan.</p></div></div>
+          <div class="sr-callout sr-callout--response"><span class="sr-marker">3</span><div><h3>Make the first and final legs visible</h3><p>I brought the walk to pickup, the return bay and the final walk into the pre-ride plan.</p></div></div>
           <div class="sr-response-frame">
-            <button type="button" class="sr-image-button sr-detail-crop" data-image="stages" aria-label="Enlarge the complete ScootRoute return plan"><img src="assets/scootroute/planner-timeline.jpg" width="390" height="844" alt="Detail of the ScootRoute timeline: Sunset Beach parking bay, six simulated spaces, and a two-minute walk to the final destination."><span class="sr-ui-outline sr-ui-outline--return" aria-hidden="true"><span>3</span></span></button>
+            <button type="button" class="sr-image-button sr-pickup-detail" data-image="pickup" aria-label="Enlarge the walk to pickup"><img src="assets/scootroute/planner-pickup-detail.jpg" width="390" height="208" alt="The first leg: a one-minute, 120-metre walk to Canada Place parking bay, with three simulated scooters."></button>
+            <div class="sr-leg-divider" aria-hidden="true"></div>
+            <button type="button" class="sr-image-button sr-detail-crop" data-image="stages" aria-label="Enlarge the return bay and final walk"><img src="assets/scootroute/planner-timeline.jpg" width="390" height="844" alt="The final leg: return the scooter at Sunset Beach parking bay, then walk 140 metres to the beach. The bay shows six simulated spaces."><span class="sr-ui-outline sr-ui-outline--return" aria-hidden="true"><span>3</span></span></button>
           </div>
-          <figcaption>The return bay has six sample spaces. From there, the planner shows a 140-metre walk to the beach. <button class="sr-inline-button" type="button" data-image="stages">View full screen</button></figcaption>
+          <figcaption>A 120-metre walk to pickup and a 140-metre walk from the return bay to the beach. Availability is simulated. Select either detail to enlarge.</figcaption>
         </figure>
       </div>
       <aside class="sr-scope-note"><strong>What this critique establishes</strong><p>These are observations about the displayed screens. Lime already documents destination-area capacity checks and alternatives for full stations. ScootRoute explores how that information fits into a complete journey. Its benefit is still a hypothesis. <a href="https://www.li.me/en-ca/locations/vancouver" target="_blank" rel="noopener noreferrer">Lime’s Vancouver guidance</a></p></aside>
@@ -113,11 +115,15 @@
 
     <section class="sr-handoff sr-section" id="rental-completion" aria-labelledby="handoff-title">
       <div class="sr-shell">
-        <p class="sr-eyebrow">Respect the provider boundary</p>
-        <div class="sr-handoff-heading"><h2 id="handoff-title">Arriving isn’t<br>ending the rental.</h2><p>ScootRoute can guide a journey. It cannot unlock a vehicle, confirm a Lime return or stop billing. That boundary shaped the transition to the final walk.</p></div>
+        <p class="sr-eyebrow">From riding to walking</p>
+        <div class="sr-handoff-heading"><h2 id="handoff-title">Return the scooter.<br>Continue on foot.</h2><p>I gave the return its own step between the ride and the final walk. The screen brings the parking location, rental reminder and next action together.</p></div>
         <div class="sr-handoff-content">
-          <figure class="sr-handoff-art"><button class="sr-image-button sr-handoff-crop" type="button" data-image="return" aria-label="Enlarge the rental-completion acknowledgement"><img src="assets/scootroute/planner-return.jpg" width="390" height="844" alt="The demo pauses at Sunset Beach parking bay and prompts the rider to check rental completion in Lime before continuing on foot."></button><figcaption>Return handoff · Simulated location<br><button class="sr-inline-button" type="button" data-image="return">Inspect the full state</button></figcaption></figure>
-          <div class="sr-handoff-notes"><div><h3>I made the handoff explicit.</h3><p>At the return bay, the walkthrough prompts the rider to park and check Lime for rental completion. The rider chooses “Continue on foot” to start the last leg.</p></div><div><h3>The local wording needs refinement.</h3><p>Lime’s Vancouver instructions say the rental ends automatically once the scooter and helmet are properly locked, followed by an app confirmation. I would align the handoff copy more closely with that process.</p><a href="https://help.li.me/hc/en-us/articles/29147595964571-Using-a-parking-station" target="_blank" rel="noopener noreferrer">Read Lime’s station instructions</a></div><div class="sr-handoff-limit"><h3>A limit I kept visible</h3><p>Reported availability does not reserve parking. The prototype also needs a clearer recovery flow if the chosen return station becomes full during the ride.</p></div></div>
+          <figure class="sr-handoff-art"><button class="sr-image-button sr-handoff-crop" type="button" data-image="return" aria-label="Enlarge the return step before walking"><img src="assets/scootroute/planner-return.jpg" width="390" height="844" alt="The Return step names Sunset Beach parking bay, asks the rider to return the scooter and check Lime for rental completion, and offers Continue on foot."></button><figcaption>The return step keeps the parking bay and “Continue on foot” visible together. Simulated walkthrough.<br><button class="sr-inline-button" type="button" data-image="return">View the full screen</button></figcaption></figure>
+          <div class="sr-handoff-notes">
+            <div><h3>Show where the ride ends.</h3><p>The screen names Sunset Beach parking bay and highlights “Return” in the journey tracker. The destination is still a short walk away.</p></div>
+            <div><h3>Make the next action clear.</h3><p>I paired the reminder to return the scooter and check Lime with “Continue on foot”. Selecting it starts the final walking leg.</p></div>
+            <aside class="sr-handoff-limit"><h3>Rental completion stays with Lime.</h3><p>The on-screen note says this preview cannot verify a return. Continuing the walkthrough does not confirm rental completion or stop billing.</p></aside>
+          </div>
         </div>
       </div>
     </section>

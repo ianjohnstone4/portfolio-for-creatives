@@ -88,9 +88,12 @@ html:has(.scootroute-page) { scroll-behavior: auto; }
 .sr-ui-outline--pin>span { right: auto; left: -14px; }
 .sr-design-response { padding-top: 0; }
 .sr-response-frame { margin: 50px 0 28px; background: #edf1e8; padding: 20px; border-radius: 8px; }
-.sr-detail-crop { position: relative; width: 100%; aspect-ratio: 390/394; overflow: hidden; background: white; border-radius: 8px; }
-.sr-detail-crop img { position: absolute; width: 100%; height: auto; top: -79.5%; left: 0; }
-.sr-ui-outline--return { top: 21%; left: 14.6%; width: 80.6%; height: 24%; border-color: var(--sr-green); }
+.sr-pickup-detail { display: block; width: 100%; overflow: hidden; border-radius: 8px; }
+.sr-pickup-detail img { width: 100%; }
+.sr-leg-divider { height: 1px; background: var(--sr-line); margin-block: 16px; }
+.sr-detail-crop { position: relative; width: 100%; aspect-ratio: 390/340; overflow: hidden; background: white; border-radius: 8px; }
+.sr-detail-crop img { position: absolute; width: 100%; height: auto; top: -112.94%; left: 0; }
+.sr-ui-outline--return { top: 4.5%; left: 14.6%; width: 80.6%; height: 26%; border-color: var(--sr-green); }
 .sr-ui-outline--return>span { background: var(--sr-green); }
 .scootroute-page figcaption a { display: inline; }
 .sr-inline-button { display: inline-flex; align-items: center; min-height: 44px; padding: 8px 0; background: transparent; border: 0; border-radius: 0; text-decoration: underline; text-underline-offset: .25em; font-size: inherit; line-height: inherit; }
@@ -129,8 +132,8 @@ html:has(.scootroute-page) { scroll-behavior: auto; }
 .sr-handoff-heading>p { max-width: 48ch; font-size: 20px; }
 .sr-handoff-content { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; margin-top: 48px; }
 .sr-handoff-art { max-width: 560px; padding: 24px; background: #e7ede3; border-radius: 8px; align-self: start; }
-.sr-handoff-crop { position: relative; width: 100%; aspect-ratio: 390/430; overflow: hidden; border-radius: 7px; background: white; }
-.sr-handoff-crop img { position: absolute; left: 0; bottom: 0; width: 100%; height: auto; }
+.sr-handoff-crop { position: relative; width: 100%; aspect-ratio: 390/340; overflow: hidden; border-radius: 7px; background: white; }
+.sr-handoff-crop img { position: absolute; left: 0; top: -123.53%; width: 100%; height: auto; }
 .sr-handoff-art figcaption { margin-top: 20px; font-size: 14px; }
 .sr-handoff-notes { display: flex; flex-direction: column; gap: 32px; padding-top: 8px; }
 .sr-handoff-notes h3 { margin-bottom: 12px; font-size: 25px; }
