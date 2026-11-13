@@ -45,12 +45,43 @@
 .sharedstandard-page .ss-scope-note { font-size: 0.88rem; color: var(--color-text-secondary); }
 
 .ss-section-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem 2rem;
+  display: grid;
+  gap: 0.65rem;
   padding: 0.35rem 0 0.75rem;
 }
-.ss-section-nav a,
+.ss-section-nav p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.ss-section-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.ss-section-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  box-sizing: border-box;
+  padding: 0.45rem 1rem;
+  border: 1px solid #a6c4b1;
+  border-radius: 100px;
+  background: var(--ss-mint);
+  color: #174c30;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+.ss-section-nav a:hover,
+.ss-section-nav a:focus-visible {
+  border-color: var(--ss-green);
+  background: #dceee2;
+}
 .sharedstandard-page .ss-text-link {
   display: inline-flex;
   align-items: center;
@@ -63,8 +94,6 @@
   text-underline-offset: 0.25em;
   text-decoration-thickness: 1px;
 }
-.ss-section-nav a { min-height: 44px; text-decoration: none; }
-.ss-section-nav a:hover { text-decoration: underline; }
 
 /* A reading-progress rail adds emphasis without hiding the process content. */
 .sharedstandard-page .ss-timeline { --ss-progress: 0; }
@@ -203,7 +232,7 @@
   }
   .ss-screen-stage-inner { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 1.5rem; box-sizing: border-box; }
   .ss-screen-frame { position: relative; height: calc(100% - 4.75rem); max-width: 90%; aspect-ratio: 393 / 927; box-sizing: content-box; border: 7px solid #253129; border-radius: 1.8rem; background: white; box-shadow: 0 12px 24px #1c372414; }
-  .ss-stage-screen { position: absolute; inset: 0; display: block; width: 100%; height: 100%; padding: 14px 5px; box-sizing: border-box; object-fit: contain; border-radius: 1.25rem; opacity: 0; transition: opacity 240ms ease; }
+  .ss-stage-screen { position: absolute; inset: 0; display: block; width: 100%; height: 100%; padding: 14px 5px; box-sizing: border-box; object-fit: contain; object-position: center top; border-radius: 1.25rem; opacity: 0; transition: opacity 240ms ease; }
   .ss-stage-screen.is-active { opacity: 1; }
   .ss-screen-stage-caption { display: flex; align-items: center; justify-content: space-between; gap: 1rem; width: 100%; margin-top: 1.5rem; font-size: 0.82rem; color: #3a5a46; }
   .ss-stage-count { font-variant-numeric: tabular-nums; white-space: nowrap; }
