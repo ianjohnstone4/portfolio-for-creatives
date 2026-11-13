@@ -7,7 +7,7 @@
   <meta name="description" content="An independent mobile journey-planning project by Ian Johnstone. How secondary research and a critique of published Lime screens shaped ScootRoute's return planning and final walk.">
   <link rel="canonical" href="https://ianjohnstone.ca/scootroute.html">
   <meta property="og:title" content="ScootRoute | Ian Johnstone">
-  <meta property="og:description" content="Planning the return and final walk before unlocking. A mobile UX case study with annotated Lime screens and a guided journey demo.">
+  <meta property="og:description" content="Planning the return and final walk before unlocking. A mobile UX case study with annotated Lime screens and an interactive prototype.">
   <meta property="og:image" content="https://ianjohnstone.ca/assets/scootroute/homepage-card-1280.webp">
   <meta name="theme-color" content="#f6f5ef">
   <link rel="icon" href="assets/branding-images/ijblackfill.svg" type="image/svg+xml">
@@ -15,8 +15,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/style.css?v=dbb266ed79">
-  <link rel="stylesheet" href="styles/scootroute.css?v=20261113-captures">
-  <script src="scripts/scootroute.js?v=20261113-captures" defer></script>
+  <link rel="stylesheet" href="styles/scootroute.css?v=20261113-planner">
+  <script src="scripts/scootroute.js?v=20261113-planner" defer></script>
     <link rel="stylesheet" href="styles/trip-comparison.css?v=28dc048292">
   <script src="scripts/trip-comparison.js?v=e9cf9d3acf" defer></script>
     <link rel="stylesheet" href="styles/footer-contours.css?v=69cc83c0102c" />
@@ -38,15 +38,15 @@
           <p class="sr-eyebrow">ScootRoute <span>/</span> Independent project <span>/</span> Vancouver</p>
           <h1 id="project-title">The journey<br>doesn’t end<br>at the scooter.</h1>
           <p class="sr-lede">I designed a mobile planner that brings pickup, riding, return and the final walk into one journey.</p>
-          <p class="sr-preview-note" id="prototype-note">This guided demo shows how my planner works. Choose a sample trip from Canada Place, compare routes and play each leg. Scooter availability, parking and GPS movement are simulated.</p>
-          <div class="sr-actions"><a class="sr-button" href="scootroute-demo/" aria-describedby="prototype-note">Try the guided demo</a><a class="sr-text-link" href="https://ianjohnstone.ca/">Explore other work</a></div>
+          <div class="sr-actions"><a class="sr-button" href="https://scootroute.ian-johnstone4444.chatgpt.site/" target="_blank" rel="noopener" aria-describedby="prototype-note">Open the interactive demo</a><a class="sr-text-link" href="https://ianjohnstone.ca/">Explore other work</a></div>
+          <p class="sr-caption sr-preview-note" id="prototype-note">Compare a trip, choose a vehicle and press Go to rehearse the journey. Vehicle availability, parking and movement are simulated.</p>
         </div>
         <figure class="sr-hero-art">
-          <button class="sr-device sr-image-button" type="button" data-image="journey" aria-label="Enlarge the mapped sample journey">
+          <button class="sr-device sr-image-button" type="button" data-image="stages" aria-label="Enlarge the ScootRoute journey plan">
             <img class="sr-hardware" src="assets/cospace/mockups/graphite-device.webp" alt="" width="600" height="1200">
-            <span class="sr-device-screen"><img src="assets/scootroute/mapped-journey.webp" alt="The portfolio demo shows the mapped walk, scooter ride and final walk from Canada Place to Sunset Beach." width="390" height="844" fetchpriority="high"></span>
+            <span class="sr-device-screen"><img src="assets/scootroute/04-stages-current.jpg" alt="ScootRoute journey details separate the return station from the final walk to Sunset Beach. Availability is simulated." width="390" height="844" fetchpriority="high"></span>
           </button>
-          <figcaption>Guided demo · Canada Place to Sunset Beach<br><span class="sr-enlarge">Select image to enlarge</span></figcaption>
+          <figcaption>Prototype capture · Demo data<br><span class="sr-enlarge">Select image to enlarge</span></figcaption>
         </figure>
         <dl class="sr-role">
           <div><dt>My role</dt><dd>Problem framing, research synthesis, <br>UX/UI and implementation</dd></div>
@@ -72,9 +72,9 @@
         <figure class="sr-design-response">
           <div class="sr-callout sr-callout--response"><span class="sr-marker">3</span><div><h3>Make the final leg visible</h3><p>I brought the named return station, reported spaces and final walk into the pre-ride plan.</p></div></div>
           <div class="sr-response-frame">
-            <button type="button" class="sr-image-button sr-detail-crop" data-image="stages" aria-label="Enlarge the original ScootRoute return plan"><img src="assets/scootroute/original-return-plan.webp" width="390" height="596" alt="Detail of the ScootRoute timeline: Sunset Beach parking bay, six simulated spaces, and a two-minute walk to the final destination."><span class="sr-ui-outline sr-ui-outline--return" aria-hidden="true"><span>3</span></span></button>
+            <button type="button" class="sr-image-button sr-detail-crop" data-image="stages" aria-label="Enlarge the complete ScootRoute return plan"><img src="assets/scootroute/04-stages-current.jpg" width="390" height="844" alt="Detail of the ScootRoute timeline: Sunset Beach parking bay, six simulated spaces, and a two-minute walk to the final destination."><span class="sr-ui-outline sr-ui-outline--return" aria-hidden="true"><span>3</span></span></button>
           </div>
-          <figcaption>Original prototype detail showing the return stop and the final walk. Parking availability is simulated. <button class="sr-inline-button" type="button" data-image="stages">View journey detail</button></figcaption>
+          <figcaption>Detail from the original prototype capture. Demo availability does not reserve a space. <button class="sr-inline-button" type="button" data-image="stages">View full screen</button></figcaption>
         </figure>
       </div>
       <aside class="sr-scope-note"><strong>What this critique establishes</strong><p>These are observations about the displayed screens. Lime already documents destination-area capacity checks and alternatives for full stations. ScootRoute explores how that information fits into a complete journey. Its benefit is still a hypothesis. <a href="https://www.li.me/en-ca/locations/vancouver" target="_blank" rel="noopener noreferrer">Lime’s Vancouver guidance</a></p></aside>
@@ -96,8 +96,8 @@
 
     <section class="sr-shell sr-complete-trip sr-section" id="whole-trip" aria-labelledby="whole-trip-title">
       <div class="sr-trip-copy"><p class="sr-eyebrow">Make the trade-off visible</p><h2 id="whole-trip-title">A short ride can<br>still be a long trip.</h2><p>I made total time and walking visible in the comparison. Each option brings together the access walk, ride and final walk, with an allowance for unlocking and returning.</p><p>This gives the rider a way to compare the commitment before choosing a route. The estimates remain model outputs, not measured trip times.</p><div class="sr-trip-compare" data-trip-comparison>
-        <p class="sr-trip-label">Compare the original prototype estimates</p>
-        <div class="sr-trip-options" role="group" aria-label="Compare original prototype journey estimates">
+        <p class="sr-trip-label">Compare the demo options</p>
+        <div class="sr-trip-options" role="group" aria-label="Compare demo journey estimates">
           <button type="button" data-trip-option="scooter" aria-pressed="true">Lime Scooter</button><button type="button" data-trip-option="bike" aria-pressed="false">Mobi E-bike</button>
         </div>
         <dl class="sr-trip-metrics">
@@ -105,10 +105,10 @@
           <div><dt>Walking distance</dt><dd><span class="sr-trip-number" data-trip-number="walk"><span class="trip-sr-only" data-trip-value>250</span><span data-trip-digits aria-hidden="true">250</span></span><span class="sr-trip-unit">m</span></dd></div>
         </dl>
         <p class="sr-trip-summary" data-trip-summary>2.6 km ride · 250 m walk</p>
-        <p class="sr-trip-demo-note">These estimates come from the original prototype screen. The guided demo calculates its estimates from the mapped paths.</p>
+        <p class="sr-trip-demo-note">Sample estimates from the prototype capture. Availability and journeys are simulated.</p>
         <span class="trip-sr-only" data-trip-announcement role="status"></span>
       </div><dl class="sr-decisions"><div><dt>My decision</dt><dd>Compare the complete trip, rather than rank options only by riding time.</dd></div><div><dt>The trade-off</dt><dd>More information helps expose the journey, but also makes each result denser. Whether the distinction is clear needs evaluation.</dd></div></dl><a class="sr-text-link" href="https://www.sciencedirect.com/science/article/pii/S2950105923000049" target="_blank" rel="noopener noreferrer">Access-distance research in the source review</a></div>
-      <figure class="sr-route-art"><div class="sr-screen-heading"><span>Original comparison screen</span><button class="sr-inline-button" type="button" data-image="compare">Enlarge</button></div><button type="button" class="sr-image-button" data-image="compare" aria-label="Enlarge the original journey comparison"><img src="assets/scootroute/original-comparison.webp" width="390" height="596" alt="ScootRoute compares three sample journeys, showing total minutes, riding distance and walking distance. All options are marked simulated."></button><figcaption>Original prototype detail · Sample availability and estimated times.</figcaption></figure>
+      <figure class="sr-route-art"><div class="sr-screen-heading"><span>Original comparison screen</span><button class="sr-inline-button" type="button" data-image="compare">Enlarge</button></div><button type="button" class="sr-image-button" data-image="compare" aria-label="Enlarge ScootRoute’s complete-journey comparison"><img src="assets/scootroute/02-compare-current.jpg" width="390" height="844" alt="ScootRoute compares three sample journeys, showing total minutes, riding distance and walking distance. All options are marked simulated."></button><figcaption>Original UI · Demo routes and availability<br>Distances and timings are illustrative.</figcaption></figure>
     </section>
 
     <section class="sr-handoff sr-section" id="rental-completion" aria-labelledby="handoff-title">
@@ -116,14 +116,14 @@
         <p class="sr-eyebrow">Respect the provider boundary</p>
         <div class="sr-handoff-heading"><h2 id="handoff-title">Arriving isn’t<br>ending the rental.</h2><p>ScootRoute can guide a journey. It cannot unlock a vehicle, confirm a Lime return or stop billing. That boundary shaped the transition to the final walk.</p></div>
         <div class="sr-handoff-content">
-          <figure class="sr-handoff-art"><button class="sr-image-button sr-handoff-crop" type="button" data-image="return" aria-label="Enlarge the rental-completion acknowledgement"><img src="assets/scootroute/original-return-confirmation.webp" width="390" height="372" alt="ScootRoute asks the rider to acknowledge parking and ending the rental before continuing. The screen uses simulated GPS."></button><figcaption>Original prototype detail · Simulated GPS<br><button class="sr-inline-button" type="button" data-image="return">Inspect the return prompt</button></figcaption></figure>
+          <figure class="sr-handoff-art"><button class="sr-image-button sr-handoff-crop" type="button" data-image="return" aria-label="Enlarge the rental-completion acknowledgement"><img src="assets/scootroute/06-return-route-aligned.jpg" width="390" height="844" alt="ScootRoute asks the rider to acknowledge parking and ending the rental before continuing. The screen uses simulated GPS."></button><figcaption>Detail of an existing component · Simulated GPS<br><button class="sr-inline-button" type="button" data-image="return">Inspect the full state</button></figcaption></figure>
           <div class="sr-handoff-notes"><div><h3>I made the handoff explicit.</h3><p>The prototype asks the rider to acknowledge parking and ending the rental before it continues on foot. This makes the transition visible, but the acknowledgement is not verification.</p></div><div><h3>The local wording needs refinement.</h3><p>Lime’s Vancouver instructions say the rental ends automatically once the scooter and helmet are properly locked, followed by an app confirmation. I would align the handoff copy more closely with that process.</p><a href="https://help.li.me/hc/en-us/articles/29147595964571-Using-a-parking-station" target="_blank" rel="noopener noreferrer">Read Lime’s station instructions</a></div><div class="sr-handoff-limit"><h3>A limit I kept visible</h3><p>Reported availability does not reserve parking. The prototype also needs a clearer recovery flow if the chosen return station becomes full during the ride.</p></div></div>
         </div>
       </div>
     </section>
 
     <section class="sr-shell sr-data-integration sr-section" id="live-data" aria-labelledby="live-data-title">
-      <div class="sr-section-heading"><p class="sr-eyebrow">From interface to implementation</p><div><h2 id="live-data-title">I built the live-data connection, too.</h2><p class="sr-section-lede">The prototype includes an adapter for Lime’s public Vancouver GBFS feeds. These are data endpoints, not shared API keys. The adapter reads scooter coordinates, station locations and reported return availability.</p><dl class="sr-decisions"><div><dt>Implemented</dt><dd>Vehicle and station feeds are normalized into pickup and return options. Disabled or outdated records are excluded, and the interface refreshes availability every minute when live mode is enabled.</dd></div><div><dt>Public walkthrough</dt><dd>The portfolio demo offers three preset trips from Canada Place. It replays saved walking and cycling paths using sample vehicles and parking. The original planner uses a separate live-data adapter.</dd></div><div><dt>Deployment boundary</dt><dd>Lime’s published terms restrict public display and aggregation. Live Lime data remains disabled in this public deployment while the applicable permission is unresolved. Public access to a feed is not the same as permission to redistribute it.</dd></div></dl><p class="sr-data-links"><a href="https://vancouver.ca/streets-transportation/shared-e-scooter-system.aspx" target="_blank" rel="noopener noreferrer">City of Vancouver: public GBFS feeds</a><a href="https://www.li.me/legal/public-gbfs-terms" target="_blank" rel="noopener noreferrer">Lime: public GBFS terms</a></p></div></div>
+      <div class="sr-section-heading"><p class="sr-eyebrow">From interface to implementation</p><div><h2 id="live-data-title">I built the live-data connection, too.</h2><p class="sr-section-lede">The prototype includes an adapter for Lime’s public Vancouver GBFS feeds. These are data endpoints, not shared API keys. The adapter reads scooter coordinates, station locations and reported return availability.</p><dl class="sr-decisions"><div><dt>Implemented</dt><dd>Vehicle and station feeds are normalized into pickup and return options. Disabled or outdated records are excluded, and the interface refreshes availability every minute when live mode is enabled.</dd></div><div><dt>Public walkthrough</dt><dd>Visitors explore a complete sample journey using fictional availability and simulated navigation. They can also change either address, compare another trip and follow each leg on the map.</dd></div><div><dt>Deployment boundary</dt><dd>Lime’s published terms restrict public display and aggregation. Live Lime data remains disabled in this public deployment while the applicable permission is unresolved. Public access to a feed is not the same as permission to redistribute it.</dd></div></dl><p class="sr-data-links"><a href="https://vancouver.ca/streets-transportation/shared-e-scooter-system.aspx" target="_blank" rel="noopener noreferrer">City of Vancouver: public GBFS feeds</a><a href="https://www.li.me/legal/public-gbfs-terms" target="_blank" rel="noopener noreferrer">Lime: public GBFS terms</a></p></div></div>
     </section>
 
     <section class="sr-shell sr-outcome sr-section" id="outcome" aria-labelledby="outcome-title">
@@ -158,7 +158,7 @@
 <li id="source-d02"><span class="sr-source-id">D02</span><a href="https://www.curiouslin.com/slicecasestudy" target="_blank" rel="noopener noreferrer">Lin Ong: Slice App Redesign</a><p class="sr-source-kind">Professional presentation reference</p><p>Informed the pairing of mobile screens with concrete design goals and clear research provenance. The case-study structure was adapted; its findings and outcomes were not reused.</p></li>
 <li id="source-d03"><span class="sr-source-id">D03</span><a href="https://anotherone.app/work/case-studies/numerade.html" target="_blank" rel="noopener noreferrer">Natalia Koldaeva: Numerade Navigation</a><p class="sr-source-kind">Professional presentation reference</p><p>Informed early role framing and the problem-to-interface narrative. Published performance claims were not independently audited and were not transferred to this project.</p></li>
 <li id="source-t01"><span class="sr-source-id">T01</span><a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/watchPosition" target="_blank" rel="noopener noreferrer">MDN: Geolocation watchPosition()</a><p class="sr-source-kind">Technical reference</p><p>Documents location updates, permission and secure-context requirements. API availability is not evidence of reliable outdoor tracking, background behaviour or successful rider outcomes.</p></li></ol></details>
-      <p class="sr-disclosure">Independent project, not affiliated with Lime. Research reviewed October 30, 2026; published app imagery added October 31. Original interface details show the October iteration. The opening image shows the updated guided demo. Lime imagery © Lime. Prototype maps © OpenStreetMap contributors. AI assisted research, development and verification.</p>
+      <p class="sr-disclosure">Independent project, not affiliated with Lime. Research reviewed October 30, 2026; published app imagery added October 31. Interface captures show that iteration and retain demo labels. Lime imagery © Lime. Prototype maps © OpenStreetMap contributors. AI assisted research, development and verification.</p>
     </section>
 
     <nav class="sr-shell sr-project-nav" aria-label="More projects"><a href="https://ianjohnstone.ca/cospace.html"><span class="sr-eyebrow">Another mobile project</span><strong>CoSpace</strong></a><a href="https://ianjohnstone.ca/"><span class="sr-eyebrow">Keep exploring</span><strong>All work</strong></a></nav>
@@ -207,6 +207,6 @@
       </div>
     </footer>
 
-  <dialog class="sr-viewer" aria-labelledby="viewer-title" aria-describedby="viewer-caption"><div class="sr-viewer-header"><h2 id="viewer-title">Project screen</h2><button type="button" id="viewer-close" autofocus>Close</button></div><div class="sr-viewer-toolbar"><button type="button" id="viewer-size" aria-pressed="false">Actual size</button><a id="viewer-original" href="assets/scootroute/mapped-journey.webp" target="_blank" rel="noopener">Open original image</a></div><div class="sr-viewer-stage"><img id="viewer-image" alt="" width="390" height="844"></div><p id="viewer-caption"></p></dialog>
+  <dialog class="sr-viewer" aria-labelledby="viewer-title" aria-describedby="viewer-caption"><div class="sr-viewer-header"><h2 id="viewer-title">Project screen</h2><button type="button" id="viewer-close" autofocus>Close</button></div><div class="sr-viewer-toolbar"><button type="button" id="viewer-size" aria-pressed="false">Actual size</button><a id="viewer-original" href="assets/scootroute/04-stages-current.jpg" target="_blank" rel="noopener">Open original image</a></div><div class="sr-viewer-stage"><img id="viewer-image" alt="" width="390" height="844"></div><p id="viewer-caption"></p></dialog>
 </body>
 </html>
