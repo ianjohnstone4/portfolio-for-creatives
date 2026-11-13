@@ -19,3 +19,10 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+
+Hornby Street simulation
+Contains information licensed under the Open Government Licence – Vancouver.
+https://opendata.vancouver.ca/pages/licence/
+City of Vancouver street intersections and 2009 LiDAR building footprints supply the intersection positions, building outlines and approximate heights in this exhibit.
+https://opendata.vancouver.ca/explore/dataset/street-intersections/
+https://opendata.vancouver.ca/explore/dataset/building-footprints-2009/
