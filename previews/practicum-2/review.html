@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Homepage preview | Device review</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #dce1da; color: #24382b; font: 14px system-ui, sans-serif; }
+    header { min-height: 64px; display: flex; gap: 20px; justify-content: space-between; align-items: center; padding: 10px 20px; background: #fafbf8; border-bottom: 1px solid #ccd5c9; flex-wrap: wrap; }
+    strong { font-weight: 600; }
+    nav { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    button, a { font: inherit; color: inherit; border: 1px solid #cad4c9; background: transparent; border-radius: 8px; padding: 10px 14px; cursor: pointer; text-decoration: none; }
+    button[aria-pressed="true"] { background: #24382b; border-color: #24382b; color: #fff; }
+    :focus-visible { outline: 2px solid #2c6740; outline-offset: 3px; }
+    main { display: flex; justify-content: center; padding: 24px 12px; }
+    iframe { display: block; width: 100%; height: calc(100vh - 112px); min-height: 500px; border: 0; background: white; box-shadow: 0 12px 48px #213c241a; }
+    @media(max-width:600px) { header { gap: 12px; } nav { gap: 6px; } button, a { padding: 9px; font-size: 12px; } main { padding: 12px 0; } }
+  </style>
+</head>
+<body>
+  <header>
+    <strong>Ian Johnstone · Homepage preview</strong>
+    <nav aria-label="Preview controls">
+      <button type="button" data-width="full" aria-pressed="true">Desktop</button>
+      <button type="button" data-width="834" aria-pressed="false">Tablet</button>
+      <button type="button" data-width="390" aria-pressed="false">Mobile</button>
+      <button type="button" id="restart">Restart</button>
+      <a href="./index.html" target="_blank" rel="noopener">Open full page ↗</a>
+    </nav>
+  </header>
+  <main><iframe src="./index.html" title="Interactive homepage preview"></iframe></main>
+  <script>
+    const frame = document.querySelector('iframe');
+    document.querySelectorAll('[data-width]').forEach(button => {
+      button.addEventListener('click', () => {
+        document.querySelectorAll('[data-width]').forEach(other => other.setAttribute('aria-pressed', String(other === button)));
+        frame.style.width = button.dataset.width === 'full' ? '100%' : `${button.dataset.width}px`;
+        frame.style.maxWidth = '100%';
+      });
+    });
+    document.querySelector('#restart').addEventListener('click', () => { frame.src = './index.html'; });
+  </script>
+</body>
+</html>
