@@ -89,8 +89,8 @@ html:has(.scootroute-page) { scroll-behavior: auto; }
 .sr-design-response { padding-top: 0; }
 .sr-response-frame { margin: 50px 0 28px; background: #edf1e8; padding: 20px; border-radius: 8px; }
 .sr-detail-crop { position: relative; width: 100%; aspect-ratio: 390/394; overflow: hidden; background: white; border-radius: 8px; }
-.sr-detail-crop img { position: absolute; width: 100%; height: auto; bottom: 0; left: 0; }
-.sr-ui-outline--return { top: 13.96%; left: 13.85%; width: 82.3%; height: 41.37%; border-color: var(--sr-green); }
+.sr-detail-crop img { position: absolute; width: 100%; height: auto; top: -79.5%; left: 0; }
+.sr-ui-outline--return { top: 21%; left: 14.6%; width: 80.6%; height: 24%; border-color: var(--sr-green); }
 .sr-ui-outline--return>span { background: var(--sr-green); }
 .scootroute-page figcaption a { display: inline; }
 .sr-inline-button { display: inline-flex; align-items: center; min-height: 44px; padding: 8px 0; background: transparent; border: 0; border-radius: 0; text-decoration: underline; text-underline-offset: .25em; font-size: inherit; line-height: inherit; }

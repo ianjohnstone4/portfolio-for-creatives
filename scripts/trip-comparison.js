@@ -1,8 +1,8 @@
 (() => {
   const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
   const options = {
-    scooter: { total: 14, walk: 250, ride: '2.6', label: 'Lime Scooter' },
-    bike: { total: 15, walk: 380, ride: '2.5', label: 'Mobi E-bike' }
+    scooter: { total: 13, walk: 260, ride: '2.2', label: 'Lime Scooter' },
+    bike: { total: 13, walk: 370, ride: '2.1', label: 'Mobi E-bike' }
   };
   document.querySelectorAll('[data-trip-comparison]').forEach((root) => {
     const buttons = [...root.querySelectorAll('[data-trip-option]')];
