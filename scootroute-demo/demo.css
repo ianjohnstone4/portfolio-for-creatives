@@ -1,5 +1,5 @@
-@font-face{font-family:Jost;src:url("../museum/fonts/jost.woff2") format("woff2");font-weight:100 900;font-display:swap}
-:root{font-family:Jost,"Avenir Next",Arial,sans-serif;font-size:16px;color:#24382d;background:#eeefe8;--ink:#24382d;--muted:#516354;--green:#275b41;--line:#cfd6ca;--paper:#fffdf8}
+@font-face{font-family:"DM Sans";src:url("dm-sans.woff2") format("woff2");font-weight:100 900;font-display:swap}
+:root{font-family:"DM Sans","Avenir Next",Arial,sans-serif;font-size:16px;color:#24382d;background:#eeefe8;--ink:#24382d;--muted:#516354;--green:#275b41;--line:#cfd6ca;--paper:#fffdf8}
 *{box-sizing:border-box}
 body{margin:0}
 [hidden]{display:none!important}
@@ -94,3 +94,14 @@ h1{font-size:clamp(1.9rem,3.8vw,2.5rem);letter-spacing:-.055em;line-height:1.1;f
   .places{margin:.8rem 0}.place{padding:.36rem 0}
 }
 @media(max-width:355px){.topbar{padding-inline:.6rem;gap:.35rem}.brand{font-size:1.17rem}.case-link{font-size:.78rem}}
+
+/* Keep playback and its controls in the same phone viewport. */
+#panel-title:focus{outline:none}
+@media(max-width:760px){
+  .workspace.is-playing .map-frame{height:clamp(145px,23vh,215px)}
+  .workspace.is-playing .stage:not(.active){display:none}
+  .workspace.is-playing .stage.active{padding:.65rem 0}
+  .workspace.is-playing .panel-head p{margin-top:.3rem}
+  .workspace.is-playing .trip-summary{padding-bottom:.45rem}
+  .workspace.is-playing .stage-message{margin:.45rem 0}
+}

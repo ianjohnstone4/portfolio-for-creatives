@@ -24,6 +24,8 @@ const rentals = [
   { label: "Lime scooter", pickup: "pender", slot: 1, motion: "Scooter", overhead: 90, speed: 4.7 },
 ];
 const legIndex = new Map();
+const workspace = document.querySelector(".workspace");
+const smallScreen = window.matchMedia("(max-width: 760px)");
 const reduced = window.matchMedia("(prefers-reduced-motion: reduce)");
 let journeys = [], selected = 0, destination = "sunset-beach";
 let view = "compare", stage = 0, fraction = 0, playing = false, complete = false;
@@ -173,6 +175,7 @@ function stageCopy() {
 function showChoices() {
   stop();
   view = "compare"; complete = false;
+  workspace.classList.remove("is-playing");
   byId("choices").hidden = false; byId("details").hidden = true;
   byId("panel-title").textContent = "Compare sample trips";
   byId("panel-intro").textContent = "See how the planner handles pickup, return and the final walk. Vehicles, parking and your movement are simulated.";
@@ -197,6 +200,7 @@ function renderStages() {
 function showDetail() {
   stop();
   view = "detail"; stage = 0; fraction = 0; complete = false;
+  workspace.classList.remove("is-playing");
   byId("choices").hidden = true;byId("details").hidden = false;
   byId("panel-title").textContent = places[destination];
   byId("panel-intro").textContent = "Sample journey from Canada Place. Playback uses a simulated location.";
@@ -252,6 +256,8 @@ function tick(now) {
 function play() { stop();playing = true;showControls();animation = requestAnimationFrame(tick); }
 function startStage() {
   stop();view = "play";fraction = 0;complete = false;
+  workspace.classList.add("is-playing");
+  if (smallScreen.matches) window.scrollTo({top: 0, behavior: "instant"});
   byId("launch").hidden = true;byId("playback").hidden = false;
   renderStages();drawMap();showControls();
   if (!reduced.matches) play();
@@ -261,11 +267,16 @@ byId("destination").addEventListener("change", (event) => {
   selected = 0;journeys = buildJourneys(destination);showChoices();
 });
 byId("review").addEventListener("click", showDetail);
-byId("back").addEventListener("click", () => {showChoices();byId("review").focus({preventScroll:true});});
+function returnToOptions() {
+  showChoices();
+  const chosen = byId("options").querySelector('[aria-pressed="true"]');
+  chosen.focus({preventScroll: !smallScreen.matches});
+}
+byId("back").addEventListener("click", returnToOptions);
 byId("launch").addEventListener("click", () => {stage = 0;startStage();byId("play").focus({preventScroll:true});});
 byId("play").addEventListener("click", () => { if (playing) {stop();showControls();} else play(); });
 byId("next").addEventListener("click", () => {
-  if (complete) {showChoices();byId("review").focus({preventScroll:true});}
+  if (complete) {returnToOptions();}
   else if (fraction < 1) atStop();
   else {stage++;startStage();}
 });
